@@ -27,7 +27,39 @@ $route["office-shifting-in-(:any)"] = "city_services/office_shifting/$1";
 $route["car-transport-in-(:any)"] = "city_services/car_transport/$1";
 $route["bike-transport-in-(:any)"] = "city_services/bike_transport/$1";
 
-// Services Routes
+// SEO Services Routes
+$route["seo-services"] = "services/seoServices";
+$route["local-seo"] = "services/localSeo";
+$route["local-seo-services"] = "services/localSeo";
+$route["international-seo-services"] = "services/internationalSeo";
+$route["white-label-seo-services"] = "services/whiteLabelSeo";
+$route["ecommerce-seo"] = "services/ecommerceSeo";
+$route["ecommerce-seo-services"] = "services/ecommerceSeo";
+$route["nationwide-seo-services"] = "services/nationwideSeo";
+$route["link-building-services"] = "services/linkBuilding";
+$route["linkbuilding-services"] = "services/linkBuilding";
+$route["technical-seo"] = "services/technicalSeo";
+$route["on-page-seo"] = "services/onPageSeo";
+$route["enterprise-seo"] = "services/enterpriseSeo";
+
+// Social Media Marketing Route
+$route["social-media-marketing"] = "services/socialMediaMarketing";
+
+// Other Services Routes
+$route["services"] = "services/otherServices";
+$route["all-services"] = "services/otherServices";
+$route["other-services"] = "services/otherServices";
+$route["ppc-management-services"] = "services/ppcManagement";
+$route["web-development-services"] = "services/webDevelopment";
+$route["content-marketing-services"] = "services/contentMarketing";
+$route["cro-services"] = "services/croServices";
+$route["email-marketing-services"] = "services/emailMarketing";
+
+// Case Studies & Packages
+$route["case-studies"] = "about/caseStudies";
+$route["packages"] = "services/packages";
+
+// Legacy Services Routes
 $route["our-services"] = "services/index";
 $route["home-relocation"] = "services/homeShifting";
 $route["office-relocation"] = "services/office";

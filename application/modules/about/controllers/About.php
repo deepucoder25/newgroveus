@@ -37,6 +37,15 @@ class About extends MX_Controller
         echo Modules::run('template/layout2', $data);
     }
 
+    function caseStudies()
+    {
+        $data['title'] = "Case Studies & Client Success Stories | " . $this->comp['company3'];
+        $data['description'] = "Explore proven case studies and real-world results achieved by " . $this->comp['company3'] . ".";
+        $data['module'] = "about";
+        $data['view_file'] = "case_studies";
+        echo Modules::run('template/layout2', $data);
+    }
+
     function reviews()
     {
         // Redirect to main reviews module
