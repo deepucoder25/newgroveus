@@ -51,15 +51,15 @@ class MX_Controller
         $this->load = clone load_class('Loader');
         $this->load->initialize($this);
 
+
+        $this->comp['gstin'] = '36AAAFM7708R1ZU'; 
         $this->comp['phone'] = '+91 0000000000';
         $this->comp['phonehtml'] = 'tel:+910000000000';
-        $this->comp['phone1'] = '+91 0000000000';
-        $this->comp['phonehtml1'] = 'tel:+910000000000';
         $this->comp['supportmail'] = 'support@mycompany.com';
         $this->comp['replyToMail'] = 'support@mycompany.com';
         $this->comp['mail'] = 'support@mycompany.com';    
         $this->comp['mailhtml'] = "mailto:support@mycompany.com";
-        $this->comp['company3'] = 'MyCompany';
+        $this->comp['company3'] = 'Groveus Informatics Pvt. Ltd.';
         $this->comp['companydomain'] = 'mycompany.com';
 
         $this->comp['facebookhtml'] = "";
@@ -75,7 +75,7 @@ class MX_Controller
         $this->comp['addressRegion'] = "Mumbai";
         $this->comp['postalCode'] = "421302";
         $this->comp['companystate'] = "Maharashtra";
-        $this->comp['themeColor'] = "#0a4ebd";
+        $this->comp['themeColor'] = "#ea2d2d";
 
         $this->comp['experience'] = "40+";
         $this->comp['startYear'] = "1986";

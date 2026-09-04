@@ -12,7 +12,6 @@ body {
 :root {
     --accent-red: #ea2d2d;
     --accent-red-hover: #d42222;
-    --text-dark: #20344d;
     --white: #ffffff;
 }
 
@@ -232,7 +231,7 @@ body {
     display: block;
     width: 22px;
     height: 2.5px;
-    background-color: var(--text-dark);
+    background-color: #000000;
     border-radius: 2px;
     transition: all 0.25s ease;
 }
