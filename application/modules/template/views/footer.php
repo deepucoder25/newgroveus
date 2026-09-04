@@ -1,245 +1,259 @@
-<footer class="footer-section footer-light-theme">
+<footer class="footer-section footer-dark-theme">
 
-  <!-- Wavy Top Decorative Line SVG with Smooth Gradient Transitions -->
+  <!-- Top Wavy Dual-Ribbon Divider -->
   <div class="footer-wave-wrap">
-    <svg class="footer-wave-svg" viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <svg viewBox="0 0 1440 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="footer-wave-svg">
       <defs>
-        <!-- Gradient 1: Deep Maroon & Red to Dark Navy -->
+        <!-- Primary Upper Wave Ribbon Gradient (Crimson Red to Indigo/Navy) -->
         <linearGradient id="footerWaveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#ea2d2d" stop-opacity="0.85"/>
-          <stop offset="45%" stop-color="#9b0b10" stop-opacity="0.75"/>
-          <stop offset="100%" stop-color="#20344d" stop-opacity="0.9"/>
+          <stop offset="0%" stop-color="#e52328"/>
+          <stop offset="28%" stop-color="#e01f30"/>
+          <stop offset="50%" stop-color="#ab235a"/>
+          <stop offset="72%" stop-color="#5a2e82"/>
+          <stop offset="88%" stop-color="#283a8f"/>
+          <stop offset="100%" stop-color="#12254c"/>
         </linearGradient>
 
-        <!-- Gradient 2: Vibrant Accent Red to Deep Maroon -->
+        <!-- Secondary Lower Overlapping Ribbon Gradient (Darker Crimson to Dark Indigo) -->
         <linearGradient id="footerWaveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#d3181e" stop-opacity="0.95"/>
-          <stop offset="50%" stop-color="#ea2d2d" stop-opacity="0.9"/>
-          <stop offset="100%" stop-color="#152233" stop-opacity="0.95"/>
-        </linearGradient>
-
-        <!-- Gradient 3: Soft Highlight Ribbon -->
-        <linearGradient id="footerWaveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#ff4d4d" stop-opacity="0.7"/>
-          <stop offset="55%" stop-color="#ea2d2d" stop-opacity="0.85"/>
-          <stop offset="100%" stop-color="#d3181e" stop-opacity="0.7"/>
+          <stop offset="0%" stop-color="#b8161d"/>
+          <stop offset="30%" stop-color="#a41829"/>
+          <stop offset="55%" stop-color="#781d4a"/>
+          <stop offset="80%" stop-color="#3c2668"/>
+          <stop offset="100%" stop-color="#0e1832"/>
         </linearGradient>
       </defs>
 
-      <!-- Layer 1: Back Wave starting from top edge -->
-      <path d="M0,0 C260,65 520,0 800,40 C1080,80 1280,10 1440,25 L1440,90 L0,90 Z" fill="url(#footerWaveGrad1)"/>
+      <!-- Base Dark Fill Connecting to Footer Main Body (Below the Ribbons) -->
+      <path d="M0 34 C340 58 720 20 1060 46 C1220 56 1350 42 1440 32 L1440 64 L0 64 Z" fill="#0e1217"/>
 
-      <!-- Layer 2: Middle Accent Wave -->
-      <path d="M0,18 C300,75 580,12 870,52 C1150,88 1320,22 1440,42 L1440,90 L0,90 Z" fill="url(#footerWaveGrad2)"/>
+      <!-- Secondary Darker Ribbon (Behind/Under) -->
+      <path d="M0 24 C340 48 720 10 1060 36 C1220 46 1350 32 1440 22 L1440 32 C1350 42 1220 56 1060 46 C720 20 340 58 0 34 Z" fill="url(#footerWaveGrad2)" opacity="0.9"/>
 
-      <!-- Layer 3: Accent Ribbon Wave -->
-      <path d="M0,32 C340,82 640,22 940,62 C1200,92 1350,35 1440,52 L1440,90 L0,90 Z" fill="url(#footerWaveGrad3)"/>
-
-      <!-- Layer 4: Front Base White Wave connecting seamlessly to Footer Body -->
-      <path d="M0,45 C380,92 700,32 1020,72 C1240,96 1360,52 1440,64 L1440,90 L0,90 Z" fill="#ffffff"/>
+      <!-- Primary Bright Ribbon (Front) -->
+      <path d="M0 16 C340 42 720 4 1060 30 C1220 40 1350 24 1440 14 L1440 24 C1350 34 1220 50 1060 40 C720 14 340 52 0 26 Z" fill="url(#footerWaveGrad1)"/>
     </svg>
   </div>
 
   <!-- Main Footer Content -->
   <div class="footer-main">
     <div class="container">
-      <div class="row g-4 g-lg-5">
+      
+      <!-- Top 4 Columns Row -->
+      <div class="row g-4 g-lg-5 pb-4">
 
-        <!-- Column 1: Brand Info & Social -->
-        <div class="col-12 col-lg-4 col-xl-4">
+        <!-- Column 1: Company Info & Contact Details -->
+        <div class="col-12 col-lg-4 footer-col-company">
           <div class="footer-brand pe-lg-4">
-            <a href="<?= site_url() ?>" class="footer-brand-logo mb-3 d-inline-block" aria-label="<?= $company3 ?>">
-              <img src="<?= base_url('assets/images/logo/logo.png') ?>" alt="<?= $company3 ?>" class="footer-logo img-fluid" loading="lazy">
+            
+            <!-- Official Brand Logo -->
+            <a href="<?= site_url() ?>" class="footer-brand-logo mb-3 d-inline-block text-decoration-none" aria-label="GROEUS">
+              <img src="<?= base_url('assets/images/logo/logo.png') ?>" alt="<?= !empty($company3) ? $company3 : 'GROEUS' ?>" class="footer-logo img-fluid" loading="lazy">
             </a>
 
-            <div class="footer-tagline-badge mb-3">
-              <i class="bi bi-cpu-fill me-1 text-danger"></i>
-              <strong>Technology Has No Boundaries</strong>
-            </div>
-
-            <p class="footer-brand-copy">
-              We empower businesses with data-driven SEO, cutting-edge web technologies, and scalable digital marketing strategies to achieve measurable global growth.
+            <p class="footer-brand-desc mb-3">
+              Groveus is a leading digital transformation and IT solutions agency dedicated to accelerating business growth. We empower enterprises with innovative web development, advanced SEO strategies, and high-performance digital marketing solutions.
             </p>
 
-            <div class="footer-social-wrap mt-3 pt-1">
-              <span class="footer-social-label">CONNECT WITH US:</span>
-              <div class="footer-social-icons d-flex align-items-center gap-2 mt-2">
+            <!-- Follow Us & Colorful Social Circles -->
+            <div class="footer-social-section mt-3">
+              <span class="footer-social-heading d-block mb-2">Follow Us</span>
+              <div class="footer-social-icons d-flex align-items-center gap-2">
                 <!-- Facebook -->
-                <a href="<?= $facebookhtml ?>" target="_blank" rel="noopener" aria-label="Facebook" class="social-circle-btn social-btn-facebook">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
+                <a href="<?= !empty($facebookhtml) ? $facebookhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-circle social-bg-fb">
+                  <i class="bi bi-facebook"></i>
                 </a>
-
-                <!-- Instagram -->
-                <a href="<?= $instagramhtml ?>" target="_blank" rel="noopener" aria-label="Instagram" class="social-circle-btn social-btn-instagram">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                </a>
-
                 <!-- LinkedIn -->
-                <a href="<?= $linkedinhtml ?>" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-circle-btn social-btn-linkedin">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
+                <a href="<?= !empty($linkedinhtml) ? $linkedinhtml : '#' ?>" target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-circle social-bg-li">
+                  <i class="bi bi-linkedin"></i>
                 </a>
-
-                <!-- YouTube -->
-                <a href="<?= $youtubehtml ?>" target="_blank" rel="noopener" aria-label="YouTube" class="social-circle-btn social-btn-youtube">
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
-                </a>
-
                 <!-- Twitter / X -->
-                <a href="<?= $twitterhtml ?>" target="_blank" rel="noopener" aria-label="Twitter / X" class="social-circle-btn social-btn-twitter">
-                  <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
+                <a href="<?= !empty($twitterhtml) ? $twitterhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Twitter" class="footer-social-circle social-bg-tw">
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="<?= !empty($instagramhtml) ? $instagramhtml : '#' ?>" target="_blank" rel="noopener" aria-label="Instagram" class="footer-social-circle social-bg-insta">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <!-- YouTube -->
+                <a href="<?= !empty($youtubehtml) ? $youtubehtml : '#' ?>" target="_blank" rel="noopener" aria-label="YouTube" class="footer-social-circle social-bg-yt">
+                  <i class="bi bi-youtube"></i>
                 </a>
               </div>
             </div>
+
           </div>
         </div>
 
-        <!-- Right Column (col-lg-8): 3 Link Columns + 3 Aligned Meta Pills Directly Below -->
-        <div class="col-12 col-lg-8 col-xl-8">
-          <!-- 3 Navigation Link Columns -->
-          <div class="row g-4">
-            <!-- Col 1: Quick Links -->
-            <div class="col-6 col-sm-6 col-md-4">
-              <div class="footer-widget">
-                <h4 class="footer-heading">Quick Links</h4>
-                <ul class="footer-nav-list">
-                  <li><a href="<?= site_url() ?>">Home</a></li>
-                  <li><a href="<?= site_url('services') ?>">All Services</a></li>
-                  <li><a href="<?= site_url('blog') ?>">Blog</a></li>
-                  <li><a href="<?= site_url('contact-us') ?>">Contact Us</a></li>
-                  <li><a href="<?= site_url('case-studies') ?>">Case Studies</a></li>
-                  <li><a href="<?= site_url('packages') ?>">Packages</a></li>
-                </ul>
-              </div>
-            </div>
+        <!-- Column 2: Quick Links -->
+        <div class="col-6 col-md-4 col-lg-2 footer-col-links">
+          <div class="footer-widget">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-link-list list-unstyled mt-3">
+              <li><a href="<?= site_url() ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Home</a></li>
+              <li><a href="<?= site_url('services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> All Services</a></li>
+              <li><a href="<?= site_url('blog') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Blog</a></li>
+              <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Contact Us</a></li>
+              <li><a href="<?= site_url('case-studies') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Case Studies</a></li>
+              <li><a href="<?= site_url('packages') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Packages</a></li>
+            </ul>
+          </div>
+        </div>
 
-            <!-- Col 2: Our Services -->
-            <div class="col-6 col-sm-6 col-md-4">
-              <div class="footer-widget">
-                <h4 class="footer-heading">Our Services</h4>
-                <ul class="footer-nav-list">
-                  <li><a href="<?= site_url('local-seo-services') ?>">Local Seo Services</a></li>
-                  <li><a href="<?= site_url('international-seo-services') ?>">International Seo Services</a></li>
-                  <li><a href="<?= site_url('white-label-seo-services') ?>">White Label Seo Services</a></li>
-                  <li><a href="<?= site_url('ecommerce-seo-services') ?>">Ecommerce Seo- Services</a></li>
-                  <li><a href="<?= site_url('nationwide-seo-services') ?>">Nationwide Seo Services</a></li>
-                  <li><a href="<?= site_url('linkbuilding-services') ?>">Linkbuilding Services</a></li>
-                </ul>
-              </div>
-            </div>
+        <!-- Column 3: Our Services -->
+        <div class="col-6 col-md-4 col-lg-3 footer-col-links">
+          <div class="footer-widget">
+            <h4 class="footer-col-title">Our Services</h4>
+            <ul class="footer-link-list list-unstyled mt-3">
+              <li><a href="<?= site_url('local-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Local SEO Services</a></li>
+              <li><a href="<?= site_url('international-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> International SEO Services</a></li>
+              <li><a href="<?= site_url('white-label-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> White Label SEO Services</a></li>
+              <li><a href="<?= site_url('ecommerce-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> E-Commerce SEO Services</a></li>
+              <li><a href="<?= site_url('nationwide-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Nationwide SEO Services</a></li>
+              <li><a href="<?= site_url('linkbuilding-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Link Building Services</a></li>
+            </ul>
+          </div>
+        </div>
 
-            <!-- Col 3: Other Services -->
-            <div class="col-6 col-md-4">
-              <div class="footer-widget">
-                <h4 class="footer-heading">Other Services</h4>
-                <ul class="footer-nav-list">
-                  <li><a href="<?= site_url('ppc-management-services') ?>">PPC Management</a></li>
-                  <li><a href="<?= site_url('web-development-services') ?>">Web Design &amp; Development</a></li>
-                  <li><a href="<?= site_url('content-marketing-services') ?>">Content Marketing</a></li>
-                  <li><a href="<?= site_url('cro-services') ?>">Conversion Rate Optimization</a></li>
-                  <li><a href="<?= site_url('email-marketing-services') ?>">Email Marketing</a></li>
-                  <li><a href="<?= site_url('social-media-marketing') ?>">Social Media Marketing</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Col 4 (Mobile Slot) / Full Strip (Desktop): Contact Info & GST Quick Strip -->
-            <div class="col-6 col-md-12 footer-meta-col">
-              <div class="footer-meta-strip">
-                <div class="row g-3">
-                  <!-- Email Box -->
-                  <div class="col-12 col-md-4">
-                    <div class="footer-meta-box">
-                      <span class="meta-box-label">OR EMAIL US AT</span>
-                      <div class="meta-box-pill d-flex align-items-center justify-content-between">
-                        <a href="<?= $mailhtml ?>" class="meta-pill-link text-truncate">
-                          <?= $mail ?>
-                        </a>
-                        <button type="button" class="btn-copy-meta flex-shrink-0" onclick="navigator.clipboard.writeText('<?= $mail ?>'); this.innerHTML='<i class=\'bi bi-check2 text-success\'></i>'; setTimeout(() => this.innerHTML='<i class=\'bi bi-copy\'></i>', 2000);" title="Copy Email" aria-label="Copy Email">
-                          <i class="bi bi-copy"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Phone Box -->
-                  <div class="col-12 col-md-4">
-                    <div class="footer-meta-box">
-                      <span class="meta-box-label">OR CALL US AT</span>
-                      <div class="meta-box-pill d-flex align-items-center justify-content-between">
-                        <a href="<?= $phonehtml ?>" class="meta-pill-link text-truncate">
-                          <?= $phone ?>
-                        </a>
-                        <a href="<?= $phonehtml ?>" class="btn-copy-meta flex-shrink-0" title="Call Us" aria-label="Call Us">
-                          <i class="bi bi-telephone-outbound"></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- GSTIN Box -->
-                  <div class="col-12 col-md-4">
-                    <div class="footer-meta-box">
-                      <span class="meta-box-label">GSTIN</span>
-                      <div class="meta-box-pill d-flex align-items-center justify-content-between">
-                        <span class="meta-pill-text fw-semibold text-truncate">
-                          <?= $gstin ?>
-                        </span>
-                        <button type="button" class="btn-copy-meta flex-shrink-0" onclick="navigator.clipboard.writeText('<?= $gstin ?>'); this.innerHTML='<i class=\'bi bi-check2 text-success\'></i>'; setTimeout(() => this.innerHTML='<i class=\'bi bi-copy\'></i>', 2000);" title="Copy GSTIN" aria-label="Copy GSTIN">
-                          <i class="bi bi-copy"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- Column 4: Other Services -->
+        <div class="col-6 col-md-4 col-lg-3 footer-col-links">
+          <div class="footer-widget">
+            <h4 class="footer-col-title">Other Services</h4>
+            <ul class="footer-link-list list-unstyled mt-3">
+              <li><a href="<?= site_url('ppc-management-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> PPC Management</a></li>
+              <li><a href="<?= site_url('web-development-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Web Design &amp; Development</a></li>
+              <li><a href="<?= site_url('content-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Content Marketing</a></li>
+              <li><a href="<?= site_url('cro-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Conversion Rate Optimization</a></li>
+              <li><a href="<?= site_url('email-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Email Marketing</a></li>
+              <li><a href="<?= site_url('social-media-marketing') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Social Media Marketing</a></li>
+            </ul>
           </div>
         </div>
 
       </div>
 
-      <!-- Footer Bottom Bar -->
-      <div class="footer-bottom mt-4 pt-4">
-        <div class="row align-items-center gy-3">
-          <!-- Copyright -->
-          <div class="col-12 col-md-6 text-center text-md-start">
-            <p class="footer-copy-text mb-0">
-              &copy; <?= date('Y') ?> <strong class="text-dark"><?= $company3 ?></strong>. All Rights Reserved.
-            </p>
-          </div>
-
-          <!-- Policy & Navigation Links -->
-          <div class="col-12 col-md-6 text-center text-md-end">
-            <div class="footer-policy-nav d-inline-flex flex-wrap justify-content-center justify-content-md-end gap-3 gap-md-4">
-              <a href="<?= site_url('about-us') ?>">About Us</a>
-              <a href="<?= site_url('faqs') ?>">Support / FAQ</a>
-              <a href="<?= site_url('testimonials') ?>">Testimonials</a>
-              <a href="<?= site_url('reviews') ?>">Reviews</a>
-              <a href="<?= site_url('photo-gallery') ?>">Gallery</a>
-              <a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a>
-              <a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a>
+      <!-- Middle Strip: Trust Features & Newsletter -->
+      <div class="footer-middle-strip position-relative pt-4 pb-4">
+        
+        <div class="row align-items-center g-0 position-relative z-1">
+          
+          <!-- Feature 1: Secure & Reliable -->
+          <div class="col-12 col-sm-6 col-lg-3 footer-trust-col">
+            <div class="footer-trust-item d-flex align-items-center gap-3 pe-lg-3">
+              <div class="footer-trust-icon text-danger flex-shrink-0">
+                <svg viewBox="0 0 32 32" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 3L5 7.5V14.5C5 21.5 9.7 27.8 16 29.5C22.3 27.8 27 21.5 27 14.5V7.5L16 3Z" stroke="#ea2d2d" stroke-width="2.3" stroke-linejoin="round"/>
+                  <path d="M11 16L14.5 19.5L21.5 12.5" stroke="#ea2d2d" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h5 class="footer-trust-title mb-1">Secure &amp; Reliable</h5>
+                <p class="footer-trust-desc mb-0">Enterprise-grade security you can trust</p>
+              </div>
             </div>
           </div>
+
+          <!-- Feature 2: 24/7 Support -->
+          <div class="col-12 col-sm-6 col-lg-3 footer-trust-col">
+            <div class="footer-trust-item d-flex align-items-center gap-3 px-lg-3">
+              <div class="footer-trust-icon text-primary flex-shrink-0">
+                <svg viewBox="0 0 32 32" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 17V15C6 9.48 10.48 5 16 5C21.52 5 26 9.48 26 15V17" stroke="#0072d6" stroke-width="2.3" stroke-linecap="round"/>
+                  <rect x="4" y="16" width="5" height="9" rx="2.5" stroke="#0072d6" stroke-width="2.3"/>
+                  <rect x="23" y="16" width="5" height="9" rx="2.5" stroke="#0072d6" stroke-width="2.3"/>
+                  <path d="M25 24V26C25 27.66 23.66 29 22 29H18" stroke="#0072d6" stroke-width="2.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h5 class="footer-trust-title mb-1">24/7 Support</h5>
+                <p class="footer-trust-desc mb-0">Our team is always here to help you</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3: Future Ready -->
+          <div class="col-12 col-sm-6 col-lg-3 footer-trust-col">
+            <div class="footer-trust-item d-flex align-items-center gap-3 px-lg-3">
+              <div class="footer-trust-icon text-danger flex-shrink-0">
+                <svg viewBox="0 0 32 32" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.5 5.5C19.5 5.5 24 6 26.5 8.5C29 11 29.5 15.5 29.5 15.5C29.5 15.5 24.5 19 19.5 18C18.5 23 15 28 15 28L12.5 23.5L8.5 19.5L4 17C4 17 9 13.5 14 12.5C13 7.5 19.5 5.5 19.5 5.5Z" stroke="#ea2d2d" stroke-width="2.3" stroke-linejoin="round"/>
+                  <circle cx="20.5" cy="11.5" r="2.5" stroke="#ea2d2d" stroke-width="2"/>
+                  <path d="M8.5 23.5L5 27" stroke="#ea2d2d" stroke-width="2.3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h5 class="footer-trust-title mb-1">Future Ready</h5>
+                <p class="footer-trust-desc mb-0">Innovative solutions for your business transformation</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 4: Newsletter Box -->
+          <div class="col-12 col-sm-6 col-lg-3 ps-lg-3">
+            <div class="footer-newsletter-wrap">
+              <h5 class="footer-newsletter-title mb-1">Subscribe to our Newsletter</h5>
+              <p class="footer-newsletter-desc mb-2">Get the latest updates, insights and news.</p>
+              <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
+                <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter">
+                <button type="submit" class="btn footer-newsletter-btn" aria-label="Subscribe">
+                  <i class="bi bi-send-fill"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
   </div>
 
+  <!-- Bottom Dual-Gradient Copyright & Legal Bar -->
+  <div class="footer-bottom-dual-bar position-relative py-3">
+    <div class="container-fluid px-3 px-lg-5 position-relative z-1">
+      <div class="row align-items-center gy-2">
+        <!-- Copyright on Left -->
+        <div class="col-12 col-lg-4 text-center text-lg-start">
+          <p class="footer-copyright-text mb-0">
+            &copy; <?= date('Y') ?> <strong><?= !empty($company3) ? $company3 : 'Groveus Informatics Pvt. Ltd.' ?></strong>. All Rights Reserved.
+          </p>
+        </div>
+
+        <!-- Policy Navigation Links on Right -->
+        <div class="col-12 col-lg-8 text-center text-lg-end footer-legal-nav-col">
+          <nav class="footer-bottom-nav d-inline-flex flex-wrap justify-content-center justify-content-lg-end align-items-center gap-2 gap-md-3">
+            <a href="<?= site_url('about-us') ?>">About Us</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('faqs') ?>">Support / FAQ</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('testimonials') ?>">Testimonials</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('reviews') ?>">Reviews</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('photo-gallery') ?>">Gallery</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('privacy-policy') ?>">Privacy Policy</a>
+            <span class="nav-sep">|</span>
+            <a href="<?= site_url('terms-and-conditions') ?>">Terms &amp; Conditions</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Large Corner Diamond Graphic matching reference screenshot exactly -->
+  <div class="footer-corner-diamond-wrap" aria-hidden="true">
+    <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-corner-diamond-svg">
+      <!-- Top Half Royal Blue Chevron with rounded apex and clean horizontal cut base -->
+      <path d="M10 98 L70 28 Q80 18 90 28 L150 98 L122 98 L88 58 Q80 50 72 58 L38 98 Z" fill="#0072d6"/>
+      <!-- Bottom Half Crimson Red Chevron with rounded apex and clean horizontal cut top -->
+      <path d="M10 102 L70 172 Q80 182 90 172 L150 102 L122 102 L88 142 Q80 150 72 142 L38 102 Z" fill="#e52323"/>
+    </svg>
+  </div>
+
 </footer>
 
 <!-- Floating Action Sticky Widget Partial -->
-<?php $this->load->view('floating_widget'); ?>
 
 <?php $this->load->view('contacts/quotemodal'); ?>
 <?php $this->load->view('contacts/review_modal'); ?>
