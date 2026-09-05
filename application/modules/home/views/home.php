@@ -4,12 +4,12 @@ $this->load->view('about_widget');
 // Load White Label SEO & Outsourcing Services Interactive Showcase
 $this->load->view('services_info');
 
-// Load other widgets (legacy / optional)
-// $this->load->view('service_widget');
+// Core Services Grid (from navigation menu)
+$this->load->view('service_widget');
 
 $this->load->view('package_details_widget');
-$this->load->view('seo_process_widget');
+$this->load->view('process_widget');
 // $this->load->view('review_widget');
-// $this->load->view('faqs_widget');
+$this->load->view('faqs_widget');
 ?>
 
