@@ -241,15 +241,7 @@
     </div>
   </div>
 
-  <!-- Large Corner Diamond Graphic matching reference screenshot exactly -->
-  <div class="footer-corner-diamond-wrap" aria-hidden="true">
-    <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="footer-corner-diamond-svg">
-      <!-- Top Half Royal Blue Chevron with rounded apex and clean horizontal cut base -->
-      <path d="M10 98 L70 28 Q80 18 90 28 L150 98 L122 98 L88 58 Q80 50 72 58 L38 98 Z" fill="#0072d6"/>
-      <!-- Bottom Half Crimson Red Chevron with rounded apex and clean horizontal cut top -->
-      <path d="M10 102 L70 172 Q80 182 90 172 L150 102 L122 102 L88 142 Q80 150 72 142 L38 102 Z" fill="#e52323"/>
-    </svg>
-  </div>
+
 
 </footer>
 

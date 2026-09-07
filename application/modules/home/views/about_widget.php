@@ -10,13 +10,13 @@ $bgImageUrl = base_url('assets/images/about/about-presentation.jpg');
 <!-- ========================================================================= -->
 <!-- ABOUT US PRESENTATION SHOWCASE SECTION (SEO OPTIMIZED & FULLY RESPONSIVE) -->
 <!-- ========================================================================= -->
-<section class="about-presentation-section" id="aboutUsSection" itemscope itemtype="https://schema.org/AboutPage" aria-label="About Our Presentation Design Services">
-    <div class="container py-4 py-lg-5">
+<section class="about-presentation-section py-4 py-lg-5 position-relative" id="aboutUsSection" style="--about-bg-img: url('<?= $bgImageUrl ?>');" itemscope itemtype="https://schema.org/AboutPage" aria-label="About Our Presentation Design Services">
+    <div class="container-fluid px-3 px-md-4 px-xl-5">
         
-        <!-- Presentation Slide Container with Background Image & Subtle Translucent Overlay -->
-        <div class="about-presentation-card shadow position-relative" style="--about-bg-img: url('<?= $bgImageUrl ?>');">
+        <!-- Presentation Slide Container -->
+        <div class="about-presentation-card position-relative">
             
-            <!-- Soft Translucent Gradient Backdrop (Balances Background Visibility & Text Legibility) -->
+            <!-- Soft Translucent Gradient Backdrop -->
             <div class="about-white-backdrop" aria-hidden="true"></div>
 
             <div class="row g-0 position-relative about-card-content align-items-stretch">
@@ -112,7 +112,7 @@ $bgImageUrl = base_url('assets/images/about/about-presentation.jpg');
                                         
                                         <!-- Laptop Base / Trackpad -->
                                         <path d="M9 44H55C56 44 56.5 45 55.5 46L52 49H12L8.5 46C7.5 45 8 44 9 44Z" fill="white"/>
-                                        <rect x="27" y="45" width="10" height="2" rx="1" fill="#8da83b"/>
+                                        <rect x="27" y="45" width="10" height="2" rx="1" fill="#0098da"/>
                                         
                                         <!-- Pie Chart inside Display -->
                                         <circle cx="32" cy="28" r="7" stroke="white" stroke-width="2" fill="none"/>

@@ -4,35 +4,35 @@
    ========================================================================== */
 
 :root {
-  --about-primary-green: #8da83b;
-  --about-primary-dark: #7a9332;
-  --about-primary-light: #9cb746;
-  --about-text-color: #2d3748;
+  --about-primary-blue: #0098da;
+  --about-primary-dark: #0077b6;
+  --about-primary-light: #38bdf8;
+  --about-text-color: #f1f5f9;
 }
 
-/* Base Presentation Section */
+/* Base Presentation Section with Background Photo */
 .about-presentation-section {
-  background-color: #f8fafc;
+  background-color: #06080d;
+  background-image: var(--about-bg-img);
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
   color: var(--about-text-color);
   overflow: hidden;
 }
 
-/* Main Presentation Card with Background Photo */
+/* Main Presentation Card (Container for presentation content) */
 .about-presentation-card {
-  background-color: #f4f6f8;
-  background-image: var(--about-bg-img);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
+  background-color: transparent;
+  border-radius: 18px;
   overflow: hidden;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  min-height: 520px;
+  min-height: 480px;
   position: relative;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-/* Translucent Gradient Overlay (Shows Background Image While Keeping Text Crisp) */
+/* Translucent Dark Shade of Black Overlay (Reveals Background Photo with High Readability) */
 .about-white-backdrop {
   position: absolute;
   top: 0;
@@ -40,11 +40,11 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(90deg, 
-    rgba(255, 255, 255, 0) 0%, 
-    rgba(255, 255, 255, 0.2) 22%, 
-    rgba(255, 255, 255, 0.72) 44%, 
-    rgba(255, 255, 255, 0.88) 68%, 
-    rgba(255, 255, 255, 0.93) 100%
+    rgba(0, 0, 0, 0.20) 0%, 
+    rgba(0, 0, 0, 0.35) 28%, 
+    rgba(6, 9, 15, 0.75) 48%, 
+    rgba(6, 9, 15, 0.88) 70%, 
+    rgba(6, 9, 15, 0.95) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -54,30 +54,30 @@
 .about-card-content {
   position: relative;
   z-index: 2;
-  min-height: 520px;
+  min-height: 480px;
 }
 
 /* Left Side: Background Showcase & 'About Us' Badge */
 .about-left-area {
   position: relative;
-  min-height: 280px;
+  min-height: 260px;
 }
 
-/* 'About Us' 3D Olive Green Banner Ribbon Badge */
+/* 'About Us' 3D Azure Blue Banner Ribbon Badge (#0098DA) */
 .about-title-banner {
   position: absolute;
-  bottom: 40px;
+  bottom: 30px;
   left: 0;
-  background: linear-gradient(135deg, #a7cc38 0%, #8da83b 45%, #667d22 100%);
-  padding: 16px 48px 16px 36px;
-  border-radius: 0 10px 10px 0;
-  border-top: 2.5px solid rgba(255, 255, 255, 0.75);
-  border-right: 2.5px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 3.5px solid #485918;
+  background: linear-gradient(135deg, #38bdf8 0%, #0098da 45%, #006699 100%);
+  padding: 14px 44px 14px 32px;
+  border-radius: 0 12px 12px 0;
+  border-top: 2.5px solid rgba(255, 255, 255, 0.85);
+  border-right: 2.5px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 3.5px solid #004d73;
   box-shadow: 
-    5px 12px 28px rgba(0, 0, 0, 0.35),
-    2px 4px 8px rgba(0, 0, 0, 0.2),
-    inset 0 3px 5px rgba(255, 255, 255, 0.7),
+    5px 12px 28px rgba(0, 0, 0, 0.45),
+    2px 4px 8px rgba(0, 152, 218, 0.35),
+    inset 0 3px 5px rgba(255, 255, 255, 0.8),
     inset 0 -3px 6px rgba(0, 0, 0, 0.35);
   z-index: 5;
   overflow: hidden;
@@ -100,9 +100,9 @@
 .about-title-banner:hover {
   transform: translateX(6px) scale(1.02);
   box-shadow: 
-    7px 16px 34px rgba(0, 0, 0, 0.4),
-    3px 6px 12px rgba(0, 0, 0, 0.25),
-    inset 0 3px 5px rgba(255, 255, 255, 0.8),
+    7px 16px 34px rgba(0, 0, 0, 0.45),
+    3px 6px 12px rgba(0, 152, 218, 0.4),
+    inset 0 3px 5px rgba(255, 255, 255, 0.85),
     inset 0 -3px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -110,24 +110,24 @@
   position: relative;
   z-index: 3;
   color: #ffffff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: -0.5px;
   line-height: 1.1;
   text-shadow: 
     0 2px 4px rgba(0, 0, 0, 0.45),
     0 -1px 1px rgba(255, 255, 255, 0.35),
-    0 3px 0 #52641a;
+    0 3px 0 #005a87;
 }
 
 /* Right Side: Content Area on Translucent Surface */
 .about-right-area {
-  padding: 45px 45px 45px 30px;
+  padding: 40px 45px 40px 30px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 520px;
+  min-height: 480px;
 }
 
 .about-features-container {
@@ -135,7 +135,7 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 32px;
 }
 
 /* Feature Item Row */
@@ -159,7 +159,7 @@
 .about-icon-circle {
   width: 82px;
   height: 82px;
-  background: radial-gradient(circle at 35% 25%, #b8df3d 0%, #90b32a 42%, #728e1d 72%, #455710 100%);
+  background: radial-gradient(circle at 35% 25%, #5cd0fa 0%, #0098da 42%, #0077b6 72%, #004d73 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -168,9 +168,9 @@
   overflow: hidden;
   border: 4.5px solid #ffffff;
   box-shadow: 
-    0 12px 26px rgba(15, 23, 42, 0.32),
-    0 4px 8px rgba(15, 23, 42, 0.18),
-    inset 0 4px 6px rgba(255, 255, 255, 0.75),
+    0 12px 26px rgba(0, 0, 0, 0.45),
+    0 4px 8px rgba(0, 152, 218, 0.35),
+    inset 0 4px 6px rgba(255, 255, 255, 0.8),
     inset 0 -4px 7px rgba(0, 0, 0, 0.42);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   cursor: default;
@@ -219,11 +219,11 @@
 
 .about-feature-text {
   font-size: 1.02rem;
-  line-height: 1.55;
-  color: #2b3543;
+  line-height: 1.6;
+  color: #f1f5f9;
   font-weight: 500;
   max-width: 530px;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* About Us Responsive Breakpoints */
@@ -269,18 +269,21 @@
 }
 
 @media (max-width: 991px) {
+  .about-presentation-section {
+    background-position: center top;
+  }
+
   .about-presentation-card {
     min-height: auto;
-    background-position: center top;
   }
 
   .about-white-backdrop {
     background: linear-gradient(180deg, 
-      rgba(255, 255, 255, 0) 0%, 
-      rgba(255, 255, 255, 0.15) 140px, 
-      rgba(255, 255, 255, 0.60) 240px, 
-      rgba(255, 255, 255, 0.80) 380px, 
-      rgba(255, 255, 255, 0.85) 100%
+      rgba(0, 0, 0, 0.25) 0%, 
+      rgba(6, 9, 15, 0.50) 140px, 
+      rgba(6, 9, 15, 0.80) 240px, 
+      rgba(6, 9, 15, 0.92) 380px, 
+      rgba(6, 9, 15, 0.96) 100%
     );
   }
 
@@ -320,21 +323,23 @@
     height: 36px;
   }
 }
-
 @media (max-width: 767px) {
+  .about-presentation-section {
+    background-position: center top;
+  }
+
   .about-presentation-card {
     min-height: auto;
     border-radius: 12px;
-    background-position: center top;
   }
 
   .about-white-backdrop {
     background: linear-gradient(180deg, 
-      rgba(255, 255, 255, 0) 0%, 
-      rgba(255, 255, 255, 0.12) 110px, 
-      rgba(255, 255, 255, 0.58) 200px, 
-      rgba(255, 255, 255, 0.78) 320px, 
-      rgba(255, 255, 255, 0.84) 100%
+      rgba(0, 0, 0, 0.25) 0%, 
+      rgba(6, 9, 15, 0.45) 110px, 
+      rgba(6, 9, 15, 0.78) 200px, 
+      rgba(6, 9, 15, 0.90) 320px, 
+      rgba(6, 9, 15, 0.95) 100%
     );
   }
 
@@ -466,14 +471,14 @@
   display: inline-flex;
   align-items: center;
   background: #fee2e2;
-  color: var(--accent-red, #ea2d2d);
+  color: #991b1b;
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   padding: 4px 14px;
   border-radius: 50px;
-  border: 1px solid #fecaca;
+  border: 1px solid #fca5a5;
 }
 
 .wl-main-title {
@@ -977,8 +982,8 @@
 .ca-cad-label {
   font-size: 11.5px;
   font-weight: 800;
-  color: #ea2d2d;
-  background: #fef2f2;
+  color: #991b1b;
+  background: #fee2e2;
   padding: 2px 6px;
   border-radius: 6px;
   margin-left: 5px;
@@ -1018,8 +1023,8 @@
 .ca-scroll-hint {
   font-size: 10.5px;
   font-weight: 600;
-  color: #94a3b8;
-  background: #f1f5f9;
+  color: #334155;
+  background: #e2e8f0;
   padding: 2px 6px;
   border-radius: 4px;
   letter-spacing: 0.3px;
@@ -1334,9 +1339,9 @@
 }
 
 .process-tab-btn.active {
-  background: var(--accent-red, #ea2d2d);
+  background: #dc2626;
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(234, 45, 45, 0.35);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
 }
 
 .process-pane {
@@ -1360,12 +1365,12 @@
 }
 
 .wl-badge-pill-web {
-  color: #0284c7;
+  color: #0369a1;
   background: #e0f2fe;
 }
 
 .wl-badge-pill-digital {
-  color: #ea2d2d;
+  color: #991b1b;
   background: #fee2e2;
 }
 
@@ -1884,21 +1889,40 @@
 
 .ca-email-capsule {
   background: #f8fafc;
-  border: 1px dashed #e2e8f0;
+  border: 1px dashed #cbd5e1;
   border-radius: 8px;
   padding: 6px 10px;
   font-size: 12px;
 }
 
+.ca-email-capsule .text-secondary {
+  color: #334155 !important;
+}
+
 .ca-email-link {
-  color: #0284c7;
+  color: #0369a1;
   text-decoration: none;
   transition: color 0.2s ease, text-decoration 0.2s ease;
 }
 
 .ca-email-link:hover {
-  color: #0369a1;
+  color: #0c4a6e;
   text-decoration: underline !important;
+}
+
+/* Accessible High-Contrast Code Tags */
+code,
+.ca-faq-item-body code,
+.ca-faq-answer code,
+.accordion-body code {
+  color: #7f1d1d !important;
+  background-color: #fee2e2 !important;
+  padding: 3px 7px !important;
+  border-radius: 4px !important;
+  font-weight: 700 !important;
+  font-size: 0.9em !important;
+  border: 1px solid #fca5a5 !important;
+  display: inline-block !important;
 }
 
 /* Pulse Dot */

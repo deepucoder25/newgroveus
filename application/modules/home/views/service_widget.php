@@ -8,7 +8,9 @@ $featuredServices = [
         'id' => 'srv-local-seo',
         'title' => 'Local SEO Services',
         'category' => 'Geo-Targeting & Maps',
-        'theme_color' => '#ea2d2d',
+        'theme_color' => '#dc2626',
+        'badge_color' => '#991b1b',
+        'badge_bg' => '#fee2e2',
         'bg_gradient' => 'linear-gradient(135deg, #fff1f2 0%, #ffffff 100%)',
         'desc' => 'Dominate Canadian local map packs, geo-targeted searches in Toronto, Vancouver & Montreal, and drive high-intent calls.',
         'link' => 'local-seo-services',
@@ -18,7 +20,9 @@ $featuredServices = [
         'id' => 'srv-white-label',
         'title' => 'White Label SEO Services',
         'category' => 'Agency Outsourcing',
-        'theme_color' => '#0284c7',
+        'theme_color' => '#0369a1',
+        'badge_color' => '#075985',
+        'badge_bg' => '#e0f2fe',
         'bg_gradient' => 'linear-gradient(135deg, #f0f9ff 0%, #ffffff 100%)',
         'desc' => '100% confidential agency SEO fulfillment under strict NDAs, real-time unbranded client portals, and CRA-compliant CAD invoices.',
         'link' => 'white-label-seo-services',
@@ -28,7 +32,9 @@ $featuredServices = [
         'id' => 'srv-ecommerce-seo',
         'title' => 'Ecommerce SEO Services',
         'category' => 'Online Store Growth',
-        'theme_color' => '#10b981',
+        'theme_color' => '#047857',
+        'badge_color' => '#065f46',
+        'badge_bg' => '#d1fae5',
         'bg_gradient' => 'linear-gradient(135deg, #ecfdf5 0%, #ffffff 100%)',
         'desc' => 'Revenue-driven product schema optimization, category architecture, and organic sales conversion scaling for online stores.',
         'link' => 'ecommerce-seo-services',
@@ -38,7 +44,9 @@ $featuredServices = [
         'id' => 'srv-international-seo',
         'title' => 'International & Bilingual SEO',
         'category' => 'Global & French-CA',
-        'theme_color' => '#8b5cf6',
+        'theme_color' => '#7c3aed',
+        'badge_color' => '#5b21b6',
+        'badge_bg' => '#ede9fe',
         'bg_gradient' => 'linear-gradient(135deg, #f5f3ff 0%, #ffffff 100%)',
         'desc' => 'Expand across US, UK, and Quebec markets with precision hreflang architecture, French-Canadian keyword silos, and backlinks.',
         'link' => 'international-seo-services',
@@ -197,7 +205,7 @@ $featuredServices = [
                             <div>
                                 <!-- Service Category Subtitle -->
                                 <div class="ca-srv-category-tag mb-2">
-                                    <span class="badge rounded-pill" style="color: <?= $srv['theme_color'] ?>; background-color: <?= $srv['theme_color'] ?>15;">
+                                    <span class="badge rounded-pill" style="color: <?= $srv['badge_color'] ?>; background-color: <?= $srv['badge_bg'] ?>; border: 1px solid <?= $srv['badge_color'] ?>30;">
                                         <?= htmlspecialchars($srv['category']) ?>
                                     </span>
                                 </div>
