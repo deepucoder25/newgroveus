@@ -46,9 +46,7 @@ $route["enterprise-seo"] = "services/enterpriseSeo";
 $route["social-media-marketing"] = "services/socialMediaMarketing";
 
 // Other Services Routes
-$route["services"] = "services/otherServices";
-$route["all-services"] = "services/otherServices";
-$route["other-services"] = "services/otherServices";
+$route["services"] = "services/Services";
 $route["ppc-management-services"] = "services/ppcManagement";
 $route["web-development-services"] = "services/webDevelopment";
 $route["content-marketing-services"] = "services/contentMarketing";
@@ -58,15 +56,6 @@ $route["email-marketing-services"] = "services/emailMarketing";
 // Case Studies & Packages
 $route["case-studies"] = "about/caseStudies";
 $route["packages"] = "services/packages";
-
-// Legacy Services Routes
-$route["our-services"] = "services/index";
-$route["home-relocation"] = "services/homeShifting";
-$route["office-relocation"] = "services/office";
-$route["bike-transportation"] = "services/bike";
-$route["car-transportation"] = "services/car";
-$route["packing-and-moving"] = "services/packingMoving";
-$route["loading-unloading"] = "services/loadingUnloading";
 
 // Legacy/Compatibility Routes
 $route["storage-services"] = "services/storage";
