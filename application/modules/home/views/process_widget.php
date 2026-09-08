@@ -21,10 +21,10 @@ $companyName = isset($company3) && !empty($company3) ? $company3 : 'NewGrove';
                         <i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i> SEO Process &amp; Methodology
                     </div>
                     <h2 class="wl-main-title text-uppercase">
-                        Our 5-Step Canadian SEO Process
+                        Our 5-Step SEO Process
                     </h2>
                     <p class="wl-main-subtitle mx-auto">
-                        A data-driven, battle-tested methodology engineered to dominate Canadian search engines (Google.ca &amp; Bing) with sustainable top-tier rankings.
+                        A data-driven, battle-tested methodology engineered to dominate search engines (Google &amp; Bing) with sustainable top-tier rankings.
                     </p>
                 </div>
 

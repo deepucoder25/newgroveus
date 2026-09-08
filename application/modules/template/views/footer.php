@@ -120,12 +120,10 @@
           <div class="footer-widget">
             <h4 class="footer-col-title">Other Services</h4>
             <ul class="footer-link-list list-unstyled mt-3">
-              <li><a href="<?= site_url('ppc-management-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> PPC Management</a></li>
-              <li><a href="<?= site_url('web-development-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Web Design &amp; Development</a></li>
               <li><a href="<?= site_url('content-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Content Marketing</a></li>
-              <li><a href="<?= site_url('cro-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Conversion Rate Optimization</a></li>
-              <li><a href="<?= site_url('email-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Email Marketing</a></li>
+              <li><a href="<?= site_url('ppc-management-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Google Pay Per Click</a></li>
               <li><a href="<?= site_url('social-media-marketing') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Social Media Marketing</a></li>
+              <li><a href="<?= site_url('web-development-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Web Design &amp; Development</a></li>
             </ul>
           </div>
         </div>

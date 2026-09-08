@@ -157,12 +157,10 @@
             <div class="mega-section-block">
               <h4 class="mega-heading">Other Services</h4>
               <ul class="mega-nav-list">
-                <li><a href="<?= site_url('ppc-management-services') ?>" class="<?= $segment1 === 'ppc-management-services' ? 'active' : '' ?>">PPC Management</a></li>
-                <li><a href="<?= site_url('web-development-services') ?>" class="<?= $segment1 === 'web-development-services' ? 'active' : '' ?>">Web Design &amp; Development</a></li>
                 <li><a href="<?= site_url('content-marketing-services') ?>" class="<?= $segment1 === 'content-marketing-services' ? 'active' : '' ?>">Content Marketing</a></li>
-                <li><a href="<?= site_url('cro-services') ?>" class="<?= $segment1 === 'cro-services' ? 'active' : '' ?>">Conversion Rate Optimization</a></li>
-                <li><a href="<?= site_url('email-marketing-services') ?>" class="<?= $segment1 === 'email-marketing-services' ? 'active' : '' ?>">Email Marketing</a></li>
+                <li><a href="<?= site_url('ppc-management-services') ?>" class="<?= in_array($segment1, ['ppc-management-services', 'google-pay-per-click']) ? 'active' : '' ?>">Google Pay Per Click</a></li>
                 <li><a href="<?= site_url('social-media-marketing') ?>" class="<?= $segment1 === 'social-media-marketing' ? 'active' : '' ?>">Social Media Marketing</a></li>
+                <li><a href="<?= site_url('web-development-services') ?>" class="<?= $segment1 === 'web-development-services' ? 'active' : '' ?>">Web Design &amp; Development</a></li>
               </ul>
             </div>
           </div>

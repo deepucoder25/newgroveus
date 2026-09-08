@@ -2,9 +2,18 @@
 
 class Services extends MX_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
     function index()
     {
-        redirect('', 'location', 301);
+        $data['title'] = "Digital Marketing Services | " . $this->comp['company3'];
+        $data['description'] = "Comprehensive digital marketing and web solutions from " . $this->comp['company3'] . ".";
+        $data['module'] = "services";
+        $data['view_file'] = "services";
+        echo Modules::run('template/layout2', $data);
     }
 
     // SEO Services
@@ -109,15 +118,6 @@ class Services extends MX_Controller
     }
 
     // Other Services
-    function Services()
-    {
-        $data['title'] = "Digital Marketing Services | " . $this->comp['company3'];
-        $data['description'] = "Comprehensive digital marketing and web solutions from " . $this->comp['company3'] . ".";
-        $data['module'] = "services";
-        $data['view_file'] = "services";
-        echo Modules::run('template/layout2', $data);
-    }
-
     function ppcManagement()
     {
         $data['title'] = "PPC Management Services | " . $this->comp['company3'];
