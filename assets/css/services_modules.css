@@ -5646,3 +5646,161 @@
     }
 }
 
+/* ==========================================================================
+   PACKAGES PAGE INTERACTIVE CATEGORY TABS NAVIGATION
+   ========================================================================== */
+
+.pkg-nav-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.pkg-tabs-container {
+    display: inline-flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 60px;
+    padding: 8px 10px;
+    box-shadow: 0 4px 24px -2px rgba(15, 23, 42, 0.09);
+    gap: 8px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.pkg-tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    border: none;
+    background: transparent;
+    color: #334155;
+    font-size: 15.5px;
+    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+    flex-shrink: 0;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.pkg-tab-btn .pkg-tab-icon {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.pkg-tab-btn .pkg-tab-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.pkg-tab-btn:hover {
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.pkg-tab-btn:hover .pkg-tab-icon {
+    transform: scale(1.12);
+}
+
+.pkg-tab-btn.active {
+    background: linear-gradient(135deg, #c91a25 0%, #991b1b 100%);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(201, 26, 37, 0.36);
+}
+
+.pkg-tab-btn.active .pkg-tab-badge {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+}
+
+/* Tab Panes Visibility */
+.pkg-content-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.pkg-content-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Tabs Navigation */
+@media (max-width: 991.98px) {
+    .pkg-nav-wrapper {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding: 6px 16px 14px;
+        justify-content: flex-start;
+        scroll-padding: 0 16px;
+    }
+    .pkg-nav-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    .pkg-tabs-container {
+        margin: 0;
+        padding: 6px;
+        border-radius: 50px;
+        gap: 6px;
+    }
+    .pkg-tab-btn {
+        padding: 10px 18px;
+        font-size: 14.5px;
+        gap: 8px;
+    }
+    .pkg-tab-btn .pkg-tab-icon {
+        font-size: 16px;
+    }
+    .pkg-tab-btn .pkg-tab-badge {
+        font-size: 10px;
+        padding: 2.5px 8px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .pkg-nav-wrapper {
+        padding: 4px 12px 12px;
+        scroll-padding: 0 12px;
+    }
+    .pkg-tabs-container {
+        padding: 5px;
+        border-radius: 45px;
+        gap: 5px;
+    }
+    .pkg-tab-btn {
+        padding: 9px 16px;
+        font-size: 14px;
+        gap: 7px;
+    }
+    .pkg-tab-btn .pkg-tab-icon {
+        font-size: 15px;
+    }
+    .pkg-tab-btn .pkg-tab-badge {
+        font-size: 9.5px;
+        padding: 2px 7px;
+    }
+}
+
+

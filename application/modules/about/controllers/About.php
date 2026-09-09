@@ -54,8 +54,8 @@ class About extends MX_Controller
 
     function privacy()
     {
-        $data['title'] = "Privacy Policy | " . $this->comp['company3'];
-        $data['description'] = "How " . $this->comp['company3'] . " handles and protects your personal data during your relocation.";
+        $data['title'] = "Privacy Policy | Transparent Data Protection | " . $this->comp['company3'];
+        $data['description'] = "Learn how " . $this->comp['company3'] . " collects, safeguards, and processes personal data. Our Privacy Policy ensures complete compliance with global data protection standards (GDPR, DPDP Act 2023) and SSL security.";
         $data['module'] = "about";
         $data['view_file'] = "privacy";
         echo Modules::run('template/layout2', $data);
@@ -63,8 +63,8 @@ class About extends MX_Controller
 
     function terms()
     {
-        $data['title'] = "Terms & Conditions | " . $this->comp['company3'];
-        $data['description'] = "The terms and conditions governing our relocation services at " . $this->comp['company3'] . ".";
+        $data['title'] = "Terms & Conditions | Service Agreement & Policies | " . $this->comp['company3'];
+        $data['description'] = "Read the official Terms and Conditions governing digital solutions, web development, SEO, and marketing services delivered by " . $this->comp['company3'] . ".";
         $data['module'] = "about";
         $data['view_file'] = "terms";
         echo Modules::run('template/layout2', $data);
