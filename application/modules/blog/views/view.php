@@ -1,15 +1,96 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
 <main class="main">
-    <!-- Breadcrumbs Section -->
-    <?php 
-$this->load->view('about/dynamic_breadcrumbs', [
-    'bc_current' => '',
-    'bc_title_white' => 'Blog',
-    'bc_title_orange' => 'Details',
-    'bc_desc' => ''
-]); 
-?>
+    <!-- =========================================================================
+         1. DYNAMIC BREADCRUMBS & HERO HEADER SECTION (CONTACT PAGE DESIGN)
+         ========================================================================= -->
+    <section class="cnt-breadcrumb-hero position-relative overflow-hidden">
+        <!-- Breadcrumb Ambient SVG Background Canvas Layer -->
+        <div class="cnt-bc-ambient-bg" aria-hidden="true">
+            <!-- Floating Glow Orbs -->
+            <div class="cnt-bc-orb cnt-bc-orb-left"></div>
+            <div class="cnt-bc-orb cnt-bc-orb-right"></div>
+            
+            <!-- Tech SVG Vector Canvas -->
+            <svg class="position-absolute w-100 h-100" style="top:0; left:0; pointer-events:none;" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="blgDtlDotPattern" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="1.1" fill="#64748b" fill-opacity="0.16" />
+                    </pattern>
+                    <pattern id="blgDtlGridPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#cbd5e1" stroke-width="0.75" stroke-opacity="0.3" stroke-dasharray="4 4" />
+                    </pattern>
+                    <linearGradient id="blgDtlSweepRed" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#c91a25" stop-opacity="0.16" />
+                        <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.05" />
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                    </linearGradient>
+                    <linearGradient id="blgDtlSweepBlue" x1="100%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#0284c7" stop-opacity="0.14" />
+                        <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.04" />
+                        <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#blgDtlDotPattern)" />
+                <rect width="100%" height="100%" fill="url(#blgDtlGridPattern)" />
+                <path d="M-50,65 C320,180 720,10 1200,110 C1600,200 1900,40 2200,80" fill="none" stroke="url(#blgDtlSweepRed)" stroke-width="1.8" />
+                <path d="M-20,130 C380,40 820,190 1300,60 C1700,-10 2000,120 2300,90" fill="none" stroke="url(#blgDtlSweepBlue)" stroke-width="1.5" stroke-dasharray="6 6" />
+                <!-- Corner Crosshair Accent Markers -->
+                <g stroke="#94a3b8" stroke-width="1" stroke-opacity="0.4">
+                    <path d="M 25,20 L 25,38 M 25,20 L 43,20" />
+                    <circle cx="25" cy="20" r="2.5" fill="#c91a25" fill-opacity="0.5" stroke="none" />
+                    <path d="M calc(100% - 25px),20 L calc(100% - 25px),38 M calc(100% - 25px),20 L calc(100% - 43px),20" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="row align-items-center g-4">
+                
+                <div class="col-12 col-lg-8">
+                    <!-- Breadcrumb Capsule Pill -->
+                    <div class="cnt-bc-pill-wrap mb-3">
+                        <?php $this->load->view('about/dynamic_breadcrumbs', [
+                            'bc_h1' => htmlspecialchars(@$query[0]->title),
+                            'bc_desc' => word_limiter(strip_tags(@$query[0]->description), 120),
+                            'breadcrumbs' => [
+                                ['name' => 'Blog', 'url' => site_url('blog')],
+                                ['name' => htmlspecialchars(@$query[0]->title)]
+                            ]
+                        ]); ?>
+                    </div>
+
+                    <!-- Main Hero Heading -->
+                    <h1 class="cnt-bc-hero-title mb-1">
+                        <?= htmlspecialchars(@$query[0]->title) ?>
+                    </h1>
+
+                    <!-- Short Concise Subtitle -->
+                    <p class="cnt-bc-hero-desc">
+                        Published on <?= date('F d, Y', strtotime(@$query[0]->created_at ?? 'now')) ?> • Technical Article &amp; Strategic Guide
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-4 d-flex justify-content-lg-end align-items-center">
+                    <div class="cnt-bc-hero-badges">
+                        <div class="cnt-bc-badge">
+                            <span class="cnt-status-dot cnt-dot-green"></span>
+                            <span><?= date('M d, Y', strtotime(@$query[0]->created_at ?? 'now')) ?></span>
+                        </div>
+                        <div class="cnt-bc-badge cnt-bc-badge-blue">
+                            <i class="bi bi-person-check-fill"></i>
+                            <span>By Editorial Team</span>
+                        </div>
+                        <div class="cnt-bc-badge cnt-bc-badge-amber">
+                            <i class="bi bi-clock-history"></i>
+                            <span>5 Min Technical Read</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Blog Single Post -->
     <section class="blog-details-section py-5 bg-light">
@@ -25,7 +106,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
                             if (@$query[0]->image && file_exists($image_path)): ?>
                                 <img src="<?= base_url('uploads/blogs/' . @$query[0]->image) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?>" class="img-fluid w-100 blog-details-img">
                             <?php else: ?>
-                                <img src="<?= base_url('assets/images/about/packers_movers.jpg') ?>" alt="Default Image" class="img-fluid w-100 blog-details-img">
+                                <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" alt="Default Image" class="img-fluid w-100 blog-details-img">
                             <?php endif; ?>
                         </div>
                         
@@ -61,7 +142,7 @@ $this->load->view('about/dynamic_breadcrumbs', [
                                         <?php
                                         $image_file = $post->image;
                                         $full_path = FCPATH . 'uploads/blogs/' . $image_file;
-                                        $imagePath = ($image_file && file_exists($full_path)) ? base_url('uploads/blogs/' . $image_file) : base_url('assets/images/about/packers_movers.jpg');
+                                        $imagePath = ($image_file && file_exists($full_path)) ? base_url('uploads/blogs/' . $image_file) : base_url('assets/images/about/about-showcase.webp');
                                         $custom_slug = !empty($post->slug) ? $post->slug : rtrim(str_replace("--", "-", urlencode(str_replace(" ", "-", str_replace(",", " ", $post->title)))), "-");
                                         ?>
                                         <a href="<?= site_url('blog/'.$custom_slug) ?>" class="d-flex align-items-center gap-3 mb-3 text-decoration-none post-link-item blog-post-link-item">

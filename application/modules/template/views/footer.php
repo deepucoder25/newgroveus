@@ -94,7 +94,6 @@
               <li><a href="<?= site_url('services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> All Services</a></li>
               <li><a href="<?= site_url('blog') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Blog</a></li>
               <li><a href="<?= site_url('contact-us') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Contact Us</a></li>
-              <li><a href="<?= site_url('case-studies') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Case Studies</a></li>
               <li><a href="<?= site_url('packages') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Packages</a></li>
             </ul>
           </div>
@@ -221,12 +220,6 @@
         <div class="col-12 col-lg-8 text-center text-lg-end footer-legal-nav-col">
           <nav class="footer-bottom-nav d-inline-flex flex-wrap justify-content-center justify-content-lg-end align-items-center gap-2 gap-md-3">
             <a href="<?= site_url('about-us') ?>">About Us</a>
-            <span class="nav-sep">|</span>
-            <a href="<?= site_url('faqs') ?>">Support / FAQ</a>
-            <span class="nav-sep">|</span>
-            <a href="<?= site_url('testimonials') ?>">Testimonials</a>
-            <span class="nav-sep">|</span>
-            <a href="<?= site_url('reviews') ?>">Reviews</a>
             <span class="nav-sep">|</span>
             <a href="<?= site_url('photo-gallery') ?>">Gallery</a>
             <span class="nav-sep">|</span>

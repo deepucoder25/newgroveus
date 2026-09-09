@@ -7,12 +7,8 @@ $route['search'] = 'home/search';
 // Company Routes
 $route['about-us'] = 'about/index';
 $route['contact-us'] = 'contacts/index';
-$route['faqs'] = 'about/faqs';
 $route['photo-gallery'] = "gallery/photo_gallery";
 $route['video-gallery'] = "gallery/video_gallery";
-$route['testimonials'] = 'about/testimonials';
-$route['reviews'] = 'reviews/index';
-$route['about/submit_review'] = 'reviews/submit';
 $route['blog/view'] = 'blog/view';
 $route['blog/view/(:num)'] = 'blog/view/$1';
 $route['blog/([a-z0-9-]+)'] = 'blog/read/$1';
@@ -48,15 +44,13 @@ $route["google-pay-per-click-services"] = "services/ppcManagement";
 $route["web-development-services"] = "services/webDevelopment";
 $route["content-marketing-services"] = "services/contentMarketing";
 
-// Case Studies & Packages
-$route["case-studies"] = "about/caseStudies";
+// Packages
 $route["packages"] = "services/packages";
 
 // Legacy/Compatibility Routes
 $route["storage-services"] = "services/storage";
 $route["car-transportation-service"] = "services/car";
 $route["infrastructure"] = "about/infrastructure";
-$route["why-choose-us"] = "about/choose";
 
 // Branch/City Routes
 $route["our-branches"] = "packers_movers/state";

@@ -17,11 +17,9 @@
     $active_tab = 'smm';
   } elseif (in_array($segment1, ['other-services', 'our-services', 'ppc-management-services', 'web-development-services', 'content-marketing-services', 'cro-services', 'email-marketing-services', 'home-shifting', 'office-relocation', 'car-transportation', 'bike-transportation', 'packing-and-moving', 'loading-unloading'])) {
     $active_tab = 'other-services';
-  } elseif ($segment1 === 'case-studies') {
-    $active_tab = 'case-studies';
   } elseif ($segment1 === 'packages') {
     $active_tab = 'packages';
-  } elseif ($class === 'about' || in_array($segment1, ['about-us', 'why-choose-us', 'faqs', 'testimonials'])) {
+  } elseif ($class === 'about' || in_array($segment1, ['about-us', 'privacy-policy', 'terms-and-conditions'])) {
     $active_tab = 'about';
   } elseif ($class === 'packers_movers' || in_array($segment1, ['our-branches', 'delhi', 'maharashtra', 'bangalore', 'west-bengal', 'bihar', 'rajasthan', 'gujarat', 'uttar-pradesh', 'punjab', 'haryana', 'jharkhand', 'assam', 'karnataka', 'tamil-nadu'])) {
     $active_tab = 'locations';
@@ -126,24 +124,32 @@
       <!-- Mega Menu Multi-Column Grid -->
       <div class="mega-grid-body py-4">
         <div class="row g-4 g-xl-5">
-          <!-- Col 1: Quick Links -->
+          <!-- Col 1: Quick Links & About -->
           <div class="col-6 col-lg-3 mega-col-quick">
-            <div class="mega-section-block">
+            <div class="mega-section-block mb-4">
               <h4 class="mega-heading">Quick Links</h4>
               <ul class="mega-nav-list">
                 <li><a href="<?= site_url() ?>" class="<?= $active_tab === 'home' ? 'active' : '' ?>">Home</a></li>
                 <li><a href="<?= site_url('services') ?>" class="<?= in_array($segment1, ['services', 'all-services', 'other-services']) ? 'active' : '' ?>">All Services</a></li>
                 <li><a href="<?= site_url('blog') ?>" class="<?= $segment1 === 'blog' ? 'active' : '' ?>">Blog</a></li>
                 <li><a href="<?= site_url('contact-us') ?>" class="<?= $segment1 === 'contact-us' ? 'active' : '' ?>">Contact Us</a></li>
-                <li><a href="<?= site_url('case-studies') ?>" class="<?= $segment1 === 'case-studies' ? 'active' : '' ?>">Case Studies</a></li>
                 <li><a href="<?= site_url('packages') ?>" class="<?= $segment1 === 'packages' ? 'active' : '' ?>">Packages</a></li>
+              </ul>
+            </div>
+            <div class="mega-section-block">
+              <h4 class="mega-heading">About</h4>
+              <ul class="mega-nav-list">
+                <li><a href="<?= site_url('about-us') ?>" class="<?= $segment1 === 'about-us' ? 'active' : '' ?>">About Us</a></li>
+                <li><a href="<?= site_url('photo-gallery') ?>" class="<?= $segment1 === 'photo-gallery' ? 'active' : '' ?>">Gallery</a></li>
+                <li><a href="<?= site_url('privacy-policy') ?>" class="<?= $segment1 === 'privacy-policy' ? 'active' : '' ?>">Privacy Policy</a></li>
+                <li><a href="<?= site_url('terms-and-conditions') ?>" class="<?= $segment1 === 'terms-and-conditions' ? 'active' : '' ?>">Terms &amp; Conditions</a></li>
               </ul>
             </div>
           </div>
 
-          <!-- Col 2: Services (Our Services & Other Services in one column) -->
+          <!-- Col 2: Our Services -->
           <div class="col-6 col-lg-3 mega-col-services">
-            <div class="mega-section-block mb-4">
+            <div class="mega-section-block">
               <h4 class="mega-heading">Our Services</h4>
               <ul class="mega-nav-list">
                 <li><a href="<?= site_url('local-seo-services') ?>" class="<?= in_array($segment1, ['local-seo', 'local-seo-services']) ? 'active' : '' ?>">Local Seo Services</a></li>
@@ -155,6 +161,10 @@
                 <li><a href="<?= site_url('web-development-services') ?>" class="<?= $segment1 === 'web-development-services' ? 'active' : '' ?>">Web Design &amp; Development</a></li>
               </ul>
             </div>
+          </div>
+
+          <!-- Col 3: Other Services -->
+          <div class="col-6 col-lg-3 mega-col-other">
             <div class="mega-section-block">
               <h4 class="mega-heading">Other Services</h4>
               <ul class="mega-nav-list">
@@ -165,25 +175,8 @@
             </div>
           </div>
 
-          <!-- Col 3: About -->
-          <div class="col-6 col-lg-3 mega-col-about">
-            <div class="mega-section-block">
-              <h4 class="mega-heading">About</h4>
-              <ul class="mega-nav-list">
-                <li><a href="<?= site_url('about-us') ?>" class="<?= $segment1 === 'about-us' ? 'active' : '' ?>">About Us</a></li>
-                <li><a href="<?= site_url('why-choose-us') ?>" class="<?= $segment1 === 'why-choose-us' ? 'active' : '' ?>">Why Choose Us</a></li>
-                <li><a href="<?= site_url('faqs') ?>" class="<?= $segment1 === 'faqs' ? 'active' : '' ?>">Support / FAQ</a></li>
-                <li><a href="<?= site_url('testimonials') ?>" class="<?= $segment1 === 'testimonials' ? 'active' : '' ?>">Testimonials</a></li>
-                <li><a href="<?= site_url('reviews') ?>" class="<?= $segment1 === 'reviews' ? 'active' : '' ?>">Reviews</a></li>
-                <li><a href="<?= site_url('photo-gallery') ?>" class="<?= $segment1 === 'photo-gallery' ? 'active' : '' ?>">Gallery</a></li>
-                <li><a href="<?= site_url('privacy-policy') ?>" class="<?= $segment1 === 'privacy-policy' ? 'active' : '' ?>">Privacy Policy</a></li>
-                <li><a href="<?= site_url('terms-and-conditions') ?>" class="<?= $segment1 === 'terms-and-conditions' ? 'active' : '' ?>">Terms &amp; Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-
           <!-- Col 4: Contact Info -->
-          <div class="col-12 col-lg-3 mega-col-contact">
+          <div class="col-6 col-lg-3 mega-col-contact">
             <div class="mega-section-block">
               <h4 class="mega-heading">Contact Info</h4>
               <div class="mega-contact-list">
