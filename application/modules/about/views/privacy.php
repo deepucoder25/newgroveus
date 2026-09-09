@@ -36,7 +36,7 @@
                 <div class="legal-pill-wrap mb-3">
                     <?php $this->load->view('about/dynamic_breadcrumbs', [
                         'bc_h1' => 'Privacy Policy',
-                        'bc_desc' => "Learn how " . (!empty($company3) ? $company3 : 'Groveus') . " protects your privacy and safeguards your personal data.",
+                        'bc_desc' => "Learn how " . $company3 . " protects your privacy and safeguards your personal data.",
                         'breadcrumbs' => [
                             ['name' => 'Privacy Policy']
                         ]
@@ -50,7 +50,7 @@
 
                 <!-- Subtitle Description -->
                 <p class="legal-hero-desc">
-                    At <?= !empty($company3) ? $company3 : 'Groveus Informatics' ?>, we prioritize transparency, data integrity, and strict confidentiality. This policy details how we collect, process, store, and safeguard your personal and enterprise information.
+                    At <?= $company3 ?>, we prioritize transparency, data integrity, and strict confidentiality. This policy details how we collect, process, store, and safeguard your personal and enterprise information.
                 </p>
 
                 <!-- Version & Last Updated Meta Badges -->
@@ -178,10 +178,10 @@
                     </div>
                     <div class="legal-card-body">
                         <p>
-                            This Privacy Policy outlines the practices and policies of <strong><?= !empty($company3) ? $company3 : 'Groveus Informatics' ?></strong> ("Company", "we", "us", or "our") regarding the collection, use, disclosure, and protection of personal data received from visitors, prospective clients, and active enterprise partners utilizing our website (<?= site_url() ?>) and our digital services (Web Development, Custom Software Engineering, SEO Strategy, and Digital Growth Marketing).
+                            This Privacy Policy outlines the practices and policies of <strong><?= $company3 ?></strong> ("Company", "we", "us", or "our") regarding the collection, use, disclosure, and protection of personal data received from visitors, prospective clients, and active enterprise partners utilizing our website (<?= site_url() ?>) and our digital services (Web Development, Custom Software Engineering, SEO Strategy, and Digital Growth Marketing).
                         </p>
                         <p>
-                            By accessing our website, submitting an inquiry, requesting an audit, or entering into a contractual engagement with <?= !empty($company3) ? $company3 : 'Groveus' ?>, you acknowledge that you have read, understood, and consented to the practices described in this document.
+                            By accessing our website, submitting an inquiry, requesting an audit, or entering into a contractual engagement with <?= $company3 ?>, you acknowledge that you have read, understood, and consented to the practices described in this document.
                         </p>
                         <div class="legal-callout legal-callout-green">
                             <div class="legal-callout-title">
@@ -339,7 +339,7 @@
                     </div>
                     <div class="legal-card-body">
                         <p>
-                            <?= !empty($company3) ? $company3 : 'Groveus' ?> maintains a robust defense-in-depth security infrastructure designed to safeguard data against unauthorized alteration, theft, or interception:
+                            <?= $company3 ?> maintains a robust defense-in-depth security infrastructure designed to safeguard data against unauthorized alteration, theft, or interception:
                         </p>
                         <div class="row g-3 my-2">
                             <div class="col-12 col-sm-6">
@@ -412,7 +412,7 @@
                             <div class="d-flex flex-column gap-2 text-secondary small">
                                 <div><strong class="text-dark">Office Address:</strong> <?= $address ?></div>
                                 <div><strong class="text-dark">Official Email:</strong> <a href="<?= $mailhtml ?>" class="text-danger text-decoration-none fw-bold"><?= $mail ?></a></div>
-                                <div><strong class="text-dark">Direct Consultation Phone:</strong> <a href="<?= $phonehtml ?>" class="text-dark text-decoration-none fw-bold"><?= $phone ?></a></div>
+                                <div><strong class="text-dark">Direct Consultation Phone:</strong> <a <?= $phonehtml ?> class="text-dark text-decoration-none fw-bold"><?= $phone ?></a></div>
                                 <div><strong class="text-dark">Response SLA:</strong> Official response provided within 24 to 48 business hours.</div>
                             </div>
                         </div>

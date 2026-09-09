@@ -43,12 +43,12 @@
       <!-- Right Side (Angled/Slanted Dark Red): Phone & Email -->
       <div class="top-bar-right d-flex align-items-center px-2 px-sm-3 px-md-4 py-1">
         <!-- Phone Block (Hidden on mobile, shown on md and up) -->
-        <a href="<?= !empty($phonehtml) ? $phonehtml : 'tel:+919093311022' ?>" class="top-contact-block d-none d-md-flex align-items-center">
+        <a <?= $phonehtml ?> class="top-contact-block d-none d-md-flex align-items-center">
           <div class="top-circle-icon me-2">
             <i class="bi bi-telephone-fill"></i>
           </div>
           <div class="top-contact-meta">
-            <span class="meta-main"><?= !empty($phone) ? $phone : '+91 0000000000' ?></span>
+            <span class="meta-main"><?=$phone ?></span>
             <span class="meta-sub">Mon - Sat, 9:00 AM - 6:00 PM</span>
           </div>
         </a>
@@ -56,12 +56,12 @@
         <span class="top-divider d-none d-md-inline mx-3">|</span>
 
         <!-- Email Block (Visible on all devices) -->
-        <a href="<?= !empty($mailhtml) ? $mailhtml : 'mailto:support@groveus.com' ?>" class="top-contact-block d-flex align-items-center">
+        <a href="<?= $mailhtml ?>" class="top-contact-block d-flex align-items-center">
           <div class="top-circle-icon me-1 me-sm-2">
             <i class="bi bi-envelope-fill"></i>
           </div>
           <div class="top-contact-meta">
-            <span class="meta-main"><?= !empty($mail) ? $mail : 'support@mycompany.com' ?></span>
+            <span class="meta-main"><?= $mail ?></span>
             <span class="meta-sub d-none d-sm-block">We reply within 24 hrs</span>
           </div>
         </a>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="mega-contact-item">
                   <div class="contact-dot-icon"><i class="bi bi-telephone-fill"></i></div>
-                  <a href="<?= !empty($phonehtml) ? $phonehtml : 'tel:+910000000000' ?>"><?= !empty($phone) ? $phone : '+91 0000000000' ?></a>
+                  <a <?= $phonehtml ?>><?= $phone ?></a>
                 </div>
               </div>
             </div>

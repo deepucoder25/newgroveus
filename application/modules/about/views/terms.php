@@ -36,7 +36,7 @@
                 <div class="legal-pill-wrap mb-3">
                     <?php $this->load->view('about/dynamic_breadcrumbs', [
                         'bc_h1' => 'Terms &amp; Conditions',
-                        'bc_desc' => "Terms of Service and contractual guidelines governing digital services at " . (!empty($company3) ? $company3 : 'Groveus') . ".",
+                        'bc_desc' => "Terms of Service and contractual guidelines governing digital services at " . $company3 . ".",
                         'breadcrumbs' => [
                             ['name' => 'Terms & Conditions']
                         ]
@@ -50,7 +50,7 @@
 
                 <!-- Subtitle Description -->
                 <p class="legal-hero-desc">
-                    These Terms &amp; Conditions govern the delivery of professional digital solutions, web design, custom engineering, search engine optimization (SEO), and consulting services provided by <?= !empty($company3) ? $company3 : 'Groveus Informatics' ?>.
+                    These Terms &amp; Conditions govern the delivery of professional digital solutions, web design, custom engineering, search engine optimization (SEO), and consulting services provided by <?= $company3 ?>.
                 </p>
 
                 <!-- Version & Last Updated Meta Badges -->
@@ -178,7 +178,7 @@
                     </div>
                     <div class="legal-card-body">
                         <p>
-                            These Terms and Conditions ("Agreement") constitute a legally binding contract between <strong><?= !empty($company3) ? $company3 : 'Groveus Informatics' ?></strong> ("Company", "we", "our", or "us") and the individual or enterprise entity ("Client", "you", or "your") purchasing digital services, including but not limited to:
+                            These Terms and Conditions ("Agreement") constitute a legally binding contract between <strong><?= $company3 ?></strong> ("Company", "we", "our", or "us") and the individual or enterprise entity ("Client", "you", or "your") purchasing digital services, including but not limited to:
                         </p>
                         <ul class="legal-bullet-list">
                             <li><strong>Web Engineering &amp; UI/UX Design:</strong> Custom web development, e-commerce solutions, web application design, and API integrations.</li>
@@ -223,7 +223,7 @@
                         <ul class="legal-bullet-list">
                             <li><strong>Asset Delivery:</strong> Provide necessary brand collateral, high-resolution logos, copy, server credentials, and domain DNS access within agreed sprint schedules.</li>
                             <li><strong>Timely Feedback:</strong> Review design mockups and staging deployments promptly (typically within 3 to 5 business days) to prevent timeline delays.</li>
-                            <li><strong>Ownership Representations:</strong> Guarantee that all text, imagery, trademarks, and third-party media supplied to <?= !empty($company3) ? $company3 : 'Groveus' ?> are fully licensed and do not infringe on any third-party copyrights.</li>
+                            <li><strong>Ownership Representations:</strong> Guarantee that all text, imagery, trademarks, and third-party media supplied to <?= $company3 ?> are fully licensed and do not infringe on any third-party copyrights.</li>
                         </ul>
                         <div class="legal-callout legal-callout-amber">
                             <div class="legal-callout-title">
@@ -231,7 +231,7 @@
                                 <span>Project Inactivity Notice</span>
                             </div>
                             <p>
-                                If a project is halted for more than thirty (30) consecutive days due to missing client assets or unresponsiveness, <?= !empty($company3) ? $company3 : 'Groveus' ?> reserves the right to invoice for work completed to date and reschedule project resumption based on developer availability.
+                                If a project is halted for more than thirty (30) consecutive days due to missing client assets or unresponsiveness, <?= $company3 ?> reserves the right to invoice for work completed to date and reschedule project resumption based on developer availability.
                             </p>
                         </div>
                     </div>
@@ -295,8 +295,8 @@
                         </p>
                         <ul class="legal-bullet-list">
                             <li><strong>Complete Code Transfer:</strong> Upon 100% full and final payment of all project invoices, all custom written source code, tailored design mockups, and databases created specifically for the Client become the exclusive property of the Client.</li>
-                            <li><strong>Pre-Existing Agency Tools:</strong> <?= !empty($company3) ? $company3 : 'Groveus' ?> retains proprietary rights over our pre-existing developer libraries, modular boilerplates, and deployment scripts incorporated into the project. The Client receives a perpetual, non-exclusive, royalty-free license to use such libraries.</li>
-                            <li><strong>Portfolio Attribution:</strong> Unless a formal NDA explicitly prohibits it, <?= !empty($company3) ? $company3 : 'Groveus' ?> reserves the right to showcase the completed project in our public portfolio and case study archives.</li>
+                            <li><strong>Pre-Existing Agency Tools:</strong> <?= $company3 ?> retains proprietary rights over our pre-existing developer libraries, modular boilerplates, and deployment scripts incorporated into the project. The Client receives a perpetual, non-exclusive, royalty-free license to use such libraries.</li>
+                            <li><strong>Portfolio Attribution:</strong> Unless a formal NDA explicitly prohibits it, <?= $company3 ?> reserves the right to showcase the completed project in our public portfolio and case study archives.</li>
                         </ul>
                     </div>
                 </article>
@@ -317,7 +317,7 @@
                                 <span>Enterprise NDA Standards</span>
                             </div>
                             <p>
-                                All engineers, strategists, and sub-contractors engaged by <?= !empty($company3) ? $company3 : 'Groveus' ?> are bound by comprehensive, legally enforceable Non-Disclosure Agreements.
+                                All engineers, strategists, and sub-contractors engaged by <?= $company3 ?> are bound by comprehensive, legally enforceable Non-Disclosure Agreements.
                             </p>
                         </div>
                     </div>
@@ -334,7 +334,7 @@
                             We stand firmly behind the quality of our engineering:
                         </p>
                         <ul class="legal-bullet-list">
-                            <li><strong>30-Day Post-Launch Bug Warranty:</strong> <?= !empty($company3) ? $company3 : 'Groveus' ?> provides a complimentary thirty (30) day warranty starting from live production launch to rectify any functional defects or code errors arising from our original development scope.</li>
+                            <li><strong>30-Day Post-Launch Bug Warranty:</strong> <?= $company3 ?> provides a complimentary thirty (30) day warranty starting from live production launch to rectify any functional defects or code errors arising from our original development scope.</li>
                             <li><strong>SEO &amp; Algorithm Disclaimers:</strong> While we execute industry-leading, white-hat SEO best practices, the Client acknowledges that third-party search engines (e.g. Google, Bing) constantly update ranking algorithms. No agency can guarantee specific rank placement (#1 position) on third-party search platforms.</li>
                             <li><strong>Third-Party Dependencies:</strong> We are not liable for disruptions resulting from external third-party API downtime, domain registrar outages, third-party plugin updates, or external web host failures.</li>
                         </ul>
@@ -349,10 +349,10 @@
                     </div>
                     <div class="legal-card-body">
                         <p>
-                            To the maximum extent permitted by applicable law, in no event shall <?= !empty($company3) ? $company3 : 'Groveus Informatics' ?>, its directors, employees, or partners be liable for any indirect, incidental, consequential, or punitive damages (including loss of profits, data corruption, or business interruption) arising out of or in connection with our services.
+                            To the maximum extent permitted by applicable law, in no event shall <?= $company3 ?>, its directors, employees, or partners be liable for any indirect, incidental, consequential, or punitive damages (including loss of profits, data corruption, or business interruption) arising out of or in connection with our services.
                         </p>
                         <p>
-                            The total aggregate liability of the Company under any claim shall not exceed the total fees paid by the Client to <?= !empty($company3) ? $company3 : 'Groveus' ?> for the specific project or service in dispute during the preceding six (6) months.
+                            The total aggregate liability of the Company under any claim shall not exceed the total fees paid by the Client to <?= $company3 ?> for the specific project or service in dispute during the preceding six (6) months.
                         </p>
                     </div>
                 </article>
@@ -396,7 +396,7 @@
                                 <div><strong class="text-dark">Company:</strong> <?= $company3 ?></div>
                                 <div><strong class="text-dark">Registered Office:</strong> <?= $address ?></div>
                                 <div><strong class="text-dark">Official Contact Email:</strong> <a href="<?= $mailhtml ?>" class="text-danger text-decoration-none fw-bold"><?= $mail ?></a></div>
-                                <div><strong class="text-dark">Direct Consultation Phone:</strong> <a href="<?= $phonehtml ?>" class="text-dark text-decoration-none fw-bold"><?= $phone ?></a></div>
+                                <div><strong class="text-dark">Direct Consultation Phone:</strong> <a <?= $phonehtml ?> class="text-dark text-decoration-none fw-bold"><?= $phone ?></a></div>
                             </div>
                         </div>
                     </div>

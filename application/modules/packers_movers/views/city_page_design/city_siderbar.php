@@ -23,7 +23,7 @@
 
       <div class="pm-city-cta-buttons">
         <!-- Primary Phone -->
-        <a href="<?= $phonehtml ?>" class="pm-city-cta-btn pm-city-cta-call" id="sidebarCallBtn">
+        <a <?= $phonehtml ?> class="pm-city-cta-btn pm-city-cta-call" id="sidebarCallBtn">
           <i class="bi bi-telephone-fill"></i>
           <div>
             <small>Call Support &nbsp;<span class="pm-city-badge-live">LIVE</span></small>

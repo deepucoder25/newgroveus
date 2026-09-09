@@ -132,7 +132,7 @@
 
                             <div class="mt-4">
                                 <p class="text-muted">For more details, Please call us: 
-                                    <strong class="me-2"><i class="bi bi-telephone-fill"></i> Phone:</strong> <a class="contact-tracking-link d-inline-block mb-2" href="<?= $phonehtml ?>"><?= $phone ?></a>
+                                    <strong class="me-2"><i class="bi bi-telephone-fill"></i> Phone:</strong> <a class="contact-tracking-link d-inline-block mb-2" <?= $phonehtml ?>><?= $phone ?></a>
                                     <br><br>
                                     or leave your
                                     <a class="contact-tracking-underline" href="<?= site_url('contacts') ?>">contact

@@ -5,7 +5,7 @@
   <!-- Sub-Buttons (Call & Enquiry Form) -->
   <div class="floating-sub-menu" id="floatingSubMenu">
     <!-- Call Button -->
-    <a href="<?= $phonehtml ?>" class="float-sub-btn float-sub-call" title="Call Now" aria-label="Call Now">
+    <a <?= $phonehtml ?> class="float-sub-btn float-sub-call" title="Call Now" aria-label="Call Now">
       <div class="float-sub-icon"><i class="bi bi-telephone-fill"></i></div>
       <span class="float-sub-label">Call Now</span>
     </a>

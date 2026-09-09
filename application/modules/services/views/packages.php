@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-$companyName = !empty($company3) ? $company3 : 'Groveus Informatics';
+$companyName = $company3;
 $companyPhone = !empty($phone) ? $phone : '+91 90933 11022';
 $companyPhoneHtml = !empty($phonehtml) ? $phonehtml : 'tel:+919093311022';
 $companyMail = !empty($mail) ? $mail : 'support@groveus.com';

@@ -47,8 +47,8 @@
           <div class="footer-brand pe-lg-4">
             
             <!-- Official Brand Logo -->
-            <a href="<?= site_url() ?>" class="footer-brand-logo mb-3 d-inline-block text-decoration-none" aria-label="GROEUS">
-              <img src="<?= base_url('assets/images/logo/logo.png') ?>" alt="<?= !empty($company3) ? $company3 : 'GROEUS' ?>" class="footer-logo img-fluid" loading="lazy">
+            <a href="<?= site_url() ?>" class="footer-brand-logo mb-3 d-inline-block text-decoration-none" aria-label="<?= $company3 ?>">
+              <img src="<?= base_url('assets/images/logo/logo.png') ?>" alt="<?= $company3 ?>" class="footer-logo img-fluid" loading="lazy">
             </a>
 
             <p class="footer-brand-desc mb-3">
@@ -212,7 +212,7 @@
         <!-- Copyright on Left -->
         <div class="col-12 col-lg-4 text-center text-lg-start">
           <p class="footer-copyright-text mb-0">
-            &copy; <?= date('Y') ?> <strong><?= !empty($company3) ? $company3 : 'Groveus Informatics Pvt. Ltd.' ?></strong>. All Rights Reserved.
+            &copy; <?= date('Y') ?> <strong><?= $company3 ?></strong>. All Rights Reserved.
           </p>
         </div>
 

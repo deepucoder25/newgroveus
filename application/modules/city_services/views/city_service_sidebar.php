@@ -39,7 +39,7 @@
             <p class="cta-desc">Get in touch with our moving experts for a fast and free quotation.</p>
             
             <div class="cta-buttons d-flex flex-column gap-3">
-                <a href="<?= $phonehtml ?>" class="btn-sidebar-cta btn-sidebar-call">
+                <a <?= $phonehtml ?> class="btn-sidebar-cta btn-sidebar-call">
                     <i class="bi bi-telephone-fill me-2"></i> <?= $phone ?>
                 </a>
                 

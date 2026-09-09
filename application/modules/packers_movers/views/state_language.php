@@ -1,5 +1,5 @@
 <?php
-$phone="<a href=''.$phonehtml>.$phone</a>";
+$phone = "<a $phonehtml>$phone</a>";
 if(strtolower($state)=="west bengal"){
     $lang="Bengali";
     $lang_text="<h3>প্যাকার এবং মুভার্স পরিষেবার জন্য, কল করুন $phone</h3>";

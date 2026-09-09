@@ -60,7 +60,7 @@
 
                 <!-- Main Hero Heading -->
                 <h1 class="cnt-bc-hero-title mb-1">
-                    Contact <span class="cnt-title-highlight"><?= !empty($company3) ? $company3 : 'Us' ?></span>
+                    Contact <span class="cnt-title-highlight"><?= $company3 ?></span>
                 </h1>
 
                 <!-- Short Concise Subtitle -->
@@ -265,8 +265,8 @@
                         <div class="cnt-card-content">
                             <span class="cnt-card-subtitle">DIRECT CONSULTATION LINE</span>
                             <h3 class="cnt-card-title">Speak to an Expert</h3>
-                            <a href="<?= !empty($phonehtml) ? $phonehtml : 'tel:+919093311022' ?>" class="cnt-card-link">
-                                <?= !empty($phone) ? $phone : '+91 90933 11022' ?>
+                            <a <?= $phonehtml ?> class="cnt-card-link">
+                                <?= $phone ?>
                             </a>
                             <div class="cnt-card-status">
                                 <span class="cnt-status-dot cnt-dot-green"></span>
@@ -410,7 +410,7 @@
                                 <i class="bi bi-send-fill"></i>
                                 <span>REQUEST A PROPOSAL</span>
                             </div>
-                            <h2 class="cnt-box-title">Get in Touch with <?= !empty($company3) ? $company3 : 'Groveus' ?></h2>
+                            <h2 class="cnt-box-title">Get in Touch with <?= $company3 ?></h2>
                             <p class="cnt-box-subtitle">
                                 Looking for high-performance Web Development, SEO, or Digital Marketing solutions? Share your project requirements below and our technical experts will get back to you promptly.
                             </p>
@@ -550,7 +550,7 @@
                                 <i class="bi bi-geo-alt-fill"></i>
                                 <span>DIRECT HEADQUARTERS</span>
                             </div>
-                            <h2 class="cnt-box-title"><?= !empty($company3) ? $company3 : 'Groveus' ?> Contact Desk</h2>
+                            <h2 class="cnt-box-title"><?= $company3 ?> Contact Desk</h2>
                             <p class="cnt-box-subtitle">
                                 Connect directly with our digital strategists and technical team via phone, email, or visit our office during business hours.
                             </p>
@@ -566,8 +566,8 @@
                                 </div>
                                 <div class="cnt-info-body">
                                     <span class="cnt-info-label">PHONE NUMBER</span>
-                                    <a href="<?= !empty($phonehtml) ? $phonehtml : 'tel:+919093311022' ?>" class="cnt-info-value-link">
-                                        <?= !empty($phone) ? $phone : '+91 90933 11022' ?>
+                                    <a <?= $phonehtml ?> class="cnt-info-value-link">
+                                        <?= $phone ?>
                                     </a>
                                     <div class="cnt-info-subtext">
                                         <span class="cnt-status-dot cnt-dot-green"></span>
@@ -667,7 +667,7 @@
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
                         <div>
-                            <h4 class="cnt-map-card-title mb-1"><?= !empty($company3) ? $company3 : 'Groveus Digital HQ' ?></h4>
+                            <h4 class="cnt-map-card-title mb-1"><?= $company3 ?></h4>
                             <p class="cnt-map-card-desc mb-0">Kalher, Bhiwandi, Mumbai &bull; Open Mon-Sat</p>
                         </div>
                     </div>

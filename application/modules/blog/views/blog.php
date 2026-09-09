@@ -52,7 +52,7 @@
                     <div class="cnt-bc-pill-wrap mb-3">
                         <?php $this->load->view('about/dynamic_breadcrumbs', [
                             'bc_h1' => 'Our Official Blog &amp; Tech Insights',
-                            'bc_desc' => 'Discover the latest technology trends, software development best practices, SEO blueprints, and engineering insights from ' . (!empty($company3) ? $company3 : 'Groveus Informatics') . '.',
+                            'bc_desc' => 'Discover the latest technology trends, software development best practices, SEO blueprints, and engineering insights from ' . $company3 . '.',
                             'breadcrumbs' => [
                                 ['name' => 'Blog']
                             ]
@@ -158,7 +158,7 @@
                             ],
                             "publisher" => [
                                 "@type" => "Organization",
-                                "name" => isset($company3) ? $company3 : 'Groveus Informatics',
+                                "name" => $company3,
                                 "logo" => [
                                     "@type" => "ImageObject",
                                     "url" => base_url('assets/images/logo/logo.png')

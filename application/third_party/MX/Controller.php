@@ -54,7 +54,7 @@ class MX_Controller
 
         $this->comp['gstin'] = '36AAAFM7708R1ZU'; 
         $this->comp['phone'] = '+91 0000000000';
-        $this->comp['phonehtml'] = 'tel:+910000000000';
+        $this->comp['phonehtml'] = 'href="tel:+910000000000"';
         $this->comp['supportmail'] = 'support@mycompany.com';
         $this->comp['replyToMail'] = 'support@mycompany.com';
         $this->comp['mail'] = 'support@mycompany.com';    

@@ -50,7 +50,7 @@
                 <!-- Breadcrumb Capsule Pill -->
                 <div class="cnt-bc-pill-wrap mb-3">
                     <?php $this->load->view('about/dynamic_breadcrumbs', [
-                        'bc_h1' => 'About Us - ' . (!empty($company3) ? $company3 : 'Groveus Informatics'),
+                        'bc_h1' => 'About Us - ' . $company3,
                         'bc_desc' => 'Discover our legacy, dedicated team of engineers, mission, and vision for digital transformation.',
                         'breadcrumbs' => [
                             ['name' => 'About Us']
@@ -112,7 +112,7 @@
 
                         <!-- Main Primary Photo Box -->
                         <div class="abt-main-img-box-1">
-                            <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" alt="<?= !empty($company3) ? $company3 : 'Groveus' ?> Team Showcase" class="abt-main-img-1" loading="lazy" onerror="this.onerror=null; this.src='<?= base_url('assets/images/about/about-presentation.jpg') ?>';">
+                            <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" alt="<?= $company3 ?> Team Showcase" class="abt-main-img-1" loading="lazy" onerror="this.onerror=null; this.src='<?= base_url('assets/images/about/about-presentation.jpg') ?>';">
                         </div>
 
                         <!-- Secondary Overlapping Floating Thumbnail Photo -->
@@ -148,7 +148,7 @@
                     </h2>
 
                     <p class="abt-section-lead">
-                        Founded with a clear mission to redefine how modern businesses harness the power of technology, <strong><?= !empty($company3) ? $company3 : 'Groveus Informatics' ?></strong> has evolved into a premier full-service digital agency and software engineering firm.
+                        Founded with a clear mission to redefine how modern businesses harness the power of technology, <strong><?= $company3 ?></strong> has evolved into a premier full-service digital agency and software engineering firm.
                     </p>
 
                     <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 14.5px;">

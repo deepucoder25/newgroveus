@@ -1,7 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// Dynamic business context with robust Canada-focused variables
-$companyName = isset($company3) && !empty($company3) ? $company3 : 'NewGrove';
+$companyName = $company3;
 $companyPhone = isset($phone) && !empty($phone) ? $phone : '+1 (800) 555-0199';
 $companyPhoneHtml = isset($phonehtml) && !empty($phonehtml) ? $phonehtml : 'tel:+18005550199';
 $companyMail = isset($mail) && !empty($mail) ? $mail : 'contact@newgrove.ca';
@@ -168,11 +167,11 @@ $faqs = [
                     <div class="ca-contact-station position-relative z-2 mt-2">
                         <div class="d-flex flex-sm-nowrap flex-wrap gap-2 mb-2">
                             <!-- Direct Call Button -->
-                            <a href="<?= htmlspecialchars($companyPhoneHtml) ?>" class="ca-cta-btn ca-btn-phone flex-grow-1 text-decoration-none d-flex align-items-center justify-content-center gap-2 py-2 px-3">
+                            <a <?= $phonehtml ?> class="ca-cta-btn ca-btn-phone flex-grow-1 text-decoration-none d-flex align-items-center justify-content-center gap-2 py-2 px-3">
                                 <span class="ca-cta-icon ca-cta-phone-icon d-flex align-items-center justify-content-center">
                                     <i class="bi bi-telephone-fill"></i>
                                 </span>
-                                <span class="ca-cta-label">Call <?= htmlspecialchars($companyPhone) ?></span>
+                                <span class="ca-cta-label">Call <?= $phone ?></span>
                             </a>
                             
                             <!-- WhatsApp Consultation -->

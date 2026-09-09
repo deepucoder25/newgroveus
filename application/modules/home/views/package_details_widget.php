@@ -1,7 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// Dynamic business context with Canada-focused variables
-$companyName = isset($company3) && !empty($company3) ? $company3 : 'NewGrove';
+$companyName = $company3;
 $companyPhone = isset($phone) && !empty($phone) ? $phone : '+1 (800) 555-0199';
 $companyPhoneHtml = isset($phonehtml) && !empty($phonehtml) ? $phonehtml : 'tel:+18005550199';
 $companyWhatsapp = isset($whatsapphtml) && !empty($whatsapphtml) ? $whatsapphtml : 'https://wa.me/18005550199';

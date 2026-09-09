@@ -1,6 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-$companyName = isset($company3) && !empty($company3) ? $company3 : 'NewGrove';
+$companyName = $company3;
 ?>
 
 <!-- ========================================================================= -->

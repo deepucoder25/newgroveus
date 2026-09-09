@@ -1,7 +1,6 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); 
 
-// Dynamic business context if provided, with robust SEO fallbacks
-$companyName = isset($company3) && !empty($company3) ? $company3 : 'NewGrove';
+$companyName = $company3;
 $companyExperience = isset($experience) && !empty($experience) ? $experience : '10+';
 $companyLocation = isset($addressRegion) && !empty($addressRegion) ? $addressRegion : 'USA & Global';
 $bgImageUrl = base_url('assets/images/about/about-presentation.jpg');

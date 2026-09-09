@@ -297,7 +297,7 @@ if (!empty($image_name)) {
     },
     "publisher": {
         "@type": "Organization",
-        "name": "<?= isset($company3) ? $company3 : 'Groveus Informatics' ?>",
+        "name": "<?= $company3 ?>",
         "logo": {
             "@type": "ImageObject",
             "url": "<?= base_url('assets/images/logo/logo.png') ?>"
