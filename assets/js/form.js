@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Clear previous errors and highlights
             form.querySelectorAll(".input-error-highlight").forEach(el => el.classList.remove("input-error-highlight"));
+            form.querySelectorAll(".has-error").forEach(el => el.classList.remove("has-error"));
             form.querySelectorAll(".field-error-msg").forEach(el => el.remove());
 
             const url = this.getAttribute("data-url");
@@ -60,17 +61,22 @@ document.addEventListener("DOMContentLoaded", function () {
             function showError(inputEl, message) {
                 if (!inputEl) return;
                 inputEl.classList.add("input-error-highlight");
+
+                const inputWrap = inputEl.closest(".cnt-field-input-wrap");
+                if (inputWrap) {
+                    inputWrap.classList.add("has-error");
+                }
                 
                 const errorDiv = document.createElement("div");
                 errorDiv.className = "field-error-msg";
-                errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> ${message}`;
+                errorDiv.innerHTML = `<i class="bi bi-exclamation-circle-fill"></i> <span>${message}</span>`;
                 
-                // Find the wrapper (either .field-wrap, .form-group, or parent)
-                const wrapper = inputEl.closest(".field-wrap") || inputEl.closest(".form-group") || inputEl.parentElement;
+                // Find the wrapper (either .cnt-field-group, .field-wrap, .form-group, or parent)
+                const wrapper = inputEl.closest(".cnt-field-group") || inputEl.closest(".field-wrap") || inputEl.closest(".form-group") || inputEl.parentElement;
                 
-                // Force wrap if wrapper is a flex container
+                // Force wrap if wrapper is a horizontal flex container
                 const computedStyle = window.getComputedStyle(wrapper);
-                if (computedStyle.display === "flex") {
+                if (computedStyle.display === "flex" && computedStyle.flexDirection !== "column") {
                     wrapper.style.flexWrap = "wrap";
                 }
                 
