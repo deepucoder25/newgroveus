@@ -738,7 +738,7 @@ ob_start(); ?>
                             <div class="ecseo-testi-author">
                                 <div class="ecseo-author-avatar">MV</div>
                                 <div>
-                                    <h4 class="ecseo-author-name">Marcus Vance <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="ecseo-author-name">Marcus Vance <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="ecseo-author-role">Founder, UrbanVibe Apparel</p>
                                 </div>
                             </div>
@@ -763,7 +763,7 @@ ob_start(); ?>
                             <div class="ecseo-testi-author">
                                 <div class="ecseo-author-avatar ecseo-av-blue">ER</div>
                                 <div>
-                                    <h4 class="ecseo-author-name">Elena Rostova <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="ecseo-author-name">Elena Rostova <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="ecseo-author-role">Head of Growth, NovaTech Store</p>
                                 </div>
                             </div>
@@ -788,7 +788,7 @@ ob_start(); ?>
                             <div class="ecseo-testi-author">
                                 <div class="ecseo-author-avatar ecseo-av-purple">DC</div>
                                 <div>
-                                    <h4 class="ecseo-author-name">David Chen <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="ecseo-author-name">David Chen <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="ecseo-author-role">E-Commerce Director, PureGlow</p>
                                 </div>
                             </div>
@@ -813,7 +813,7 @@ ob_start(); ?>
                             <div class="ecseo-testi-author">
                                 <div class="ecseo-author-avatar ecseo-av-green">SJ</div>
                                 <div>
-                                    <h4 class="ecseo-author-name">Sarah Jenkins <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="ecseo-author-name">Sarah Jenkins <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="ecseo-author-role">VP of Marketing, PeakGear Outdoor</p>
                                 </div>
                             </div>
@@ -838,7 +838,7 @@ ob_start(); ?>
                             <div class="ecseo-testi-author">
                                 <div class="ecseo-author-avatar ecseo-av-dark">KT</div>
                                 <div>
-                                    <h4 class="ecseo-author-name">Kenji Takahashi <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="ecseo-author-name">Kenji Takahashi <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="ecseo-author-role">Co-Founder, Kanso Living</p>
                                 </div>
                             </div>

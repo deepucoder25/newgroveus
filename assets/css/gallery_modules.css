@@ -1,18 +1,139 @@
-/* gallery_modules.css */
+/* =========================================================================
+   GALLERY MODULE STYLES (gallery_modules.css)
+   ========================================================================= */
 
-/* Photo Gallery */
-.gallery-photo-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid #eef1f6 !important; }
-.gallery-photo-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(95, 150, 24, 0.08) !important; border-color: #5f9618 !important; }
-.gallery-bg-success-soft { background-color: rgba(25, 135, 84, 0.1) !important; }
-.gallery-img-wrapper:hover .gallery-hover-overlay { opacity: 1 !important; }
-.gallery-bg-dark-50 { background-color: rgba(0, 0, 0, 0.4) !important; }
-.gallery-transition-all { transition: all 0.3s ease-in-out; }
+/* Photo Gallery Section */
+.gallery-section {
+    padding: 60px 0 80px;
+    background: #f8fafc;
+    position: relative;
+}
 
-.gallery-img { height: 220px; object-fit: cover; }
-.gallery-icon-lg { font-size: 2rem; }
-.gallery-badge-sm { font-size: 0.75rem; }
-.gallery-title-sm { font-size: 1rem; }
+.gallery-photo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.gallery-photo-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px -6px rgba(15, 23, 42, 0.12) !important;
+    border-color: #c91a25 !important;
+}
+
+.gallery-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #0f172a;
+    height: 250px;
+    cursor: pointer;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-photo-card:hover .gallery-img {
+    transform: scale(1.08);
+}
+
+.gallery-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-photo-card:hover .gallery-hover-overlay {
+    opacity: 1;
+}
+
+.gallery-zoom-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #c91a25;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 8px 20px rgba(201, 26, 37, 0.4);
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.gallery-photo-card:hover .gallery-zoom-btn {
+    transform: scale(1);
+}
+
+.gallery-card-body {
+    padding: 18px 20px;
+}
+
+.gallery-album-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(201, 26, 37, 0.08);
+    color: #c91a25;
+    border-radius: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.gallery-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 0;
+}
+
+/* Lightbox Modal */
+.gallery-modal-content {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gallery-modal-img {
+    max-height: 75vh;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+}
 
 /* Video Gallery */
-.gallery-video-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid #eef1f6 !important; }
-.gallery-video-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(95, 150, 24, 0.08) !important; border-color: #5f9618 !important; }
+.gallery-video-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 18px !important;
+    overflow: hidden;
+}
+
+.gallery-video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1) !important;
+    border-color: #c91a25 !important;
+}

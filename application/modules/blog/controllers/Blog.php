@@ -4,19 +4,15 @@ class Blog extends MX_Controller {
 
     function __construct(){
         parent::__construct();
+        $this->load->database();
+        $this->load->helper(['text', 'url']);
     }
 
     private function slugify($text) {
-        $text = strtolower($text);
-        $text = preg_replace('~[^a-z0-9\s-]~', '', $text);
-        $text = preg_replace('~[\s-]+~', '-', $text);
+        $text = strtolower(trim($text));
+        $text = preg_replace('/[^a-z0-9\s-]/', '', $text);
+        $text = preg_replace('/[\s-]+/', '-', $text);
         return trim($text, '-');
-    }
-
-    private function loadBlogs() {
-        $path = FCPATH . 'admin_data/blogs.json';
-        if (!file_exists($path)) return [];
-        return json_decode(file_get_contents($path), true) ?: [];
     }
 
     function index() {
@@ -25,9 +21,12 @@ class Blog extends MX_Controller {
 
     function view(){
         $this->load->library('pagination');
-        $this->load->helper('text'); 
 
-        $all_blogs = array_reverse($this->loadBlogs());
+        // Fetch dynamic blogs from database (Admin Panel table: blog)
+        $this->db->order_by('b_id', 'DESC');
+        $query = $this->db->get('blog');
+        $all_blogs = ($query && $query->num_rows() > 0) ? $query->result() : [];
+
         $total_rows = count($all_blogs);
         $per_page = 6;
         $offset = (int) $this->uri->segment(3);
@@ -62,8 +61,8 @@ class Blog extends MX_Controller {
         $data['total'] = $total_rows;
         $data['recent_posts'] = array_slice($all_blogs, 0, 5);
 
-        $data['title'] = "Official Blog of ".$this->comp['company3']." India";
-        $data['description'] = "Latest blog of ".$this->comp['company3'];
+        $data['title'] = "Official Blog | " . (!empty($this->comp['company3']) ? $this->comp['company3'] : 'Groveus Informatics');
+        $data['description'] = "Discover the latest insights, technology trends, software development best practices, and search engine optimization guides from " . (!empty($this->comp['company3']) ? $this->comp['company3'] : 'Groveus Informatics') . ".";
         $data['module'] = "blog";
         $data['view_file'] = "blog"; 
 
@@ -71,38 +70,55 @@ class Blog extends MX_Controller {
     }
 
     function read($slug = '') {
-        // die("DEBUG: Slug received: " . $slug);
-        $this->load->helper('text');
+        $search_slug = str_replace('_', '-', trim($slug));
 
-        $all_blogs = $this->loadBlogs();
+        $this->db->order_by('b_id', 'DESC');
+        $query = $this->db->get('blog');
+        $all_blogs = ($query && $query->num_rows() > 0) ? $query->result() : [];
+
         $selected_blog = null;
-        
-        foreach ($all_blogs as $b) {
-            $custom_slug = $b['slug'] ?? '';
-            $auto_slug = $this->slugify($b['title']);
-            
-            // Handle CI's translate_uri_dashes by replacing _ back to - in incoming slug
-            $search_slug = str_replace('_', '-', $slug);
+        if (!empty($all_blogs)) {
+            foreach ($all_blogs as $b) {
+                $custom_slug = !empty($b->slug) ? $b->slug : '';
+                $auto_slug = $this->slugify($b->title);
+                $b_id = isset($b->b_id) ? (string)$b->b_id : (isset($b->id) ? (string)$b->id : '');
 
-            if (
-                (!empty($custom_slug) && strtolower($custom_slug) == strtolower($search_slug)) || 
-                (strtolower($auto_slug) == strtolower($search_slug)) ||
-                ($b['id'] == $search_slug)
-            ) {
-                $selected_blog = (object) $b;
-                break;
+                if (
+                    (!empty($custom_slug) && strtolower($custom_slug) === strtolower($search_slug)) || 
+                    (strtolower($auto_slug) === strtolower($search_slug)) ||
+                    ($b_id === $search_slug)
+                ) {
+                    $selected_blog = $b;
+                    break;
+                }
             }
         }
 
         if ($selected_blog) {
+            // Increment view count
+            if (isset($selected_blog->b_id)) {
+                $this->db->where('b_id', $selected_blog->b_id);
+                $this->db->set('views', 'views+1', FALSE);
+                $this->db->update('blog');
+            }
+
             $data['query'] = [$selected_blog];
-            $data['recent_posts'] = array_slice(array_reverse($all_blogs), 0, 5);
+            $data['recent_posts'] = array_slice($all_blogs, 0, 5);
             
-            $data['title'] = ucfirst($selected_blog->title);
-            $data['description'] = word_limiter(strip_tags($selected_blog->description), 200);
+            $data['title'] = !empty($selected_blog->meta_title) ? $selected_blog->meta_title : ucfirst($selected_blog->title);
+            $data['description'] = !empty($selected_blog->meta_desc) ? $selected_blog->meta_desc : word_limiter(strip_tags($selected_blog->description), 200);
             
-            $image_file = $selected_blog->image;
-            $data['img'] = ($image_file && file_exists(FCPATH . 'uploads/blogs/' . $image_file)) ? base_url('uploads/blogs/'.$image_file) : base_url('assets/images/about/packers_movers.jpg');
+            // Image resolution for header & social graph
+            $image_file = $selected_blog->image ?? '';
+            if (!empty($image_file) && substr($image_file, 0, 4) === 'http') {
+                $data['img'] = $image_file;
+            } elseif (!empty($image_file) && file_exists(FCPATH . 'assets/uploads/blog/' . $image_file)) {
+                $data['img'] = base_url('assets/uploads/blog/' . $image_file);
+            } elseif (!empty($image_file) && file_exists(FCPATH . 'uploads/blogs/' . $image_file)) {
+                $data['img'] = base_url('uploads/blogs/' . $image_file);
+            } else {
+                $data['img'] = base_url('assets/images/about/about-showcase.webp');
+            }
             
             $data['module'] = "blog";
             $data['view_file'] = "view"; 

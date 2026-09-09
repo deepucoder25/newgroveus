@@ -403,16 +403,6 @@ ob_start(); ?>
             'icon' => 'bi bi-people-fill',
             'title' => 'Active Community',
             'subtitle' => '24/7 Engagement & DMs'
-        ],
-        [
-            'icon' => 'bi bi-stars',
-            'title' => 'Creator Strategy',
-            'subtitle' => 'Influencer Partnerships'
-        ],
-        [
-            'icon' => 'bi bi-graph-up-arrow',
-            'title' => 'Social Revenue',
-            'subtitle' => 'Followers to Buyers'
         ]
     ],
     'svg' => $social_media_marketing_svg
@@ -750,7 +740,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="smm-step-card">
                         <div class="smm-step-num">01</div>
-                        <h4 class="smm-step-title">Brand Tone Audit</h4>
+                        <h3 class="smm-step-title">Brand Tone Audit</h3>
                         <p class="smm-step-desc">Auditing past social performance, competitor tactics, and defining your unique brand persona.</p>
                     </div>
                 </div>
@@ -759,7 +749,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="smm-step-card">
                         <div class="smm-step-num">02</div>
-                        <h4 class="smm-step-title">Content Calendar</h4>
+                        <h3 class="smm-step-title">Content Calendar</h3>
                         <p class="smm-step-desc">Designing a 30-day multi-channel roadmap mixing educational, viral, and commercial posts.</p>
                     </div>
                 </div>
@@ -768,7 +758,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="smm-step-card">
                         <div class="smm-step-num">03</div>
-                        <h4 class="smm-step-title">Media Production</h4>
+                        <h3 class="smm-step-title">Media Production</h3>
                         <p class="smm-step-desc">Editing custom reels, designing graphic carousels, and writing captivating captions.</p>
                     </div>
                 </div>
@@ -777,7 +767,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="smm-step-card">
                         <div class="smm-step-num">04</div>
-                        <h4 class="smm-step-title">Publish &amp; Engage</h4>
+                        <h3 class="smm-step-title">Publish &amp; Engage</h3>
                         <p class="smm-step-desc">Scheduling posts at peak times and driving real-time comments, shares, and DM chats.</p>
                     </div>
                 </div>
@@ -786,7 +776,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="smm-step-card">
                         <div class="smm-step-num">05</div>
-                        <h4 class="smm-step-title">Analytics &amp; Scale</h4>
+                        <h3 class="smm-step-title">Analytics &amp; Scale</h3>
                         <p class="smm-step-desc">Reviewing monthly reach, follower conversions, and doubling down on top-performing hooks.</p>
                     </div>
                 </div>
@@ -953,7 +943,7 @@ ob_start(); ?>
                             <div class="smm-review-author">
                                 <div class="smm-review-avatar">SM</div>
                                 <div>
-                                    <h4 class="smm-review-name">Sophia Montgomery <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="smm-review-name">Sophia Montgomery <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="smm-review-role">Head of Marketing, LuxeGlow Cosmetics</p>
                                 </div>
                             </div>
@@ -978,7 +968,7 @@ ob_start(); ?>
                             <div class="smm-review-author">
                                 <div class="smm-review-avatar smm-av-blue">AS</div>
                                 <div>
-                                    <h4 class="smm-review-name">Aarav Singhania <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="smm-review-name">Aarav Singhania <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="smm-review-role">Co-Founder &amp; CEO, CloudPulse Tech</p>
                                 </div>
                             </div>
@@ -1003,7 +993,7 @@ ob_start(); ?>
                             <div class="smm-review-author">
                                 <div class="smm-review-avatar smm-av-purple">JV</div>
                                 <div>
-                                    <h4 class="smm-review-name">Jessica Vance <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="smm-review-name">Jessica Vance <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="smm-review-role">Creative Director, AeroFit Apparel</p>
                                 </div>
                             </div>
@@ -1028,7 +1018,7 @@ ob_start(); ?>
                             <div class="smm-review-author">
                                 <div class="smm-review-avatar smm-av-green">LH</div>
                                 <div>
-                                    <h4 class="smm-review-name">Liam Henderson <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="smm-review-name">Liam Henderson <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="smm-review-role">Growth Lead, VibeWave Beverages</p>
                                 </div>
                             </div>
@@ -1053,7 +1043,7 @@ ob_start(); ?>
                             <div class="smm-review-author">
                                 <div class="smm-review-avatar smm-av-dark">ER</div>
                                 <div>
-                                    <h4 class="smm-review-name">Elena Rostova <i class="bi bi-check-circle-fill" title="Verified Client"></i></h4>
+                                    <h3 class="smm-review-name">Elena Rostova <i class="bi bi-check-circle-fill" title="Verified Client"></i></h3>
                                     <p class="smm-review-role">Managing Director, PeakHealth Clinics</p>
                                 </div>
                             </div>
@@ -1097,11 +1087,11 @@ ob_start(); ?>
                         
                         <!-- FAQ 1 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="smmHeadingOne">
+                            <h3 class="accordion-header" id="smmHeadingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#smmCollapseOne" aria-expanded="true" aria-controls="smmCollapseOne">
                                     Do we get to approve the content before it goes live on our social accounts?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="smmCollapseOne" class="accordion-collapse collapse show" aria-labelledby="smmHeadingOne" data-bs-parent="#socialMediaFaq">
                                 <div class="accordion-body">
                                     Yes, 100%. We provide a full monthly visual content calendar in advance detailing every reel, carousel graphic, caption, and hashtag set for your review. Nothing is published to your live social accounts without your explicit sign-off and approval.
@@ -1111,11 +1101,11 @@ ob_start(); ?>
 
                         <!-- FAQ 2 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="smmHeadingTwo">
+                            <h3 class="accordion-header" id="smmHeadingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smmCollapseTwo" aria-expanded="false" aria-controls="smmCollapseTwo">
                                     Which social media platforms are best suited for my business?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="smmCollapseTwo" class="accordion-collapse collapse" aria-labelledby="smmHeadingTwo" data-bs-parent="#socialMediaFaq">
                                 <div class="accordion-body">
                                     Platform selection depends on your target customer. For B2B and enterprise brands, LinkedIn and YouTube deliver the highest-ticket executive leads. For lifestyle, retail, eCommerce, and D2C brands, Instagram, TikTok, and Facebook drive the strongest visual engagement and direct consumer sales. We analyze your customer demographics to select the most profitable platform mix.
@@ -1125,11 +1115,11 @@ ob_start(); ?>
 
                         <!-- FAQ 3 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="smmHeadingThree">
+                            <h3 class="accordion-header" id="smmHeadingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smmCollapseThree" aria-expanded="false" aria-controls="smmCollapseThree">
                                     How do you capture our brand tone and industry expertise?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="smmCollapseThree" class="accordion-collapse collapse" aria-labelledby="smmHeadingThree" data-bs-parent="#socialMediaFaq">
                                 <div class="accordion-body">
                                     During our Brand Discovery Phase, we audit your existing marketing materials, visual guidelines, and competitor positioning. We create a comprehensive Brand Voice &amp; Tone Guide that specifies your color palette, typography, terminology, and engagement rules to ensure every post authentically reflects your company.
@@ -1139,11 +1129,11 @@ ob_start(); ?>
 
                         <!-- FAQ 4 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="smmHeadingFour">
+                            <h3 class="accordion-header" id="smmHeadingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#smmCollapseFour" aria-expanded="false" aria-controls="smmCollapseFour">
                                     How do you measure real business return on investment (ROI) from social media?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="smmCollapseFour" class="accordion-collapse collapse" aria-labelledby="smmHeadingFour" data-bs-parent="#socialMediaFaq">
                                 <div class="accordion-body">
                                     We go far beyond superficial follower counts. We track website referral traffic in Google Analytics 4, link-in-bio click-through rates, direct message lead inquiries, assisted conversion paths, and customer acquisition costs to demonstrate tangible business revenue generated by your social presence.

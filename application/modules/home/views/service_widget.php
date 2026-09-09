@@ -226,7 +226,7 @@ $featuredServices = [
                             <!-- Bottom CTA Pill Button (Solid Vibrant Color Guaranteed) -->
                             <div class="ca-srv-actions mt-auto pt-2">
                                 <a href="<?= site_url($srv['link']) ?>" class="ca-srv-pill-btn w-100 fw-bold d-inline-flex align-items-center justify-content-center gap-2" style="--btn-color: <?= $srv['theme_color'] ?>; background-color: <?= $srv['theme_color'] ?>;">
-                                    <span>MORE</span>
+                                    <span>Learn More <span class="visually-hidden">about <?= htmlspecialchars($srv['title']) ?></span></span>
                                     <i class="bi bi-arrow-right ca-btn-arrow"></i>
                                 </a>
                             </div>

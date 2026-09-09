@@ -514,11 +514,6 @@ ob_start(); ?>
             'icon' => 'bi bi-graph-up-arrow',
             'title' => 'Higher Conversion',
             'subtitle' => 'Targeted Lead Magnets'
-        ],
-        [
-            'icon' => 'bi bi-award-fill',
-            'title' => 'Brand Authority',
-            'subtitle' => 'Thought Leadership'
         ]
     ],
     'svg' => $content_marketing_svg
@@ -856,7 +851,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="cm-step-card">
                         <div class="cm-step-num">01</div>
-                        <h4 class="cm-step-title">Intent Research</h4>
+                        <h3 class="cm-step-title">Intent Research</h3>
                         <p class="cm-step-desc">Mapping high-intent buyer pain points, search queries, and competitor content gaps.</p>
                     </div>
                 </div>
@@ -865,7 +860,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="cm-step-card">
                         <div class="cm-step-num">02</div>
-                        <h4 class="cm-step-title">Topic Architecture</h4>
+                        <h3 class="cm-step-title">Topic Architecture</h3>
                         <p class="cm-step-desc">Structuring topic clusters, editorial calendars, and internal linking roadmaps.</p>
                     </div>
                 </div>
@@ -874,7 +869,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="cm-step-card">
                         <div class="cm-step-num">03</div>
-                        <h4 class="cm-step-title">Expert Writing</h4>
+                        <h3 class="cm-step-title">Expert Writing</h3>
                         <p class="cm-step-desc">Crafting original, engaging copy backed by real industry data and human storytelling.</p>
                     </div>
                 </div>
@@ -883,7 +878,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="cm-step-card">
                         <div class="cm-step-num">04</div>
-                        <h4 class="cm-step-title">Multi-Channel Push</h4>
+                        <h3 class="cm-step-title">Multi-Channel Push</h3>
                         <p class="cm-step-desc">Amplifying content across search engines, email broadcasts, and social channels.</p>
                     </div>
                 </div>
@@ -892,7 +887,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="cm-step-card">
                         <div class="cm-step-num">05</div>
-                        <h4 class="cm-step-title">Revenue Tracking</h4>
+                        <h3 class="cm-step-title">Revenue Tracking</h3>
                         <p class="cm-step-desc">Analyzing keyword rankings, lead attribution, and continuous optimization cycles.</p>
                     </div>
                 </div>
@@ -964,11 +959,11 @@ ob_start(); ?>
                         
                         <!-- FAQ 1 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
+                            <h3 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                     How do you capture our exact brand tone and technical industry voice?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#contentMarketingFaq">
                                 <div class="accordion-body">
                                     We start with a thorough Brand Tone &amp; Style Discovery session where we audit your existing marketing collateral, interview your internal subject-matter experts, and establish clear editorial guidelines. Every piece of content is crafted by specialized writers with domain experience and reviewed before publication.
@@ -978,11 +973,11 @@ ob_start(); ?>
 
                         <!-- FAQ 2 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
+                            <h3 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                     How do you measure the direct business ROI of content marketing?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contentMarketingFaq">
                                 <div class="accordion-body">
                                     We track full-funnel attribution metrics including organic keyword ranking growth, session duration, scroll depth, downloadable lead magnet conversions, assisted conversion paths in Google Analytics 4, and direct marketing qualified leads (MQLs) generated by specific topic clusters.
@@ -992,11 +987,11 @@ ob_start(); ?>
 
                         <!-- FAQ 3 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
+                            <h3 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     How does content marketing integrate with SEO and lead generation?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contentMarketingFaq">
                                 <div class="accordion-body">
                                     Content and SEO work together symbiotically. High-quality content provides the semantic depth and internal link equity necessary to rank for high-intent keywords, while strategically placed calls-to-action, lead magnets, and case studies capture that traffic and guide visitors directly into your sales pipeline.
@@ -1006,11 +1001,11 @@ ob_start(); ?>
 
                         <!-- FAQ 4 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
+                            <h3 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                     What is the recommended publishing frequency for noticeable organic growth?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contentMarketingFaq">
                                 <div class="accordion-body">
                                     Quality always beats sheer quantity. For most B2B and enterprise brands, publishing 4 to 8 deeply researched, authoritative pillar articles per month—accompanied by supporting social assets, email newsletters, and downloadable resources—delivers compounding search visibility and steady lead generation.

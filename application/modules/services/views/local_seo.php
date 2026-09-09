@@ -526,7 +526,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">Google 3-Pack Optimization</h4>
+                            <h3 class="lseo-deliverable-heading">Google 3-Pack Optimization</h3>
                             <p class="lseo-deliverable-text">Complete configuration of business description, services, products, and operational attributes.</p>
                         </div>
                     </div>
@@ -536,7 +536,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">NAP Consistency Audit</h4>
+                            <h3 class="lseo-deliverable-heading">NAP Consistency Audit</h3>
                             <p class="lseo-deliverable-text">100% verification that your phone, name, and address match exactly across all mapping networks.</p>
                         </div>
                     </div>
@@ -546,7 +546,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">Local Schema (JSON-LD)</h4>
+                            <h3 class="lseo-deliverable-heading">Local Schema (JSON-LD)</h3>
                             <p class="lseo-deliverable-text">Structured data integration with precise coordinates, opening hours, pricing, and service taxonomy.</p>
                         </div>
                     </div>
@@ -556,7 +556,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">Location Landing Pages</h4>
+                            <h3 class="lseo-deliverable-heading">Location Landing Pages</h3>
                             <p class="lseo-deliverable-text">High-converting neighborhood &amp; city pages with locally relevant headers, content, and map embeds.</p>
                         </div>
                     </div>
@@ -566,7 +566,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">Review Generation System</h4>
+                            <h3 class="lseo-deliverable-heading">Review Generation System</h3>
                             <p class="lseo-deliverable-text">Automated direct review links and QR strategies to boost customer review frequency &amp; rating score.</p>
                         </div>
                     </div>
@@ -576,7 +576,7 @@ ob_start(); ?>
                     <div class="lseo-deliverable-item">
                         <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
                         <div>
-                            <h4 class="lseo-deliverable-heading">Geo-Grid Rank Heatmaps</h4>
+                            <h3 class="lseo-deliverable-heading">Geo-Grid Rank Heatmaps</h3>
                             <p class="lseo-deliverable-text">Visual monthly tracking showing exact map rankings block-by-block and mile-by-mile around your location.</p>
                         </div>
                     </div>
@@ -607,42 +607,42 @@ ob_start(); ?>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-hospital"></i></div>
-                        <h4 class="lseo-ind-title">Healthcare</h4>
+                        <h3 class="lseo-ind-title">Healthcare</h3>
                         <p class="lseo-ind-desc">Clinics, Dentists &amp; Doctors</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-tools"></i></div>
-                        <h4 class="lseo-ind-title">Home Services</h4>
+                        <h3 class="lseo-ind-title">Home Services</h3>
                         <p class="lseo-ind-desc">Plumbing, HVAC &amp; Roofing</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-briefcase"></i></div>
-                        <h4 class="lseo-ind-title">Legal &amp; Law</h4>
+                        <h3 class="lseo-ind-title">Legal &amp; Law</h3>
                         <p class="lseo-ind-desc">Attorneys &amp; Law Firms</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-house-door"></i></div>
-                        <h4 class="lseo-ind-title">Real Estate</h4>
+                        <h3 class="lseo-ind-title">Real Estate</h3>
                         <p class="lseo-ind-desc">Brokers, Agents &amp; Rentals</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-cup-hot"></i></div>
-                        <h4 class="lseo-ind-title">Hospitality</h4>
+                        <h3 class="lseo-ind-title">Hospitality</h3>
                         <p class="lseo-ind-desc">Restaurants &amp; Cafes</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="lseo-industry-card">
                         <div class="lseo-ind-icon"><i class="bi bi-bag-check"></i></div>
-                        <h4 class="lseo-ind-title">Retail Stores</h4>
+                        <h3 class="lseo-ind-title">Retail Stores</h3>
                         <p class="lseo-ind-desc">Local Shops &amp; Boutiques</p>
                     </div>
                 </div>
@@ -674,11 +674,11 @@ ob_start(); ?>
                         
                         <!-- FAQ 1 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeadOne">
+                            <h3 class="accordion-header" id="faqHeadOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
                                     How long does it take to see results from Local SEO?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadOne" data-bs-parent="#localSeoFaqAccordion">
                                 <div class="accordion-body">
                                     Most local businesses start noticing increased impressions and local search visibility within 30 to 60 days following GBP optimization and citation alignment. Highly competitive metropolitan areas typically reach solid Google 3-Pack rankings within 3 to 6 months.
@@ -688,11 +688,11 @@ ob_start(); ?>
 
                         <!-- FAQ 2 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeadTwo">
+                            <h3 class="accordion-header" id="faqHeadTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
                                     What is the Google Map 3-Pack and why is it crucial?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadTwo" data-bs-parent="#localSeoFaqAccordion">
                                 <div class="accordion-body">
                                     The Google 3-Pack is the boxed section appearing at the top of Google search results that showcases 3 local businesses with interactive map pins, reviews, phone numbers, and driving directions. Over 70% of high-intent clicks go directly to these 3 spots.
@@ -702,11 +702,11 @@ ob_start(); ?>
 
                         <!-- FAQ 3 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeadThree">
+                            <h3 class="accordion-header" id="faqHeadThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
                                     What if my business has multiple branches or locations?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadThree" data-bs-parent="#localSeoFaqAccordion">
                                 <div class="accordion-body">
                                     We build dedicated, geocoded landing pages for each location, configure separate Google Business Profiles under an organized location group, and establish distinct NAP citations so each branch dominates its specific territory without cannibalization.
@@ -716,11 +716,11 @@ ob_start(); ?>
 
                         <!-- FAQ 4 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="faqHeadFour">
+                            <h3 class="accordion-header" id="faqHeadFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
                                     How does NAP consistency affect my local rankings?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadFour" data-bs-parent="#localSeoFaqAccordion">
                                 <div class="accordion-body">
                                     NAP (Name, Address, Phone number) consistency provides Google's search algorithms with trust and verification. When your information matches across major directories, search engines feel confident recommending your business to nearby searchers.

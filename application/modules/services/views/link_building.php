@@ -178,11 +178,6 @@ ob_start(); ?>
             'icon' => 'bi bi-award-fill',
             'title' => 'White-Hat PR',
             'subtitle' => 'Zero PBN Footprint'
-        ],
-        [
-            'icon' => 'bi bi-graph-up-arrow',
-            'title' => 'Permanent Lift',
-            'subtitle' => 'Top Search Positions'
         ]
     ],
     'svg' => $link_building_svg

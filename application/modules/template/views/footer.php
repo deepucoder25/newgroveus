@@ -88,7 +88,7 @@
         <!-- Column 2: Quick Links -->
         <div class="col-6 col-md-4 col-lg-2 footer-col-links">
           <div class="footer-widget">
-            <h4 class="footer-col-title">Quick Links</h4>
+            <h3 class="footer-col-title">Quick Links</h3>
             <ul class="footer-link-list list-unstyled mt-3">
               <li><a href="<?= site_url() ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Home</a></li>
               <li><a href="<?= site_url('services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> All Services</a></li>
@@ -102,7 +102,7 @@
         <!-- Column 3: Our Services -->
         <div class="col-6 col-md-4 col-lg-3 footer-col-links">
           <div class="footer-widget">
-            <h4 class="footer-col-title">Our Services</h4>
+            <h3 class="footer-col-title">Our Services</h3>
             <ul class="footer-link-list list-unstyled mt-3">
               <li><a href="<?= site_url('local-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Local SEO Services</a></li>
               <li><a href="<?= site_url('international-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> International SEO Services</a></li>
@@ -118,7 +118,7 @@
         <!-- Column 4: Other Services -->
         <div class="col-6 col-md-4 col-lg-3 footer-col-links">
           <div class="footer-widget">
-            <h4 class="footer-col-title">Other Services</h4>
+            <h3 class="footer-col-title">Other Services</h3>
             <ul class="footer-link-list list-unstyled mt-3">
               <li><a href="<?= site_url('content-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Content Marketing</a></li>
               <li><a href="<?= site_url('ppc-management-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Google Pay Per Click</a></li>
@@ -144,7 +144,7 @@
                 </svg>
               </div>
               <div>
-                <h5 class="footer-trust-title mb-1">Secure &amp; Reliable</h5>
+                <div class="footer-trust-title mb-1 fw-bold text-white">Secure &amp; Reliable</div>
                 <p class="footer-trust-desc mb-0">Enterprise-grade security you can trust</p>
               </div>
             </div>
@@ -162,7 +162,7 @@
                 </svg>
               </div>
               <div>
-                <h5 class="footer-trust-title mb-1">24/7 Support</h5>
+                <div class="footer-trust-title mb-1 fw-bold text-white">24/7 Support</div>
                 <p class="footer-trust-desc mb-0">Our team is always here to help you</p>
               </div>
             </div>
@@ -179,7 +179,7 @@
                 </svg>
               </div>
               <div>
-                <h5 class="footer-trust-title mb-1">Future Ready</h5>
+                <div class="footer-trust-title mb-1 fw-bold text-white">Future Ready</div>
                 <p class="footer-trust-desc mb-0">Innovative solutions for your business transformation</p>
               </div>
             </div>
@@ -188,7 +188,7 @@
           <!-- Feature 4: Newsletter Box -->
           <div class="col-12 col-sm-6 col-lg-3 ps-lg-3">
             <div class="footer-newsletter-wrap">
-              <h5 class="footer-newsletter-title mb-1">Subscribe to our Newsletter</h5>
+              <h3 class="footer-newsletter-title mb-1" style="font-size: 16px;">Subscribe to our Newsletter</h3>
               <p class="footer-newsletter-desc mb-2">Get the latest updates, insights and news.</p>
               <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!'); this.reset();">
                 <input type="email" class="form-control footer-newsletter-input" placeholder="Enter your email address" required aria-label="Email address for newsletter">

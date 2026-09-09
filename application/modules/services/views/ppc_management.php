@@ -443,11 +443,6 @@ ob_start(); ?>
             'icon' => 'bi bi-funnel-fill',
             'title' => 'Full-Funnel Reach',
             'subtitle' => 'Search, Social & Display'
-        ],
-        [
-            'icon' => 'bi bi-shield-check',
-            'title' => 'Zero Wasted Spend',
-            'subtitle' => 'Negative Filtration'
         ]
     ],
     'svg' => $ppc_management_svg
@@ -785,7 +780,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="ppc-step-card">
                         <div class="ppc-step-num">01</div>
-                        <h4 class="ppc-step-title">Account Audit</h4>
+                        <h3 class="ppc-step-title">Account Audit</h3>
                         <p class="ppc-step-desc">Deep-dive analysis of search query reports, wasted spend, quality scores, and conversion tracking.</p>
                     </div>
                 </div>
@@ -794,7 +789,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="ppc-step-card">
                         <div class="ppc-step-num">02</div>
-                        <h4 class="ppc-step-title">Structure &amp; Intent</h4>
+                        <h3 class="ppc-step-title">Structure &amp; Intent</h3>
                         <p class="ppc-step-desc">Rebuilding tight single-intent ad groups (STAG), negative keyword lists, and custom audience segments.</p>
                     </div>
                 </div>
@@ -803,7 +798,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="ppc-step-card">
                         <div class="ppc-step-num">03</div>
-                        <h4 class="ppc-step-title">Creative &amp; CRO</h4>
+                        <h3 class="ppc-step-title">Creative &amp; CRO</h3>
                         <p class="ppc-step-desc">Crafting high-CTR ad copy, engaging visual assets, and high-converting dedicated landing page funnels.</p>
                     </div>
                 </div>
@@ -812,7 +807,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="ppc-step-card">
                         <div class="ppc-step-num">04</div>
-                        <h4 class="ppc-step-title">Smart Bidding</h4>
+                        <h3 class="ppc-step-title">Smart Bidding</h3>
                         <p class="ppc-step-desc">Deploying target CPA and ROAS bidding algorithms to secure top ad placements at the lowest cost.</p>
                     </div>
                 </div>
@@ -821,7 +816,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="ppc-step-card">
                         <div class="ppc-step-num">05</div>
-                        <h4 class="ppc-step-title">Scale &amp; Attrib</h4>
+                        <h3 class="ppc-step-title">Scale &amp; Attrib</h3>
                         <p class="ppc-step-desc">Continuous budget scaling, cross-channel attribution modeling, and weekly transparent KPI reporting.</p>
                     </div>
                 </div>
@@ -964,11 +959,11 @@ ob_start(); ?>
                         
                         <!-- FAQ 1 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="ppcHeadingOne">
+                            <h3 class="accordion-header" id="ppcHeadingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ppcCollapseOne" aria-expanded="true" aria-controls="ppcCollapseOne">
                                     How quickly can we expect to see results from paid search &amp; social ads?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="ppcCollapseOne" class="accordion-collapse collapse show" aria-labelledby="ppcHeadingOne" data-bs-parent="#ppcManagementFaq">
                                 <div class="accordion-body">
                                     Unlike organic SEO which compounds over months, paid search and social ads start driving qualified traffic within 24 to 48 hours of campaign launch. During the initial 2 to 4 weeks, we aggressively test ad hooks, cull non-converting search terms, and refine audience targeting to rapidly scale your Return on Ad Spend (ROAS).
@@ -978,11 +973,11 @@ ob_start(); ?>
 
                         <!-- FAQ 2 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="ppcHeadingTwo">
+                            <h3 class="accordion-header" id="ppcHeadingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppcCollapseTwo" aria-expanded="false" aria-controls="ppcCollapseTwo">
                                     Do I pay the ad platforms directly or through your agency?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="ppcCollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppcHeadingTwo" data-bs-parent="#ppcManagementFaq">
                                 <div class="accordion-body">
                                     You maintain 100% ownership and direct billing of your ad accounts (Google Ads, Meta Ads Manager, LinkedIn Campaign Manager). You pay the ad platforms directly with your credit card or invoicing, while our agency charges a transparent monthly management fee. You retain all historical data and campaign ownership at all times.
@@ -992,11 +987,11 @@ ob_start(); ?>
 
                         <!-- FAQ 3 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="ppcHeadingThree">
+                            <h3 class="accordion-header" id="ppcHeadingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppcCollapseThree" aria-expanded="false" aria-controls="ppcCollapseThree">
                                     How do you prevent click fraud and wasted ad spend?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="ppcCollapseThree" class="accordion-collapse collapse" aria-labelledby="ppcHeadingThree" data-bs-parent="#ppcManagementFaq">
                                 <div class="accordion-body">
                                     We implement a comprehensive multi-layered defense strategy: aggressive negative keyword list scrubbing, IP exclusion rules, strict geographic radius targeting (preventing out-of-market clicks), bot filtration, and device-level bid adjustments to ensure every single dollar is invested in genuine buyers.
@@ -1006,11 +1001,11 @@ ob_start(); ?>
 
                         <!-- FAQ 4 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="ppcHeadingFour">
+                            <h3 class="accordion-header" id="ppcHeadingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppcCollapseFour" aria-expanded="false" aria-controls="ppcCollapseFour">
                                     How do you track and verify real conversions and revenue?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="ppcCollapseFour" class="accordion-collapse collapse" aria-labelledby="ppcHeadingFour" data-bs-parent="#ppcManagementFaq">
                                 <div class="accordion-body">
                                     We configure advanced server-side conversion tracking (Google Tag Manager, Meta Conversions API / CAPI, Google Analytics 4, and CRM offline conversion imports). This ensures accurate attribution of phone calls, form fills, demo bookings, and closed sales without signal loss from browser cookie blockers.

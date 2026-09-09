@@ -574,16 +574,6 @@ ob_start(); ?>
             'icon' => 'bi bi-lightning-charge-fill',
             'title' => 'Sub-Second Speed',
             'subtitle' => '99+ Core Web Vitals'
-        ],
-        [
-            'icon' => 'bi bi-phone-fill',
-            'title' => '100% Responsive',
-            'subtitle' => 'Mobile-First Architecture'
-        ],
-        [
-            'icon' => 'bi bi-shield-check',
-            'title' => 'Enterprise Security',
-            'subtitle' => 'SSL, DDoS & 99.99% Uptime'
         ]
     ],
     'svg' => $web_development_svg
@@ -921,7 +911,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="webdev-step-card">
                         <div class="webdev-step-num">01</div>
-                        <h4 class="webdev-step-title">Architecture Audit</h4>
+                        <h3 class="webdev-step-title">Architecture Audit</h3>
                         <p class="webdev-step-desc">Analyzing technical specs, user personas, database schemas, and selecting the optimal technology stack.</p>
                     </div>
                 </div>
@@ -930,7 +920,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="webdev-step-card">
                         <div class="webdev-step-num">02</div>
-                        <h4 class="webdev-step-title">Figma UI/UX</h4>
+                        <h3 class="webdev-step-title">Figma UI/UX</h3>
                         <p class="webdev-step-desc">Designing interactive wireframes, custom design systems, and responsive desktop/mobile prototypes.</p>
                     </div>
                 </div>
@@ -939,7 +929,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="webdev-step-card">
                         <div class="webdev-step-num">03</div>
-                        <h4 class="webdev-step-title">Full-Stack Sprint</h4>
+                        <h3 class="webdev-step-title">Full-Stack Sprint</h3>
                         <p class="webdev-step-desc">Coding clean, modular frontend components and robust backend APIs in 2-week agile sprint cycles.</p>
                     </div>
                 </div>
@@ -948,7 +938,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="webdev-step-card">
                         <div class="webdev-step-num">04</div>
-                        <h4 class="webdev-step-title">QA &amp; Security</h4>
+                        <h3 class="webdev-step-title">QA &amp; Security</h3>
                         <p class="webdev-step-desc">Executing cross-browser testing, Core Web Vitals speed tuning, penetration tests, and accessibility checks.</p>
                     </div>
                 </div>
@@ -957,7 +947,7 @@ ob_start(); ?>
                 <div class="col-12 col-md-6 col-lg">
                     <div class="webdev-step-card">
                         <div class="webdev-step-num">05</div>
-                        <h4 class="webdev-step-title">CI/CD Deploy</h4>
+                        <h3 class="webdev-step-title">CI/CD Deploy</h3>
                         <p class="webdev-step-desc">Configuring production DNS, cloud SSL certificates, edge caching, and providing 24/7 SLA maintenance support.</p>
                     </div>
                 </div>
@@ -1103,11 +1093,11 @@ ob_start(); ?>
                         
                         <!-- FAQ 1 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="webdevHeadingOne">
+                            <h3 class="accordion-header" id="webdevHeadingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#webdevCollapseOne" aria-expanded="true" aria-controls="webdevCollapseOne">
                                     Do you build custom web applications or use pre-made WordPress themes?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="webdevCollapseOne" class="accordion-collapse collapse show" aria-labelledby="webdevHeadingOne" data-bs-parent="#webdevFaqAccordion">
                                 <div class="accordion-body">
                                     We build 100% custom web platforms engineered specifically for your business goals. While we build enterprise WordPress solutions, we develop bespoke Gutenberg blocks and headless API architectures rather than installing slow, bloated third-party themes. For custom web applications and SaaS, we utilize modern frameworks including Next.js, React, TypeScript, Node.js, and Laravel.
@@ -1117,11 +1107,11 @@ ob_start(); ?>
 
                         <!-- FAQ 2 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="webdevHeadingTwo">
+                            <h3 class="accordion-header" id="webdevHeadingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webdevCollapseTwo" aria-expanded="false" aria-controls="webdevCollapseTwo">
                                     How do you ensure sub-second page load speeds and 99+ Core Web Vitals?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="webdevCollapseTwo" class="accordion-collapse collapse" aria-labelledby="webdevHeadingTwo" data-bs-parent="#webdevFaqAccordion">
                                 <div class="accordion-body">
                                     Speed is built into our core engineering workflow. We employ server-side rendering (SSR), critical CSS inlining, automated WebP/AVIF image transcoding, minimal DOM depth, Redis caching, and global edge CDN caching. Every single line of code is optimized to pass Google Core Web Vitals (LCP &lt; 1.2s, CLS &lt; 0.05, INP &lt; 50ms).
@@ -1131,11 +1121,11 @@ ob_start(); ?>
 
                         <!-- FAQ 3 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="webdevHeadingThree">
+                            <h3 class="accordion-header" id="webdevHeadingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webdevCollapseThree" aria-expanded="false" aria-controls="webdevCollapseThree">
                                     Who owns the source code and Intellectual Property (IP) once the project is finished?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="webdevCollapseThree" class="accordion-collapse collapse" aria-labelledby="webdevHeadingThree" data-bs-parent="#webdevFaqAccordion">
                                 <div class="accordion-body">
                                     You have 100% full ownership of all source code, design assets, database repositories, and deployment configurations upon project completion. We transfer complete GitHub repository access, cloud credentials, and technical documentation with zero vendor lock-in.
@@ -1145,11 +1135,11 @@ ob_start(); ?>
 
                         <!-- FAQ 4 -->
                         <div class="accordion-item">
-                            <h2 class="accordion-header" id="webdevHeadingFour">
+                            <h3 class="accordion-header" id="webdevHeadingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#webdevCollapseFour" aria-expanded="false" aria-controls="webdevCollapseFour">
                                     Do you provide post-launch maintenance, cloud monitoring, and security SLA support?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="webdevCollapseFour" class="accordion-collapse collapse" aria-labelledby="webdevHeadingFour" data-bs-parent="#webdevFaqAccordion">
                                 <div class="accordion-body">
                                     Yes. We provide comprehensive post-launch SLA support packages including 24/7 server uptime monitoring, automated security patches, cloud database backups, feature enhancements, and continuous Core Web Vitals performance tuning to keep your web platform operating at peak efficiency.

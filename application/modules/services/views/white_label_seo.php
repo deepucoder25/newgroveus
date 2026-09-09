@@ -518,8 +518,8 @@ ob_start(); ?>
                             <div class="col-12 col-lg-6">
                                 <div class="wlseo-compare-col wlseo-compare-inhouse">
                                     <div class="wlseo-compare-header">
-                                        <i class="bi bi-x-circle-fill text-danger fs-4"></i>
-                                        <h3 class="text-danger">Building an In-House Team</h3>
+                                        <i class="bi bi-x-circle-fill fs-4"></i>
+                                        <h3>Building an In-House Team</h3>
                                     </div>
                                     <ul class="wlseo-compare-list">
                                         <li class="wlseo-compare-item neg">
@@ -541,8 +541,8 @@ ob_start(); ?>
                             <div class="col-12 col-lg-6">
                                 <div class="wlseo-compare-col wlseo-compare-partner">
                                     <div class="wlseo-compare-header">
-                                        <i class="bi bi-check-circle-fill text-success fs-4"></i>
-                                        <h3 class="text-success">Partnering with Groveus</h3>
+                                        <i class="bi bi-check-circle-fill fs-4"></i>
+                                        <h3>Partnering with Groveus</h3>
                                     </div>
                                     <ul class="wlseo-compare-list">
                                         <li class="wlseo-compare-item pos">

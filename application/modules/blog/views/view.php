@@ -1,5 +1,30 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+<?php
+$blog = @$query[0];
+$title = !empty($blog->title) ? htmlspecialchars($blog->title) : 'Blog Article';
+$date_raw = !empty($blog->date) ? $blog->date : (!empty($blog->created_at) ? $blog->created_at : date('Y-m-d'));
+$author = !empty($blog->author) ? htmlspecialchars($blog->author) : 'Editorial Team';
+
+// Image handling - only set if real image exists
+$image_name = $blog->image ?? '';
+$has_image = false;
+$img = '';
+
+if (!empty($image_name)) {
+    if (substr($image_name, 0, 4) === 'http') {
+        $has_image = true;
+        $img = $image_name;
+    } elseif (file_exists(FCPATH . 'assets/uploads/blog/' . $image_name)) {
+        $has_image = true;
+        $img = base_url('assets/uploads/blog/' . $image_name);
+    } elseif (file_exists(FCPATH . 'uploads/blogs/' . $image_name)) {
+        $has_image = true;
+        $img = base_url('uploads/blogs/' . $image_name);
+    }
+}
+?>
+
 <main class="main">
     <!-- =========================================================================
          1. DYNAMIC BREADCRUMBS & HERO HEADER SECTION (CONTACT PAGE DESIGN)
@@ -51,23 +76,23 @@
                     <!-- Breadcrumb Capsule Pill -->
                     <div class="cnt-bc-pill-wrap mb-3">
                         <?php $this->load->view('about/dynamic_breadcrumbs', [
-                            'bc_h1' => htmlspecialchars(@$query[0]->title),
-                            'bc_desc' => word_limiter(strip_tags(@$query[0]->description), 120),
+                            'bc_h1' => $title,
+                            'bc_desc' => word_limiter(strip_tags($blog->description ?? ''), 120),
                             'breadcrumbs' => [
                                 ['name' => 'Blog', 'url' => site_url('blog')],
-                                ['name' => htmlspecialchars(@$query[0]->title)]
+                                ['name' => $title]
                             ]
                         ]); ?>
                     </div>
 
                     <!-- Main Hero Heading -->
                     <h1 class="cnt-bc-hero-title mb-1">
-                        <?= htmlspecialchars(@$query[0]->title) ?>
+                        <?= $title ?>
                     </h1>
 
                     <!-- Short Concise Subtitle -->
                     <p class="cnt-bc-hero-desc">
-                        Published on <?= date('F d, Y', strtotime(@$query[0]->created_at ?? 'now')) ?> • Technical Article &amp; Strategic Guide
+                        Published on <?= date('F d, Y', strtotime($date_raw)) ?> • By <?= $author ?>
                     </p>
                 </div>
 
@@ -75,11 +100,11 @@
                     <div class="cnt-bc-hero-badges">
                         <div class="cnt-bc-badge">
                             <span class="cnt-status-dot cnt-dot-green"></span>
-                            <span><?= date('M d, Y', strtotime(@$query[0]->created_at ?? 'now')) ?></span>
+                            <span><?= date('M d, Y', strtotime($date_raw)) ?></span>
                         </div>
                         <div class="cnt-bc-badge cnt-bc-badge-blue">
                             <i class="bi bi-person-check-fill"></i>
-                            <span>By Editorial Team</span>
+                            <span><?= $author ?></span>
                         </div>
                         <div class="cnt-bc-badge cnt-bc-badge-amber">
                             <i class="bi bi-clock-history"></i>
@@ -92,110 +117,165 @@
         </div>
     </section>
 
-    <!-- Blog Single Post -->
+    <!-- =========================================================================
+         2. BLOG SINGLE ARTICLE CONTENT & SIDEBAR
+         ========================================================================= -->
     <section class="blog-details-section py-5 bg-light">
         <div class="container my-3">
-            <div class="row ">
-                <!-- Main Content -->
+            <div class="row g-4">
+                
+                <!-- Main Article Column -->
                 <div class="col-lg-8">
-                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                        <!-- Image -->
-                        <div class="mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
-                            <?php 
-                            $image_path = FCPATH . 'uploads/blogs/' . @$query[0]->image;
-                            if (@$query[0]->image && file_exists($image_path)): ?>
-                                <img src="<?= base_url('uploads/blogs/' . @$query[0]->image) ?>" alt="<?= htmlspecialchars(@$query[0]->title) ?>" class="img-fluid w-100 blog-details-img">
-                            <?php else: ?>
-                                <img src="<?= base_url('assets/images/about/about-showcase.webp') ?>" alt="Default Image" class="img-fluid w-100 blog-details-img">
-                            <?php endif; ?>
-                        </div>
+                    <article class="blog-details-article">
                         
-                        <!-- Meta Info -->
-                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 pb-3 border-bottom">
-                            <div class="d-flex gap-3 text-muted small">
-                                <span class="d-flex align-items-center gap-2"><i class="bi bi-calendar-event blog-icon-primary"></i> <?= date('M d, Y', strtotime(@$query[0]->created_at)) ?></span>
-                                <span class="d-flex align-items-center gap-2"><i class="bi bi-person-circle text-success"></i> By Admin</span>
+                        <?php if ($has_image): ?>
+                        <!-- Featured Header Image -->
+                        <div class="blog-featured-img-box">
+                            <img src="<?= $img ?>" 
+                                 alt="<?= $title ?>" 
+                                 class="w-100 img-fluid">
+                        </div>
+                        <?php endif; ?>
+                        
+                        <!-- Meta Info Bar -->
+                        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 pb-3 border-bottom gap-2">
+                            <div class="d-flex flex-wrap gap-3 text-muted small">
+                                <span class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar-event text-danger"></i> <?= date('M d, Y', strtotime($date_raw)) ?>
+                                </span>
+                                <span class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-person-circle text-success"></i> By <?= $author ?>
+                                </span>
+                                <?php if (!empty($blog->views)): ?>
+                                <span class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-eye text-primary"></i> <?= (int)$blog->views ?> Views
+                                </span>
+                                <?php endif; ?>
                             </div>
                             <div>
-                                <button class="btn btn-sm px-3 rounded-pill fw-bold blog-btn-share" data-bs-toggle="modal" data-bs-target="#shareModal">
-                                    <i class="bi bi-share me-1"></i> Share Post
+                                <button class="btn btn-sm btn-outline-secondary px-3 rounded-pill fw-bold" data-bs-toggle="modal" data-bs-target="#shareModal">
+                                    <i class="bi bi-share me-1"></i> Share Article
                                 </button>
                             </div>
                         </div>
 
-                        <!-- Blog Details -->
-                        <h2 class="fw-bold mb-4 blog-details-title"><?= @$query[0]->title ?></h2>
-                        <div class="blog-content-wrapper text-muted">
-                            <?= nl2br(@$query[0]->content) ?>
+                        <!-- Main Article Body -->
+                        <h2 class="fw-bold mb-4 text-dark" style="font-size: 26px; line-height: 1.35;"><?= $title ?></h2>
+                        
+                        <div class="blog-content-wrapper text-secondary" style="font-size: 15.5px; line-height: 1.8;">
+                            <?= nl2br($blog->description ?? '') ?>
                         </div>
-                    </div>
+
+                        <?php if (!empty($blog->tags)): ?>
+                        <!-- Tags -->
+                        <div class="mt-4 pt-3 border-top d-flex flex-wrap align-items-center gap-2">
+                            <span class="fw-bold text-dark small me-1"><i class="bi bi-tags-fill text-danger me-1"></i>Tags:</span>
+                            <?php 
+                            $tags = explode(',', $blog->tags);
+                            foreach ($tags as $t): 
+                                $t_clean = trim($t);
+                                if (!empty($t_clean)):
+                            ?>
+                                <span class="badge bg-light text-dark border px-3 py-2"><?= htmlspecialchars($t_clean) ?></span>
+                            <?php 
+                                endif;
+                            endforeach; 
+                            ?>
+                        </div>
+                        <?php endif; ?>
+
+                    </article>
                 </div>
 
-                <!-- Sidebar -->
+                <!-- Sidebar Column -->
                 <div class="col-lg-4">
-                    <aside class="blog-sidebar sticky-top blog-sidebar-sticky">
-                        <div class="bg-white p-4 rounded-4 shadow-sm mb-4">
-                            <h5 class="fw-bold mb-4 pb-2 border-bottom blog-icon-primary">Recent Posts</h5>
+                    <aside class="sticky-top" style="top: 100px; z-index: 10;">
+                        
+                        <!-- Recent Posts Widget -->
+                        <div class="bg-white p-4 rounded-4 shadow-sm border mb-4">
+                            <h5 class="fw-bold text-dark mb-3 pb-2 border-bottom">
+                                <i class="bi bi-journal-richtext text-danger me-2"></i>Recent Articles
+                            </h5>
                             <div class="recent-posts-list">
                                 <?php if (!empty($recent_posts)): ?>
-                                    <?php foreach ($recent_posts as $post_arr): $post = (object)$post_arr; ?>
-                                        <?php
-                                        $image_file = $post->image;
-                                        $full_path = FCPATH . 'uploads/blogs/' . $image_file;
-                                        $imagePath = ($image_file && file_exists($full_path)) ? base_url('uploads/blogs/' . $image_file) : base_url('assets/images/about/about-showcase.webp');
-                                        $custom_slug = !empty($post->slug) ? $post->slug : rtrim(str_replace("--", "-", urlencode(str_replace(" ", "-", str_replace(",", " ", $post->title)))), "-");
-                                        ?>
-                                        <a href="<?= site_url('blog/'.$custom_slug) ?>" class="d-flex align-items-center gap-3 mb-3 text-decoration-none post-link-item blog-post-link-item">
-                                            <div class="flex-shrink-0">
-                                                <img src="<?= $imagePath ?>" alt="thumb" class="rounded-3 shadow-sm blog-recent-post-img">
+                                    <?php foreach ($recent_posts as $post_obj): 
+                                        $post = (object)$post_obj;
+                                        if (isset($blog->b_id) && isset($post->b_id) && $blog->b_id == $post->b_id) continue;
+                                        
+                                        $p_img_file = $post->image ?? '';
+                                        $p_has_img = false;
+                                        $p_img = '';
+                                        if (!empty($p_img_file) && substr($p_img_file, 0, 4) === 'http') {
+                                            $p_has_img = true;
+                                            $p_img = $p_img_file;
+                                        } elseif (!empty($p_img_file) && file_exists(FCPATH . 'assets/uploads/blog/' . $p_img_file)) {
+                                            $p_has_img = true;
+                                            $p_img = base_url('assets/uploads/blog/' . $p_img_file);
+                                        } elseif (!empty($p_img_file) && file_exists(FCPATH . 'uploads/blogs/' . $p_img_file)) {
+                                            $p_has_img = true;
+                                            $p_img = base_url('uploads/blogs/' . $p_img_file);
+                                        }
+
+                                        $p_slug = !empty($post->slug) ? $post->slug : rtrim(str_replace("--", "-", urlencode(str_replace(" ", "-", str_replace(",", " ", $post->title)))), "-");
+                                        $p_date = !empty($post->date) ? $post->date : (!empty($post->created_at) ? $post->created_at : date('Y-m-d'));
+                                    ?>
+                                        <a href="<?= site_url('blog/' . $p_slug) ?>" class="d-flex align-items-center gap-3 mb-3 text-decoration-none text-dark p-2 rounded-3 border bg-light">
+                                            <div class="flex-shrink-0 d-flex align-items-center justify-content-center bg-white border" style="width: 54px; height: 54px; border-radius: 8px; overflow: hidden;">
+                                                <?php if ($p_has_img): ?>
+                                                    <img src="<?= $p_img ?>" alt="<?= htmlspecialchars($post->title) ?>" style="width: 100%; height: 100%; object-fit: cover;">
+                                                <?php else: ?>
+                                                    <i class="bi bi-file-earmark-text text-danger" style="font-size: 22px;"></i>
+                                                <?php endif; ?>
                                             </div>
                                             <div>
-                                                <h6 class="fw-bold text-dark mb-1 blog-post-title"><?= $post->title ?></h6>
-                                                <small class="text-muted"><i class="bi bi-clock me-1"></i> <?= date('M d, Y', strtotime($post->created_at)) ?></small>
+                                                <h6 class="fw-bold text-dark mb-1 small" style="line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;"><?= $post->title ?></h6>
+                                                <small class="text-muted" style="font-size: 11.5px;"><i class="bi bi-clock me-1"></i> <?= date('M d, Y', strtotime($p_date)) ?></small>
                                             </div>
                                         </a>
                                     <?php endforeach; ?>
                                 <?php else: ?>
-                                    <p class="text-muted">No recent posts available.</p>
+                                    <p class="text-muted small mb-0">No other articles available.</p>
                                 <?php endif; ?>
                             </div>
                         </div>
 
-                        <!-- Sticky CTA Widget -->
-                        <div class="bg-light p-4 rounded-4 shadow-sm text-center border-top border-4 blog-border-warning">
-                            <div class="mb-3">
-                                <i class="bi bi-headset blog-icon-lg-primary"></i>
+                        <!-- Technical Consultation CTA Widget -->
+                        <div class="bg-dark text-white p-4 rounded-4 shadow-sm text-center position-relative overflow-hidden">
+                            <div class="mb-3 text-danger fs-2">
+                                <i class="bi bi-rocket-takeoff-fill"></i>
                             </div>
-                            <h5 class="fw-bold mb-3">Need Moving Help?</h5>
-                            <p class="text-muted small mb-4">Get a quick and free estimate for your relocation directly from our experts.</p>
-                            <button class="btn w-100 fw-bold py-2 rounded-pill shadow-sm blog-btn-quote" data-bs-toggle="modal" data-bs-target="#qteModal">
-                                <i class="bi bi-file-earmark-text me-2"></i> Get a Free Quote
-                            </button>
+                            <h5 class="fw-bold mb-2">Ready to Scale Your Software?</h5>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6;">Schedule a strategy session with our engineering consultants today.</p>
+                            <a href="<?= site_url('contact-us') ?>" class="btn btn-danger w-100 fw-bold py-2 rounded-3">
+                                <i class="bi bi-chat-dots-fill me-2"></i> Request Consultation
+                            </a>
                         </div>
+
                     </aside>
                 </div>
+
             </div>
         </div>
     </section>
 </main>
 
 <!-- Share Modal -->
-<div class="modal fade" id="shareModal" tabindex="-1">
+<div class="modal fade" id="shareModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 rounded-4 shadow-lg">
+        <div class="modal-content border-0 rounded-4 shadow-lg p-3">
             <div class="modal-header border-bottom-0 pb-0">
-                <h5 class="modal-title fw-bold blog-icon-primary">Share this post</h5>
+                <h5 class="modal-title fw-bold text-dark">Share This Article</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
-            <div class="modal-body p-4">
-                <div class="d-grid gap-3 social-buttons">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank" class="btn text-white py-2 rounded-3 fw-bold blog-bg-fb">
+            <div class="modal-body p-3">
+                <div class="d-grid gap-3">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(current_url()) ?>" target="_blank" class="btn btn-primary py-2 rounded-3 fw-bold">
                         <i class="bi bi-facebook me-2"></i> Share on Facebook
                     </a>
-                    <a href="https://twitter.com/intent/tweet?url=YOUR_URL" target="_blank" class="btn text-white py-2 rounded-3 fw-bold blog-bg-tw">
-                        <i class="bi bi-twitter me-2"></i> Share on Twitter
+                    <a href="https://twitter.com/intent/tweet?url=<?= urlencode(current_url()) ?>&text=<?= urlencode($title) ?>" target="_blank" class="btn btn-dark py-2 rounded-3 fw-bold">
+                        <i class="bi bi-twitter-x me-2"></i> Share on X (Twitter)
                     </a>
-                    <a href="https://api.whatsapp.com/send?text=YOUR_URL" target="_blank" class="btn text-white py-2 rounded-3 fw-bold blog-bg-wa">
+                    <a href="https://api.whatsapp.com/send?text=<?= urlencode($title . ' ' . current_url()) ?>" target="_blank" class="btn btn-success py-2 rounded-3 fw-bold">
                         <i class="bi bi-whatsapp me-2"></i> Share on WhatsApp
                     </a>
                 </div>
@@ -204,38 +284,26 @@
     </div>
 </div>
 
-<script>
-    var currentUrl = window.location.href;
-    document.querySelectorAll('.social-buttons a').forEach(function(btn) {
-        var shareUrl = btn.getAttribute('href');
-        btn.setAttribute('href', shareUrl.replace('YOUR_URL', encodeURIComponent(currentUrl)));
-    });
-</script>
-
-
-
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "<?= addslashes(@$query[0]->title) ?>",
-    "image": [
-        "<?= @$query[0]->image ? base_url('uploads/blogs/' . @$query[0]->image) : base_url('assets/images/about/packers_movers.jpg') ?>"
-    ],
-    "datePublished": "<?= date('c', strtotime(@$query[0]->created_at)) ?>",
+    "headline": "<?= addslashes($title) ?>",
+    "image": ["<?= $img ?>"],
+    "datePublished": "<?= date('c', strtotime($date_raw)) ?>",
     "author": {
         "@type": "Person",
-        "name": "Admin"
+        "name": "<?= addslashes($author) ?>"
     },
     "publisher": {
         "@type": "Organization",
-        "name": "<?= isset($company3) ? $company3 : 'MyCompany' ?>",
+        "name": "<?= isset($company3) ? $company3 : 'Groveus Informatics' ?>",
         "logo": {
             "@type": "ImageObject",
             "url": "<?= base_url('assets/images/logo/logo.png') ?>"
         }
     },
-    "description": "<?= addslashes(substr(strip_tags(@$query[0]->description), 0, 160)) ?>",
+    "description": "<?= addslashes(substr(strip_tags($blog->description ?? ''), 0, 160)) ?>",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "<?= current_url() ?>"

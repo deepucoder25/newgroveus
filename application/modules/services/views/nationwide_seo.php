@@ -219,11 +219,6 @@ ob_start(); ?>
             'icon' => 'bi bi-diagram-3-fill',
             'title' => 'Geo-Silo Engine',
             'subtitle' => 'Zero Cannibalization'
-        ],
-        [
-            'icon' => 'bi bi-graph-up-arrow',
-            'title' => 'High Intent',
-            'subtitle' => 'Commercial Leads'
         ]
     ],
     'svg' => $nationwide_seo_svg

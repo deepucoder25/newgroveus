@@ -35,22 +35,8 @@
     <div class="top-bar-inner d-flex align-items-stretch justify-content-between">
       <!-- Left Side (Red gradient): Tagline + Links -->
       <div class="top-bar-left d-flex align-items-center flex-wrap px-3 px-sm-4 px-lg-5 py-2">
-        <div class="top-tagline d-flex align-items-center me-3">
+        <div class="top-tagline d-flex align-items-center">
           <strong>Technology Has No Boundaries</strong>
-        </div>
-        <span class="top-divider d-none d-lg-inline me-3">|</span>
-        <div class="top-nav-links d-none d-md-flex align-items-center gap-3">
-          <a href="https://edubios.com" target="_blank" rel="noopener" class="top-item-link">
-            <i class="bi bi-mortarboard-fill me-1"></i> EduBios
-          </a>
-          <span class="top-divider">|</span>
-          <a href="https://groveus.com" target="_blank" rel="noopener" class="top-item-link">
-            <i class="bi bi-people-fill me-1"></i> Groveus Education
-          </a>
-          <span class="top-divider">|</span>
-          <a href="<?= site_url('login') ?>" class="top-item-link">
-            <i class="bi bi-headset me-1"></i> Client Login
-          </a>
         </div>
       </div>
 
