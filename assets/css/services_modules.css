@@ -1057,3 +1057,4592 @@
         position: static;
     }
 }
+
+
+/* ==========================================================================
+   EXTRACTED SERVICES MODULE BESPOKE STYLES (MIGRATED FROM INTERNAL STYLES)
+   ========================================================================== */
+
+/* ==========================================================================
+   DYNAMIC SLIDER & HERO COMPONENT
+   ========================================================================== */
+/* Service Hero Section */
+.service-hero-section {
+    background-color: #ffffff;
+    background-image: 
+        radial-gradient(circle at 12% 88%, rgba(254, 226, 226, 0.45) 0%, rgba(255, 255, 255, 0) 45%),
+        radial-gradient(circle at 90% 12%, rgba(254, 226, 226, 0.5) 0%, rgba(255, 255, 255, 0) 40%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Organic Ambient Background Blobs with Gentle Breathing */
+.service-hero-shape-tr {
+    position: absolute;
+    top: -50px;
+    right: -80px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(254, 215, 215, 0.55) 0%, rgba(254, 242, 242, 0.2) 60%, transparent 80%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: heroBlobFloat1 9s ease-in-out infinite alternate;
+}
+
+.service-hero-shape-bl {
+    position: absolute;
+    bottom: -120px;
+    left: -120px;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(254, 215, 215, 0.6) 0%, rgba(254, 242, 242, 0.25) 55%, transparent 75%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: heroBlobFloat2 11s ease-in-out infinite alternate;
+}
+
+@keyframes heroBlobFloat1 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-20px, 20px) scale(1.08); }
+}
+
+@keyframes heroBlobFloat2 {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(20px, -18px) scale(1.06); }
+}
+
+/* Typography & Titles */
+.service-hero-title {
+    color: #0f172a;
+    font-size: clamp(2.1rem, 3.5vw, 3.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.text-danger-highlight {
+    color: #c91a25;
+    display: inline-block;
+}
+
+.service-hero-desc {
+    color: #475569;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 480px;
+}
+
+/* CTA Pill Button */
+.btn-service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #d91c24 0%, #b9131a 100%);
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(217, 28, 36, 0.28);
+    border: none;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-service-cta:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 28px rgba(217, 28, 36, 0.38);
+    color: #ffffff !important;
+}
+
+.btn-service-cta i {
+    transition: transform 0.3s ease;
+}
+
+.btn-service-cta:hover i {
+    transform: translateX(4px);
+}
+
+/* Feature Highlight Badges (Strict Single Row on All Devices) */
+.service-hero-highlights {
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+}
+
+.service-highlight-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 0;
+    min-width: 0;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: default;
+}
+
+.service-highlight-item:hover {
+    transform: translateY(-2px);
+}
+
+.service-highlight-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+    transition: all 0.3s ease;
+}
+
+.service-highlight-item:hover .service-highlight-icon {
+    background: #c91a25;
+    color: #ffffff;
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 4px 12px rgba(201, 26, 37, 0.3);
+}
+
+.service-highlight-text {
+    min-width: 0;
+}
+
+.service-highlight-text strong {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+.service-highlight-text span {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #64748b;
+    line-height: 1.15;
+    white-space: nowrap;
+}
+
+/* SVG Artwork Stage - Smooth Levitation & 3D Interactive Hover */
+.service-mockup-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    cursor: pointer;
+}
+
+.service-mockup-inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transform-style: preserve-3d;
+    animation: serviceSvgFloat 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+.service-mockup-wrapper:hover .service-mockup-inner {
+    animation-play-state: paused;
+    transform: translateY(-10px) scale(1.025);
+    filter: drop-shadow(0 25px 40px rgba(201, 26, 37, 0.12)) drop-shadow(0 10px 20px rgba(15, 23, 42, 0.06));
+}
+
+.service-mockup-wrapper svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+    filter: drop-shadow(0 15px 30px rgba(15, 23, 42, 0.07));
+    transition: filter 0.5s ease;
+}
+
+@keyframes serviceSvgFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(0.35deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .service-hero-desc {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-hero-highlights {
+        gap: 6px !important;
+        padding-top: 14px !important;
+    }
+    .service-highlight-item {
+        gap: 5px;
+    }
+    .service-highlight-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+    .service-highlight-text strong {
+        font-size: 10.5px;
+    }
+    .service-highlight-text span {
+        font-size: 8.5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .service-hero-highlights {
+        gap: 4px !important;
+    }
+    .service-highlight-item {
+        gap: 4px;
+    }
+    .service-highlight-icon {
+        width: 25px;
+        height: 25px;
+        font-size: 11px;
+    }
+    .service-highlight-text strong {
+        font-size: 9.5px;
+    }
+    .service-highlight-text span {
+        font-size: 7.5px;
+    }
+}
+
+/* ==========================================================================
+   CONTENT MARKETING SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.cm-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.cm-section {
+    padding: 48px 0;
+    position: relative;
+}
+
+.cm-bg-white {
+    background-color: #ffffff;
+}
+
+.cm-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.cm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.cm-badge i {
+    font-size: 14px;
+}
+
+.cm-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.cm-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.cm-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+.cm-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/* Checklist Items */
+.cm-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cm-check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.cm-check-item i {
+    color: #16a34a;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.cm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.cm-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.cm-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.cm-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* SVG Artwork Frames */
+.cm-svg-box {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.cm-svg-box:hover {
+    transform: translateY(-4px);
+}
+
+.cm-svg-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================================
+   Section 3: Full-Funnel Content Architecture (TOFU / MOFU / BOFU Cards)
+   ========================================================================= */
+.cm-funnel-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cm-funnel-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.cm-funnel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.cm-funnel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.cm-funnel-stage {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.cm-funnel-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.cm-funnel-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.cm-funnel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+.cm-funnel-list li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cm-funnel-list li i {
+    color: #16a34a;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 4: Multi-Format Content Ecosystem (6 Cards Grid)
+   ========================================================================= */
+.cm-format-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.cm-format-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.cm-format-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.cm-format-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.cm-format-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: 5-Stage Editorial Production Lifecycle (Timeline Stepper)
+   ========================================================================= */
+.cm-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.cm-step-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 14px 28px rgba(201, 26, 37, 0.08);
+}
+
+.cm-step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 15px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+.cm-step-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.cm-step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 6: Content ROI & Business Impact Metrics
+   ========================================================================= */
+.cm-metrics-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 38px 30px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+}
+
+.cm-metric-num {
+    font-size: clamp(30px, 3.2vw, 42px);
+    font-weight: 800;
+    color: #c91a25;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.cm-metric-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.cm-metric-desc {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 7: Accordion FAQ Styling
+   ========================================================================= */
+.cm-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.cm-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.cm-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.cm-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.cm-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.cm-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .cm-section {
+        padding: 38px 0;
+    }
+}
+
+/* ==========================================================================
+   ECOMMERCE SEO SERVICES MODULE
+   ========================================================================== */
+/* Base Page Wrapper */
+.ecseo-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+/* Feature Sections - Tight 45px padding to eliminate awkward gaps */
+.ecseo-feature-section {
+    padding: 48px 0;
+    position: relative;
+}
+
+.ecseo-bg-white {
+    background-color: #ffffff;
+}
+
+.ecseo-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow Badge */
+.ecseo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.ecseo-badge i {
+    font-size: 14px;
+}
+
+/* Headings & Text */
+.ecseo-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+}
+
+.ecseo-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.ecseo-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* Checklist Points */
+.ecseo-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ecseo-check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.ecseo-check-item i {
+    color: #16a34a;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary CTA Button in Content */
+.ecseo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.ecseo-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.ecseo-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.ecseo-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* SVG Graphic Frame */
+.ecseo-svg-box {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.ecseo-svg-box:hover {
+    transform: translateY(-4px);
+}
+
+.ecseo-svg-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   Section 3: Platform Capabilities Grid
+   ========================================================================== */
+.ecseo-platform-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 22px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.ecseo-platform-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.ecseo-platform-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.ecseo-platform-title {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.ecseo-platform-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Section 4: Testimonials Cards (Side-Scroll Carousel)
+   ========================================================================== */
+.ecseo-reviews-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.ecseo-reviews-header-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ecseo-reviews-nav-btns {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ecseo-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.ecseo-nav-btn:hover {
+    background: #c91a25;
+    color: #ffffff;
+    border-color: #c91a25;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(201, 26, 37, 0.25);
+}
+
+.ecseo-reviews-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 4px 24px 4px;
+    margin: 0 -4px;
+}
+
+/* Custom Sleek Scrollbar */
+.ecseo-reviews-track::-webkit-scrollbar {
+    height: 7px;
+}
+
+.ecseo-reviews-track::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.ecseo-reviews-track::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.ecseo-reviews-track::-webkit-scrollbar-thumb:hover {
+    background: #c91a25;
+}
+
+.ecseo-review-card-item {
+    flex: 0 0 380px;
+    max-width: 380px;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.ecseo-testimonial-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 28px 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    position: relative;
+}
+
+.ecseo-testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.ecseo-review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 8px;
+}
+
+.ecseo-stars-row {
+    color: #eab308;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.ecseo-review-platform {
+    font-size: 11px;
+    font-weight: 800;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.ecseo-review-platform i {
+    color: #c91a25;
+}
+
+.ecseo-metric-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 6px;
+    margin-bottom: 14px;
+    width: fit-content;
+}
+
+.ecseo-testi-quote {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.ecseo-testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.ecseo-author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c91a25 0%, #88131b 100%);
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.ecseo-author-avatar.ecseo-av-blue {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.ecseo-author-avatar.ecseo-av-purple {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+}
+
+.ecseo-author-avatar.ecseo-av-green {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.ecseo-author-avatar.ecseo-av-dark {
+    background: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+}
+
+.ecseo-author-name {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ecseo-author-name i {
+    color: #16a34a;
+    font-size: 14px;
+}
+
+.ecseo-author-role {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Side Scroll cue on mobile */
+.ecseo-scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+/* Responsive Rules */
+@media (max-width: 991px) {
+    .ecseo-feature-section {
+        padding: 38px 0;
+    }
+    .ecseo-review-card-item {
+        flex: 0 0 340px;
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ecseo-review-card-item {
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+    .ecseo-scroll-hint {
+        display: flex;
+    }
+}
+
+/* ==========================================================================
+   INTERNATIONAL SEO SERVICES MODULE
+   ========================================================================== */
+/* ==========================================================================
+   International SEO Page Custom Internal Stylesheet
+   ========================================================================== */
+.iseo-page-wrap {
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+/* Base Alternating Section */
+.iseo-feature-section {
+    padding: 45px 0;
+    position: relative;
+}
+
+.iseo-bg-white {
+    background-color: #ffffff;
+}
+
+.iseo-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Badge / Eyebrow */
+.iseo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.iseo-badge i {
+    font-size: 14px;
+}
+
+/* Section Headings & Text */
+.iseo-heading {
+    font-size: clamp(26px, 2.6vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+}
+
+.iseo-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.iseo-lead {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* Feature Bullet Points List */
+.iseo-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.iseo-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 15px;
+    color: #334155;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.iseo-check-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #c91a25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    box-shadow: 0 2px 6px rgba(201, 26, 37, 0.12);
+}
+
+/* Key Highlight Card Inside Content */
+.iseo-mini-highlight {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #c91a25;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-top: 10px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iseo-mini-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(201, 26, 37, 0.08);
+}
+
+.iseo-mini-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.iseo-mini-title i {
+    color: #c91a25;
+}
+
+.iseo-mini-text {
+    font-size: 13.5px;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* Artwork / SVG Illustration Column */
+.iseo-artwork-wrapper {
+    position: relative;
+    padding: 16px;
+    border-radius: 28px;
+    background: radial-gradient(circle at 50% 50%, #ffffff 0%, #f4f8fd 100%);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 16px 40px -12px rgba(15, 23, 42, 0.06), 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+
+.iseo-artwork-wrapper:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px -10px rgba(201, 26, 37, 0.12), 0 4px 12px rgba(15, 23, 42, 0.04);
+    border-color: rgba(201, 26, 37, 0.25);
+}
+
+.iseo-artwork-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 460px;
+}
+
+/* Content Action Button */
+.iseo-content-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 22px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.28);
+}
+
+.iseo-content-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.2);
+}
+
+.iseo-content-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.iseo-content-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive Rules */
+@media (max-width: 991px) {
+    .iseo-feature-section {
+        padding: 55px 0;
+    }
+    .iseo-artwork-wrapper {
+        margin-top: 20px;
+    }
+}
+
+/* ==========================================================================
+   LINK BUILDING SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.lb-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.lb-section {
+    padding: 48px 0;
+    position: relative;
+}
+
+.lb-bg-white {
+    background-color: #ffffff;
+}
+
+.lb-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.lb-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.lb-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.lb-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.lb-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.lb-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Primary Button */
+.lb-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.lb-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.lb-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.lb-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================================================
+   Section 1: The 3 Core Pillars of Authority Links (Feature Cards)
+   ========================================================================= */
+.lb-pillar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    position: relative;
+}
+
+.lb-pillar-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.lb-pillar-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.lb-pillar-title {
+    font-size: 18.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.lb-pillar-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 16px;
+}
+
+.lb-pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.lb-pillar-list li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lb-pillar-list li i {
+    color: #16a34a;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 2: High-Performance Link Building Methodologies (6-Card Grid)
+   ========================================================================= */
+.lb-method-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.lb-method-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.lb-method-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.lb-method-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+}
+
+.lb-method-tag {
+    font-size: 11.5px;
+    font-weight: 700;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.lb-method-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.lb-method-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 3: White-Hat Safety vs Toxic Link Traps (2-Column Comparison)
+   ========================================================================= */
+.lb-compare-box {
+    border-radius: 24px;
+    padding: 34px 28px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.lb-box-safe {
+    background: #ffffff;
+    border: 2px solid #bbf7d0;
+}
+
+.lb-box-unsafe {
+    background: #ffffff;
+    border: 2px solid #fecdd3;
+}
+
+.lb-compare-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.lb-tag-safe {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.lb-tag-unsafe {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.lb-compare-title {
+    font-size: 21px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.lb-compare-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.lb-compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lb-compare-list li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.lb-compare-list li i {
+    font-size: 17px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.lb-icon-safe {
+    color: #16a34a;
+}
+
+.lb-icon-unsafe {
+    color: #dc2626;
+}
+
+/* =========================================================================
+   Section 4: Proven Authority Growth Metrics Bar
+   ========================================================================= */
+.lb-metrics-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 38px 30px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+}
+
+.lb-metric-num {
+    font-size: clamp(30px, 3.2vw, 42px);
+    font-weight: 800;
+    color: #c91a25;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.lb-metric-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.lb-metric-desc {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: Accordion FAQ Styling
+   ========================================================================= */
+.lb-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.lb-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.lb-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.lb-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.lb-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.lb-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .lb-section {
+        padding: 38px 0;
+    }
+    .lb-compare-box {
+        padding: 26px 20px;
+    }
+}
+
+/* ==========================================================================
+   LOCAL SEO SERVICES MODULE
+   ========================================================================== */
+/* Local SEO Page Layout Variables & Core Styles */
+.lseo-page-wrap {
+    font-family: 'Outfit', sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+.lseo-section {
+    padding: 70px 0;
+    position: relative;
+}
+
+.lseo-section-light {
+    background-color: #ffffff;
+}
+
+.lseo-section-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+/* Section Header Badges & Typography */
+.lseo-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.12);
+}
+
+.lseo-title {
+    font-size: clamp(28px, 3.2vw, 38px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.22;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.lseo-title-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.lseo-subtitle {
+    font-size: 16px;
+    line-height: 1.68;
+    color: #64748b;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Content Feature Cards (6-Grid) - Attractive Modern Design */
+.lseo-card {
+    background: linear-gradient(175deg, #ffffff 0%, #fcfdfe 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 28px 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Top Border Line */
+.lseo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, #c91a25 0%, #f43f5e 50%, #fda4af 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+/* Subtle Ambient Bottom-Right Glow on Hover */
+.lseo-card::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    width: 130px;
+    height: 130px;
+    background: radial-gradient(circle, rgba(201, 26, 37, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.lseo-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(201, 26, 37, 0.3);
+    box-shadow: 0 20px 38px -8px rgba(201, 26, 37, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+}
+
+.lseo-card:hover::before,
+.lseo-card:hover::after {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Card Header (Icon + Title in one row) */
+.lseo-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 14px;
+}
+
+/* Modern Gradient Icon Box */
+.lseo-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fff1f2 0%, #fee2e2 100%);
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+    box-shadow: 0 4px 12px rgba(201, 26, 37, 0.08);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lseo-card:hover .lseo-icon-box {
+    background: linear-gradient(135deg, #c91a25 0%, #991b1b 100%);
+    color: #ffffff;
+    transform: scale(1.08) rotate(-4deg);
+    box-shadow: 0 8px 20px rgba(201, 26, 37, 0.35);
+    border-color: transparent;
+}
+
+.lseo-card-title-wrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.lseo-card-title {
+    font-size: 18.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 3px;
+    line-height: 1.25;
+}
+
+.lseo-card-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c91a25;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.lseo-card-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.62;
+    margin-bottom: 16px;
+}
+
+/* Mini feature tags/points inside card */
+.lseo-card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px dashed #e2e8f0;
+    padding-top: 14px;
+}
+
+.lseo-card-features li {
+    font-size: 12.5px;
+    color: #475569;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lseo-card-features li i {
+    color: #16a34a;
+    font-size: 13.5px;
+}
+
+/* 5-Step Process Roadmap Cards */
+.lseo-process-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 30px 24px;
+    position: relative;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.lseo-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.06);
+    border-color: #cbd5e1;
+}
+
+.lseo-step-badge {
+    position: absolute;
+    top: -16px;
+    left: 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+}
+
+.lseo-process-card:hover .lseo-step-badge {
+    background: linear-gradient(135deg, #c91a25 0%, #e11d48 100%);
+}
+
+.lseo-process-icon {
+    font-size: 28px;
+    color: #c91a25;
+    margin-bottom: 14px;
+    margin-top: 6px;
+}
+
+.lseo-process-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.lseo-process-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Deliverables Checklist Grid */
+.lseo-deliverable-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.25s ease;
+    height: 100%;
+}
+
+.lseo-deliverable-item:hover {
+    border-color: #c91a25;
+    background: #fffafa;
+    transform: translateX(4px);
+}
+
+.lseo-check-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #dcfce7;
+    color: #16a34a;
+    display: grid;
+    place-items: center;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.lseo-deliverable-item:hover .lseo-check-icon {
+    background: #c91a25;
+    color: #ffffff;
+}
+
+.lseo-deliverable-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.lseo-deliverable-text {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Key Metrics & Stats Highlight Banner */
+.lseo-stats-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 24px;
+    padding: 48px 40px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.lseo-stats-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(201, 26, 37, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.lseo-stat-box {
+    text-align: center;
+    padding: 10px;
+}
+
+.lseo-stat-num {
+    font-size: clamp(34px, 4vw, 46px);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #ffffff 0%, #fecdd3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lseo-stat-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #94a3b8;
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Industry Showcase Cards */
+.lseo-industry-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.lseo-industry-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 10px 25px rgba(201, 26, 37, 0.08);
+}
+
+.lseo-ind-icon {
+    font-size: 28px;
+    color: #c91a25;
+    margin-bottom: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.lseo-industry-card:hover .lseo-ind-icon {
+    transform: scale(1.15);
+}
+
+.lseo-ind-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.lseo-ind-desc {
+    font-size: 12.5px;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* FAQ Accordion Styling */
+.lseo-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 16px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.lseo-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.lseo-accordion .accordion-button {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 20px 24px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.lseo-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.lseo-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.lseo-accordion .accordion-body {
+    padding: 0 24px 22px 24px;
+    font-size: 15px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    .lseo-section {
+        padding: 48px 0;
+    }
+    .lseo-stats-banner {
+        padding: 36px 20px;
+    }
+    .lseo-title {
+        font-size: 26px;
+    }
+}
+
+/* ==========================================================================
+   NATIONWIDE SEO SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.nwseo-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.nwseo-section {
+    padding: 48px 0;
+    position: relative;
+}
+
+.nwseo-bg-white {
+    background-color: #ffffff;
+}
+
+.nwseo-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.nwseo-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.nwseo-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.nwseo-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.nwseo-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+.nwseo-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Primary Button */
+.nwseo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.nwseo-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.nwseo-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.nwseo-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* =========================================================================
+   Section 1: 4-Stage Pan-India Dominance Roadmap Stepper
+   ========================================================================= */
+.nwseo-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 22px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.nwseo-step-card:hover {
+    transform: translateY(-6px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 30px rgba(201, 26, 37, 0.09);
+}
+
+.nwseo-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.nwseo-step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 16px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+}
+
+.nwseo-step-phase {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.nwseo-step-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.nwseo-step-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.nwseo-step-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.nwseo-step-list li {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nwseo-step-list li i {
+    color: #16a34a;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 2: Metro Dominance vs Tier-2/3 Expansion (2-Column Bento)
+   ========================================================================= */
+.nwseo-bento-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 36px 32px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.nwseo-bento-box:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.nwseo-bento-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.nwseo-bento-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.nwseo-bento-desc {
+    font-size: 14.5px;
+    color: #64748b;
+    line-height: 1.65;
+    margin-bottom: 22px;
+}
+
+.nwseo-bento-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.nwseo-bento-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #334155;
+}
+
+.nwseo-bento-metric-bar {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 16px 20px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nwseo-bento-metric-val {
+    font-size: 20px;
+    font-weight: 900;
+    color: #c91a25;
+}
+
+.nwseo-bento-metric-lbl {
+    font-size: 12px;
+    font-weight: 700;
+    color: #475569;
+}
+
+/* =========================================================================
+   Section 3: Deliverables Grid (4 Strategic Pillars)
+   ========================================================================= */
+.nwseo-deliv-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 30px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.nwseo-deliv-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 14px 28px rgba(201, 26, 37, 0.08);
+}
+
+.nwseo-deliv-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.nwseo-deliv-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.nwseo-deliv-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.nwseo-deliv-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nwseo-deliv-checklist li {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nwseo-deliv-checklist li i {
+    color: #16a34a;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 4: National Impact Metrics Bar
+   ========================================================================= */
+.nwseo-metrics-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 38px 30px;
+    box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+}
+
+.nwseo-metric-num {
+    font-size: clamp(30px, 3.2vw, 42px);
+    font-weight: 800;
+    color: #c91a25;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.nwseo-metric-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.nwseo-metric-desc {
+    font-size: 12.5px;
+    color: #64748b;
+    line-height: 1.45;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: Accordion FAQ Styling
+   ========================================================================= */
+.nwseo-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.nwseo-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.nwseo-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.nwseo-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.nwseo-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.nwseo-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .nwseo-section {
+        padding: 38px 0;
+    }
+    .nwseo-bento-box {
+        padding: 28px 22px;
+    }
+}
+
+/* ==========================================================================
+   PPC MANAGEMENT SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.ppc-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.ppc-section {
+    padding: 52px 0;
+    position: relative;
+}
+
+.ppc-bg-white {
+    background-color: #ffffff;
+}
+
+.ppc-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.ppc-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.ppc-badge i {
+    font-size: 14px;
+}
+
+.ppc-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.ppc-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.ppc-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+.ppc-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/* Checklist Items */
+.ppc-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ppc-check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.ppc-check-item i {
+    color: #16a34a;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.ppc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.ppc-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.ppc-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.ppc-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* SVG Artwork Frames */
+.ppc-svg-box {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.ppc-svg-box:hover {
+    transform: translateY(-4px);
+}
+
+.ppc-svg-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================================
+   Section 3: Full-Funnel Paid Channel Cards (3-Card Layout)
+   ========================================================================= */
+.ppc-channel-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.ppc-channel-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.ppc-channel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.ppc-channel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.ppc-channel-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #0f172a;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.ppc-channel-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.ppc-channel-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.ppc-channel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+.ppc-channel-list li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ppc-channel-list li i {
+    color: #16a34a;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 4: PPC Ecosystem Formats (6-Card Designer Grid)
+   ========================================================================= */
+.ppc-format-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.ppc-format-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.ppc-format-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.ppc-format-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.ppc-format-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: 5-Stage PPC Management Lifecycle (Stepper)
+   ========================================================================= */
+.ppc-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.ppc-step-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 14px 28px rgba(201, 26, 37, 0.08);
+}
+
+.ppc-step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 15px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+.ppc-step-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.ppc-step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 6: Comparison Box (Standard DIY vs Groveus Protocol)
+   ========================================================================= */
+.ppc-compare-card {
+    border-radius: 22px;
+    padding: 34px 28px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.ppc-compare-card.ppc-card-unsafe {
+    background: #ffffff;
+    border: 2px solid #fecdd3;
+}
+
+.ppc-compare-card.ppc-card-safe {
+    background: #ffffff;
+    border: 2px solid #bbf7d0;
+}
+
+.ppc-compare-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.ppc-tag-danger {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.ppc-tag-success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.ppc-compare-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+.ppc-compare-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ppc-compare-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #475569;
+}
+
+.ppc-compare-items li i {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.ppc-card-unsafe .ppc-compare-items li i {
+    color: #e11d48;
+}
+
+.ppc-card-safe .ppc-compare-items li i {
+    color: #16a34a;
+}
+
+.ppc-compare-item-bold {
+    font-weight: 700;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* =========================================================================
+   Section 7: Accordion FAQ Styling
+   ========================================================================= */
+.ppc-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.ppc-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.ppc-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.ppc-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.ppc-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.ppc-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .ppc-section {
+        padding: 38px 0;
+    }
+}
+
+/* ==========================================================================
+   SOCIAL MEDIA MARKETING SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.smm-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.smm-section {
+    padding: 52px 0;
+    position: relative;
+}
+
+.smm-bg-white {
+    background-color: #ffffff;
+}
+
+.smm-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.smm-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.smm-badge i {
+    font-size: 14px;
+}
+
+.smm-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.smm-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.smm-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+.smm-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/* Checklist Items */
+.smm-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.smm-check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.smm-check-item i {
+    color: #16a34a;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.smm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.smm-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.smm-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.smm-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* SVG Artwork Frames */
+.smm-svg-box {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.smm-svg-box:hover {
+    transform: translateY(-4px);
+}
+
+.smm-svg-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================================
+   Section 3: Core Social Pillars (3-Card Layout)
+   ========================================================================= */
+.smm-pillar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.smm-pillar-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.smm-pillar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.smm-pillar-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.smm-pillar-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #0f172a;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.smm-pillar-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.smm-pillar-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.smm-pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+.smm-pillar-list li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.smm-pillar-list li i {
+    color: #16a34a;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 4: Social Ecosystem Formats (6-Card Designer Grid)
+   ========================================================================= */
+.smm-format-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.smm-format-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.smm-format-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.smm-format-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.smm-format-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: 5-Stage Social Growth Lifecycle (Stepper)
+   ========================================================================= */
+.smm-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.smm-step-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 14px 28px rgba(201, 26, 37, 0.08);
+}
+
+.smm-step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 15px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+.smm-step-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.smm-step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 6: Comparison Box (Generic Posting vs Authentic Engagement)
+   ========================================================================= */
+.smm-compare-card {
+    border-radius: 22px;
+    padding: 34px 28px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.smm-compare-card.smm-card-unsafe {
+    background: #ffffff;
+    border: 2px solid #fecdd3;
+}
+
+.smm-compare-card.smm-card-safe {
+    background: #ffffff;
+    border: 2px solid #bbf7d0;
+}
+
+.smm-compare-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.smm-tag-danger {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.smm-tag-success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.smm-compare-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+.smm-compare-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.smm-compare-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #475569;
+}
+
+.smm-compare-items li i {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.smm-card-unsafe .smm-compare-items li i {
+    color: #e11d48;
+}
+
+.smm-card-safe .smm-compare-items li i {
+    color: #16a34a;
+}
+
+.smm-compare-item-bold {
+    font-weight: 700;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* =========================================================================
+   Section 7: Client Reviews & Social Proof Cards (Side-Scroll Carousel)
+   ========================================================================= */
+.smm-reviews-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.smm-reviews-header-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.smm-reviews-nav-btns {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.smm-nav-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    color: #0f172a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.smm-nav-btn:hover {
+    background: #c91a25;
+    color: #ffffff;
+    border-color: #c91a25;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(201, 26, 37, 0.25);
+}
+
+.smm-reviews-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 4px 24px 4px;
+    margin: 0 -4px;
+}
+
+/* Custom Sleek Scrollbar */
+.smm-reviews-track::-webkit-scrollbar {
+    height: 7px;
+}
+
+.smm-reviews-track::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+.smm-reviews-track::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+    transition: background 0.2s ease;
+}
+
+.smm-reviews-track::-webkit-scrollbar-thumb:hover {
+    background: #c91a25;
+}
+
+.smm-review-card-item {
+    flex: 0 0 380px;
+    max-width: 380px;
+    scroll-snap-align: start;
+    display: flex;
+}
+
+.smm-review-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.smm-review-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.smm-review-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    gap: 8px;
+}
+
+.smm-review-stars {
+    color: #f59e0b;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.smm-review-platform {
+    font-size: 11px;
+    font-weight: 800;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.smm-review-platform i {
+    color: #c91a25;
+}
+
+.smm-review-metric {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 12px;
+    font-weight: 800;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.smm-review-quote {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.65;
+    margin-bottom: 20px;
+}
+
+.smm-review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+.smm-review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c91a25 0%, #88131b 100%);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.smm-review-avatar.smm-av-blue {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.smm-review-avatar.smm-av-purple {
+    background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+}
+
+.smm-review-avatar.smm-av-green {
+    background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+}
+
+.smm-review-avatar.smm-av-dark {
+    background: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+}
+
+.smm-review-name {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.smm-review-name i {
+    color: #16a34a;
+    font-size: 14px;
+}
+
+.smm-review-role {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Side Scroll cue on mobile */
+.smm-scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-top: 8px;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .smm-review-card-item {
+        flex: 0 0 340px;
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 767px) {
+    .smm-review-card-item {
+        flex: 0 0 85%;
+        max-width: 85%;
+    }
+    .smm-scroll-hint {
+        display: flex;
+    }
+}
+
+/* =========================================================================
+   Section 8: Accordion FAQ Styling
+   ========================================================================= */
+.smm-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.smm-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.smm-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.smm-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.smm-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.smm-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .smm-section {
+        padding: 38px 0;
+    }
+}
+
+/* ==========================================================================
+   WEB DEVELOPMENT SERVICES MODULE
+   ========================================================================== */
+/* Base Page Structure */
+.webdev-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.webdev-section {
+    padding: 52px 0;
+    position: relative;
+}
+
+.webdev-bg-white {
+    background-color: #ffffff;
+}
+
+.webdev-bg-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Eyebrow & Badges */
+.webdev-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.15);
+}
+
+.webdev-badge i {
+    font-size: 14px;
+}
+
+.webdev-heading {
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.webdev-highlight {
+    color: #c91a25;
+    position: relative;
+    display: inline-block;
+}
+
+.webdev-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #64748b;
+    margin-bottom: 22px;
+}
+
+.webdev-lead-center {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+
+/* Checklist Items */
+.webdev-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.webdev-check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.webdev-check-item i {
+    color: #16a34a;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+/* Primary Button */
+.webdev-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    background: #c91a25;
+    color: #ffffff;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 4px 14px rgba(201, 26, 37, 0.3);
+}
+
+.webdev-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.25);
+}
+
+.webdev-btn i {
+    font-size: 15px;
+    transition: transform 0.25s ease;
+}
+
+.webdev-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* SVG Artwork Frames */
+.webdev-svg-box {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.webdev-svg-box:hover {
+    transform: translateY(-4px);
+}
+
+.webdev-svg-box svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =========================================================================
+   Section 3: Core Engineering Pillars (3-Card Layout)
+   ========================================================================= */
+.webdev-pillar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 32px 26px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.webdev-pillar-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 16px 32px rgba(201, 26, 37, 0.08);
+}
+
+.webdev-pillar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.webdev-pillar-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.webdev-pillar-tag {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: #0f172a;
+    background: #f1f5f9;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.webdev-pillar-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.webdev-pillar-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.webdev-pillar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+}
+
+.webdev-pillar-list li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.webdev-pillar-list li i {
+    color: #16a34a;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+/* =========================================================================
+   Section 4: Modern Tech Stack Ecosystem (6-Card Designer Grid)
+   ========================================================================= */
+.webdev-stack-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.webdev-stack-card:hover {
+    transform: translateY(-5px);
+    border-color: #cbd5e1;
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.webdev-stack-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.webdev-stack-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.webdev-stack-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 5: 5-Stage Development Lifecycle (Stepper)
+   ========================================================================= */
+.webdev-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+}
+
+.webdev-step-card:hover {
+    transform: translateY(-5px);
+    border-color: #c91a25;
+    box-shadow: 0 14px 28px rgba(201, 26, 37, 0.08);
+}
+
+.webdev-step-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 15px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+}
+
+.webdev-step-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.webdev-step-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* =========================================================================
+   Section 6: Quality Comparison (Bloated Theme Hacks vs Engineered Code)
+   ========================================================================= */
+.webdev-compare-card {
+    border-radius: 22px;
+    padding: 34px 28px;
+    height: 100%;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.webdev-compare-card.webdev-card-unsafe {
+    background: #ffffff;
+    border: 2px solid #fecdd3;
+}
+
+.webdev-compare-card.webdev-card-safe {
+    background: #ffffff;
+    border: 2px solid #bbf7d0;
+}
+
+.webdev-compare-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.webdev-tag-danger {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.webdev-tag-success {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.webdev-compare-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+.webdev-compare-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.webdev-compare-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: #475569;
+}
+
+.webdev-compare-items li i {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.webdev-card-unsafe .webdev-compare-items li i {
+    color: #e11d48;
+}
+
+.webdev-card-safe .webdev-compare-items li i {
+    color: #16a34a;
+}
+
+.webdev-compare-item-bold {
+    font-weight: 700;
+    color: #0f172a;
+    display: block;
+    margin-bottom: 2px;
+}
+
+/* =========================================================================
+   Section 7: Accordion FAQ Styling
+   ========================================================================= */
+.webdev-accordion .accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px !important;
+    margin-bottom: 14px;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.02);
+    transition: border-color 0.25s ease;
+}
+
+.webdev-accordion .accordion-item:hover {
+    border-color: #cbd5e1;
+}
+
+.webdev-accordion .accordion-button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    padding: 18px 22px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.webdev-accordion .accordion-button:not(.collapsed) {
+    color: #c91a25;
+    background: #fffafa;
+}
+
+.webdev-accordion .accordion-button::after {
+    background-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+.webdev-accordion .accordion-body {
+    padding: 0 22px 20px 22px;
+    font-size: 14.5px;
+    color: #475569;
+    line-height: 1.65;
+    background: #fffafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .webdev-section {
+        padding: 38px 0;
+    }
+}
+
+/* ==========================================================================
+   WHITE LABEL SEO SERVICES MODULE
+   ========================================================================== */
+/* ==========================================================================
+   White Label SEO Custom Internal Stylesheet - Clean Box Architecture
+   ========================================================================== */
+.wlseo-page-wrap {
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.wlseo-section {
+    padding: 50px 0;
+    position: relative;
+}
+
+.wlseo-section-alt {
+    background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Master Container Box (col-12) */
+.wlseo-main-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 44px 38px;
+    box-shadow: 0 6px 24px -2px rgba(15, 23, 42, 0.04), 0 2px 6px rgba(15, 23, 42, 0.02);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Section Header Typography */
+.wlseo-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    background: #fee2e2;
+    color: #c91a25;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(201, 26, 37, 0.12);
+}
+
+.wlseo-eyebrow i {
+    font-size: 13.5px;
+}
+
+.wlseo-box-title {
+    font-size: clamp(24px, 2.6vw, 34px);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+}
+
+.wlseo-title-highlight {
+    color: #c91a25;
+    display: inline-block;
+}
+
+.wlseo-box-desc {
+    font-size: 15.5px;
+    line-height: 1.68;
+    color: #64748b;
+    max-width: 820px;
+    margin-bottom: 28px;
+}
+
+/* Inner Feature Cards (Inside Box) */
+.wlseo-feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #c91a25;
+    border-radius: 16px;
+    padding: 24px 20px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.wlseo-feature-card:hover {
+    background: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    border-color: #cbd5e1;
+    border-left-color: #c91a25;
+}
+
+.wlseo-feature-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.wlseo-feature-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fee2e2;
+    color: #c91a25;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.wlseo-feature-title {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0;
+}
+
+.wlseo-feature-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.58;
+    margin-bottom: 0;
+}
+
+/* Workflow Steps inside Box */
+.wlseo-step-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 26px 20px;
+    height: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.wlseo-step-box:hover {
+    border-color: #c91a25;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(201, 26, 37, 0.08);
+}
+
+.wlseo-step-num-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.wlseo-step-box:hover .wlseo-step-num-badge {
+    background: #c91a25;
+}
+
+.wlseo-step-title {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.wlseo-step-desc {
+    font-size: 13.5px;
+    color: #64748b;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+/* Comparison Columns inside Box */
+.wlseo-compare-col {
+    padding: 26px;
+    border-radius: 18px;
+    height: 100%;
+}
+
+.wlseo-compare-inhouse {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.wlseo-compare-partner {
+    background: #f0fdf4;
+    border: 1.5px solid #86efac;
+}
+
+.wlseo-compare-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.wlseo-compare-header h3 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.wlseo-compare-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.wlseo-compare-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.wlseo-compare-item.neg i {
+    color: #ef4444;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.wlseo-compare-item.pos i {
+    color: #16a34a;
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Deliverables Grid inside Box */
+.wlseo-deliv-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    height: 100%;
+    transition: all 0.25s ease;
+}
+
+.wlseo-deliv-item:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
+}
+
+.wlseo-deliv-icon {
+    color: #c91a25;
+    font-size: 20px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.wlseo-deliv-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 4px;
+}
+
+.wlseo-deliv-desc {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .wlseo-section {
+        padding: 38px 0;
+    }
+    .wlseo-main-box {
+        padding: 28px 20px;
+        border-radius: 18px;
+    }
+}
+

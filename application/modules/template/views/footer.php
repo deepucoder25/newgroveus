@@ -111,6 +111,7 @@
               <li><a href="<?= site_url('ecommerce-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> E-Commerce SEO Services</a></li>
               <li><a href="<?= site_url('nationwide-seo-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Nationwide SEO Services</a></li>
               <li><a href="<?= site_url('linkbuilding-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Link Building Services</a></li>
+              <li><a href="<?= site_url('web-development-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Web Design &amp; Development</a></li>
             </ul>
           </div>
         </div>
@@ -123,7 +124,6 @@
               <li><a href="<?= site_url('content-marketing-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Content Marketing</a></li>
               <li><a href="<?= site_url('ppc-management-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Google Pay Per Click</a></li>
               <li><a href="<?= site_url('social-media-marketing') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Social Media Marketing</a></li>
-              <li><a href="<?= site_url('web-development-services') ?>"><i class="bi bi-chevron-right text-danger me-1"></i> Web Design &amp; Development</a></li>
             </ul>
           </div>
         </div>

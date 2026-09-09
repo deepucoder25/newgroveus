@@ -1,6 +1,8 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 
-// 1. Define Link Building Vector Artwork SVG
+// =========================================================================
+// 1. HERO VECTOR SVG: LINK BUILDING & DIGITAL PR ARTWORK
+// =========================================================================
 ob_start(); ?>
 <svg viewBox="80 25 750 490" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
   <defs>
@@ -16,7 +18,7 @@ ob_start(); ?>
     <!-- Red Link Gradient -->
     <linearGradient id="linkRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF5055"/><stop offset="100%" stop-color="#E5222B"/></linearGradient>
 
-  <!-- Drop Shadows -->
+    <!-- Drop Shadows -->
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#4C83AA" flood-opacity=".18"/></filter>
     <filter id="softShadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#5292C5" flood-opacity=".15"/></filter>
   </defs>
@@ -104,15 +106,10 @@ ob_start(); ?>
     <rect x="307" y="392" width="122" height="9" rx="4.5" fill="#A8D3F9"/>
   </g>
 
-  <!-- =====================================================
-       LARGE INTERLOCKED CHAIN LINKS (MATCHING SCREENSHOT)
-  ====================================================== -->
-  <!-- Radiating Spark / Action Lines -->
+  <!-- LARGE INTERLOCKED CHAIN LINKS -->
   <g stroke-linecap="round">
-    <!-- Top-Left Rays -->
     <line x1="428" y1="262" x2="410" y2="250" stroke="#2B7FDE" stroke-width="5.5"/>
     <line x1="462" y1="240" x2="454" y2="222" stroke="#1D3E64" stroke-width="5.5"/>
-    <!-- Bottom-Right Rays -->
     <line x1="532" y1="334" x2="550" y2="352" stroke="#1D3E64" stroke-width="5.5"/>
     <line x1="504" y1="344" x2="504" y2="365" stroke="#71B7F0" stroke-width="5"/>
     <line x1="565" y1="305" x2="585" y2="316" stroke="#71B7F0" stroke-width="5"/>
@@ -121,7 +118,6 @@ ob_start(); ?>
   <!-- Blue Link (Bottom-Left) -->
   <g transform="translate(458, 328) rotate(-42)">
     <rect x="-44" y="-22" width="88" height="44" rx="22" fill="none" stroke="url(#linkBlue)" stroke-width="17.5"/>
-    <!-- Shadow / Cuff Accents on straight sides -->
     <path d="M-10 -22 H4" stroke="#165FA8" stroke-width="18" stroke-linecap="round" opacity=".55"/>
     <path d="M-10 22 H4" stroke="#165FA8" stroke-width="18" stroke-linecap="round" opacity=".55"/>
   </g>
@@ -129,12 +125,11 @@ ob_start(); ?>
   <!-- Red Link (Top-Right) -->
   <g transform="translate(506, 275) rotate(-42)">
     <rect x="-44" y="-22" width="88" height="44" rx="22" fill="none" stroke="url(#linkRed)" stroke-width="17.5"/>
-    <!-- Shadow / Cuff Accents on straight sides -->
     <path d="M-10 -22 H4" stroke="#B3151E" stroke-width="18" stroke-linecap="round" opacity=".55"/>
     <path d="M-10 22 H4" stroke="#B3151E" stroke-width="18" stroke-linecap="round" opacity=".55"/>
   </g>
 
-  <!-- Overlapping Blue Loop (Seamless 3D chain hook) -->
+  <!-- Overlapping Blue Loop -->
   <g transform="translate(458, 328) rotate(-42)">
     <path d="M-15 -22 H22 C34.15 -22 44 -12.15 44 0" fill="none" stroke="url(#linkBlue)" stroke-width="17.5" stroke-linecap="butt"/>
     <path d="M-10 -22 H4" stroke="#165FA8" stroke-width="18" stroke-linecap="round" opacity=".55"/>
@@ -156,69 +151,472 @@ ob_start(); ?>
 </svg>
 <?php $link_building_svg = ob_get_clean(); ?>
 
-<!-- 2. Render Reusable Dynamic Slider Component -->
+<!-- =========================================================================
+     2. DYNAMIC HERO SLIDER COMPONENT
+     ========================================================================= -->
 <?php $this->load->view('services/dynamic_slider_services', [
     'breadcrumbs' => [
         ['name' => 'Services', 'url' => site_url('services')],
         ['name' => 'Link Building Services']
     ],
-    'title' => 'Build Stronger Links, <span class="text-danger-highlight">Boost Your Rankings</span>',
-    'description' => 'Get high-quality backlinks from trusted websites and improve your domain authority, drive more traffic and achieve long-term SEO success.',
-    'cta_text' => 'Grow Your Authority',
-    'cta_icon' => 'bi bi-arrow-right',
+    'title' => 'Build Authority with <span class="text-danger-highlight">High-Impact Backlinks</span>',
+    'description' => 'Supercharge your domain rating and organic search rankings with Google-compliant editorial backlinks, digital PR outreach, and high-trust contextual placements across top-tier industry publications.',
+    'cta_text' => 'Get Authority Backlinks',
     'cta_url' => site_url('contact-us'),
     'highlights' => [
         [
             'icon' => 'bi bi-link-45deg',
-            'title' => 'High-Quality Links',
-            'subtitle' => 'From Trusted Sources'
-        ],
-        [
-            'icon' => 'bi bi-graph-up-arrow',
-            'title' => 'Better Rankings',
-            'subtitle' => 'On Search Engines'
+            'title' => '100% Editorial',
+            'subtitle' => 'Contextual Links'
         ],
         [
             'icon' => 'bi bi-shield-check',
-            'title' => 'Stronger Authority',
-            'subtitle' => 'For Long-Term Growth'
+            'title' => 'DR 70+ Domains',
+            'subtitle' => 'Real Organic Traffic'
+        ],
+        [
+            'icon' => 'bi bi-award-fill',
+            'title' => 'White-Hat PR',
+            'subtitle' => 'Zero PBN Footprint'
+        ],
+        [
+            'icon' => 'bi bi-graph-up-arrow',
+            'title' => 'Permanent Lift',
+            'subtitle' => 'Top Search Positions'
         ]
     ],
     'svg' => $link_building_svg
 ]); ?>
 
-<!-- 3. Link Building Details Content Section -->
-<section class="service-details-section py-5">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-12">
-                <div class="service-main-content bg-white p-4 p-md-5 rounded-4 shadow-sm border">
-                    <h2 class="fw-bold mb-3">Accelerate Search Visibility with High-Authority Backlink Acquisition</h2>
-                    <p class="text-muted leading-relaxed mb-4">
-                        Search engines evaluate the quality, relevance, and credibility of the websites linking to you. We execute manual outreach, editorial placements, digital PR campaigns, and niche-specific link acquisition strategies that elevate your Domain Authority and drive steady organic keyword growth.
+<!-- =========================================================================
+     INTERNAL CSS: LINK BUILDING BESPOKE STYLESHEET (ZERO INLINE STYLES)
+     ========================================================================= -->
+<div class="lb-page-wrap">
+
+    <!-- =========================================================================
+         SECTION 1: 3 CORE PILLARS OF HIGH-AUTHORITY BACKLINKS
+         ========================================================================= -->
+    <section class="lb-section lb-bg-white">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="lb-badge">
+                        <i class="bi bi-shield-check"></i> Quality Standards
+                    </div>
+                    <h2 class="lb-heading">
+                        The Anatomy of a <span class="lb-highlight">High-Impact Backlink</span>
+                    </h2>
+                    <p class="lb-lead lb-lead-center">
+                        Not all backlinks are created equal. We focus exclusively on natural, high-trust contextual placements that pass real ranking authority and protect your domain against search algorithm shifts.
                     </p>
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Editorial Digital PR</h5>
-                                <p class="small text-muted mb-0">Secure organic editorial backlinks from trusted, high-DA news sites and leading industry publications.</p>
-                            </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Pillar 1: Contextual Editorial Relevance -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-pillar-card">
+                        <div class="lb-pillar-icon">
+                            <i class="bi bi-file-earmark-text-fill"></i>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Niche-Relevant Outreach</h5>
-                                <p class="small text-muted mb-0">100% manual, contextually relevant link building tailored strictly to your industry vertical.</p>
-                            </div>
+                        <h3 class="lb-pillar-title">Contextual Relevance</h3>
+                        <p class="lb-pillar-desc">
+                            Links embedded naturally within high-quality, comprehensive editorial articles that match your specific industry niche and target audience intent.
+                        </p>
+                        <ul class="lb-pillar-list">
+                            <li><i class="bi bi-check-circle-fill"></i> In-Content Natural Link Embeds</li>
+                            <li><i class="bi bi-check-circle-fill"></i> 1,000+ Word Editorial Quality</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Topical Clustering Alignment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Real Traffic & Domain Authority -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-pillar-card">
+                        <div class="lb-pillar-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Safe White-Hat Strategy</h5>
-                                <p class="small text-muted mb-0">Google-compliant link profiles designed for long-term algorithmic safety and permanent gains.</p>
+                        <h3 class="lb-pillar-title">Real Organic Traffic</h3>
+                        <p class="lb-pillar-desc">
+                            We vet every hosting domain to ensure it possesses genuine organic traffic (10,000+ monthly visitors), high Domain Rating (DR 60–85+), and healthy indexation.
+                        </p>
+                        <ul class="lb-pillar-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Verified Live Google Traffic</li>
+                            <li><i class="bi bi-check-circle-fill"></i> DR 60 to DR 85+ Authority Sites</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Zero Artificial Spam Networks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Anchor Text Calibration -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-pillar-card">
+                        <div class="lb-pillar-icon">
+                            <i class="bi bi-bezier2"></i>
+                        </div>
+                        <h3 class="lb-pillar-title">Natural Anchor Calibration</h3>
+                        <p class="lb-pillar-desc">
+                            Balanced distribution of branded, topical, partial-match, and naked URL anchors designed to look completely organic and prevent over-optimization penalties.
+                        </p>
+                        <ul class="lb-pillar-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Branded &amp; Topical Anchor Balance</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Google Penguin Algorithmic Safety</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Target URL Deep-Link Mapping</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2: 6 HIGH-PERFORMANCE LINK BUILDING METHODOLOGIES
+         ========================================================================= -->
+    <section class="lb-section lb-bg-alt">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="lb-badge">
+                        <i class="bi bi-gear-wide-connected"></i> Proven Strategies
+                    </div>
+                    <h2 class="lb-heading">
+                        Enterprise Link Acquisition <span class="lb-highlight">Methodologies</span>
+                    </h2>
+                    <p class="lb-lead lb-lead-center">
+                        A multi-channel manual outreach framework that secures permanent, do-follow authority links from high-tier digital publications and industry authorities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Method 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-megaphone-fill"></i>
+                            </div>
+                            <span class="lb-method-tag">High Authority</span>
+                        </div>
+                        <h3 class="lb-method-title">Data-Driven Digital PR</h3>
+                        <p class="lb-method-desc">
+                            Crafting original industry surveys, market data reports, and proprietary infographics that journalists and national publications actively cite and link to.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-newspaper"></i>
+                            </div>
+                            <span class="lb-method-tag">Niche Editorial</span>
+                        </div>
+                        <h3 class="lb-method-title">Guest Editorial Outreach</h3>
+                        <p class="lb-method-desc">
+                            Authoring thought-leadership articles published on respected, relevant industry blogs and news portals with permanent contextual backlinks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-building-fill-up"></i>
+                            </div>
+                            <span class="lb-method-tag">Content Scaling</span>
+                        </div>
+                        <h3 class="lb-method-title">Skyscraper Reclamation</h3>
+                        <p class="lb-method-desc">
+                            Identifying outdated top-ranking content in your vertical, producing vastly superior resources, and reaching out to sites linking to outdated competitors.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-link-45deg"></i>
+                            </div>
+                            <span class="lb-method-tag">Technical Fix</span>
+                        </div>
+                        <h3 class="lb-method-title">Broken Link Reclamation</h3>
+                        <p class="lb-method-desc">
+                            Finding 404 dead links on prominent resource hubs and offering your relevant live content as the superior replacement URL to webmasters.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-tags-fill"></i>
+                            </div>
+                            <span class="lb-method-tag">Fast Wins</span>
+                        </div>
+                        <h3 class="lb-method-title">Unlinked Brand Mentions</h3>
+                        <p class="lb-method-desc">
+                            Scanning news outlets, podcasts, and blogs for existing brand mentions of your company and converting them into clickable, do-follow links.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Method 6 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lb-method-card">
+                        <div class="lb-method-header">
+                            <div class="lb-method-icon">
+                                <i class="bi bi-mic-fill"></i>
+                            </div>
+                            <span class="lb-method-tag">Brand Entity</span>
+                        </div>
+                        <h3 class="lb-method-title">Executive Thought Leadership</h3>
+                        <p class="lb-method-desc">
+                            Positioning your founders and leadership team for expert commentary, podcast guesting, and industry roundups that yield powerful Tier-1 citations.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3: WHITE-HAT SAFETY VS TOXIC LINK TRAPS (2-COLUMN COMPARISON)
+         ========================================================================= -->
+    <section class="lb-section lb-bg-white">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="lb-badge">
+                        <i class="bi bi-shield-lock-fill"></i> Quality Assurance
+                    </div>
+                    <h2 class="lb-heading">
+                        White-Hat Authority vs <span class="lb-highlight">Toxic Link Traps</span>
+                    </h2>
+                    <p class="lb-lead lb-lead-center">
+                        Our transparent, Google-compliant link building protects your brand from algorithmic penalties while ensuring sustainable long-term authority growth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Safe White-Hat Box -->
+                <div class="col-12 col-lg-6">
+                    <div class="lb-compare-box lb-box-safe">
+                        <span class="lb-compare-tag lb-tag-safe">
+                            <i class="bi bi-check-circle-fill"></i> The Groveus Standard
+                        </span>
+                        <h3 class="lb-compare-title">What We Build For You</h3>
+                        <p class="lb-compare-desc">
+                            100% manual, high-trust outreach campaigns on established websites with real organic readers, verified traffic, and natural editorial standards.
+                        </p>
+                        
+                        <ul class="lb-compare-list">
+                            <li>
+                                <i class="bi bi-check-circle-fill lb-icon-safe"></i>
+                                <span><strong>Real Editorial Domains:</strong> Verified organic traffic (>10,000 monthly Google visitors).</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill lb-icon-safe"></i>
+                                <span><strong>100% Manual Outreach:</strong> Human-to-human relationship building with editors and journalists.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill lb-icon-safe"></i>
+                                <span><strong>Natural Anchor Ratios:</strong> Safe combination of brand, generic, and topical target anchors.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill lb-icon-safe"></i>
+                                <span><strong>Permanent In-Content Placement:</strong> Guaranteed link longevity within indexable body copy.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill lb-icon-safe"></i>
+                                <span><strong>Pre-Approval Workflow:</strong> Full visibility and approval rights on target domains before publishing.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Toxic Trap Box -->
+                <div class="col-12 col-lg-6">
+                    <div class="lb-compare-box lb-box-unsafe">
+                        <span class="lb-compare-tag lb-tag-unsafe">
+                            <i class="bi bi-x-circle-fill"></i> What We Never Do
+                        </span>
+                        <h3 class="lb-compare-title">Toxic Traps That Risk Penalties</h3>
+                        <p class="lb-compare-desc">
+                            Low-cost link vendors use black-hat networks and automated scripts that trigger algorithmic link spam penalties and tank your search visibility.
+                        </p>
+                        
+                        <ul class="lb-compare-list">
+                            <li>
+                                <i class="bi bi-x-circle-fill lb-icon-unsafe"></i>
+                                <span><strong>Private Blog Networks (PBNs):</strong> Artificial link webs designed solely to manipulate PageRank.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-x-circle-fill lb-icon-unsafe"></i>
+                                <span><strong>Automated Spam Software:</strong> Auto-generated forum, comment, or directory link blasts.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-x-circle-fill lb-icon-unsafe"></i>
+                                <span><strong>Zero-Traffic Link Farms:</strong> Sites created solely to sell guest posts with zero actual human readership.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-x-circle-fill lb-icon-unsafe"></i>
+                                <span><strong>Over-Optimized Exact Anchors:</strong> Keyword stuffing that triggers Google Penguin algorithmic filters.</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-x-circle-fill lb-icon-unsafe"></i>
+                                <span><strong>Hidden or Sidebar Links:</strong> Manipulative non-contextual link schemes that Google devalues.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4: PROVEN AUTHORITY GROWTH METRICS BAR
+         ========================================================================= -->
+    <section class="lb-section lb-bg-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="lb-metrics-box">
+                        <div class="row g-4 text-center">
+                            <div class="col-6 col-lg-3">
+                                <div class="lb-metric-num">DR 75+</div>
+                                <div class="lb-metric-label">Average Domain Rating</div>
+                                <p class="lb-metric-desc">High-authority placement domains verified via Ahrefs and Semrush</p>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="lb-metric-num">100%</div>
+                                <div class="lb-metric-label">Editorial Do-Follow</div>
+                                <p class="lb-metric-desc">Contextually embedded links passing maximum link equity and PageRank</p>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="lb-metric-num">50K+</div>
+                                <div class="lb-metric-label">Average Monthly Traffic</div>
+                                <p class="lb-metric-desc">Real human readers on host publications driving referral visits</p>
+                            </div>
+                            <div class="col-6 col-lg-3">
+                                <div class="lb-metric-num">0%</div>
+                                <div class="lb-metric-label">PBN / Spam Risk</div>
+                                <p class="lb-metric-desc">100% white-hat safety with permanent indexation and link monitoring</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5: LINK BUILDING FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         ========================================================================= -->
+    <section class="lb-section lb-bg-white">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <div class="lb-badge">
+                        <i class="bi bi-question-circle-fill"></i> Got Questions?
+                    </div>
+                    <h2 class="lb-heading">
+                        Link Building <span class="lb-highlight">Frequently Asked Questions</span>
+                    </h2>
+                    <p class="lb-lead lb-lead-center">
+                        Clear answers on how our link building outreach works, quality standards, and ranking impact.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="accordion lb-accordion" id="linkBuildingFaq">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Are all the backlinks you build permanent and do-follow?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#linkBuildingFaq">
+                                <div class="accordion-body">
+                                    Yes. We build permanent, in-content contextual do-follow backlinks. We also monitor your active link profile continuously to ensure link longevity and replace any lost links within our guarantee window.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Can we pre-approve the websites and content before links go live?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#linkBuildingFaq">
+                                <div class="accordion-body">
+                                    Absolutely. We provide full transparency. You have complete review and approval rights over target publications, content drafts, and anchor text pairings before any outreach is published.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    How do you protect our website from Google link penalties?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#linkBuildingFaq">
+                                <div class="accordion-body">
+                                    We strictly adhere to Google Search Essentials (Webmaster Guidelines). We never use automated link software, PBNs, or low-quality link farms. Every link is earned through genuine editorial contribution on real, indexed websites with real organic traffic.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How quickly do high-authority backlinks improve our search rankings?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#linkBuildingFaq">
+                                <div class="accordion-body">
+                                    Once indexed by Googlebot, high-authority editorial links typically start passing link equity and boosting target keyword positions within 3 to 8 weeks. Combined with solid on-page SEO, link velocity produces compounding organic ranking gains over 3 to 6 months.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>

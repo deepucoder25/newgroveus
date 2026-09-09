@@ -337,39 +337,324 @@ ob_start(); ?>
     ],
     'svg' => $white_label_seo_svg
 ]); ?>
+<div class="wlseo-page-wrap">
 
-<!-- 3. White Label SEO Details Content Section -->
-<section class="service-details-section py-5">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-12">
-                <div class="service-main-content bg-white p-4 p-md-5 rounded-4 shadow-sm border">
-                    <h2 class="fw-bold mb-3">Turnkey SEO Fulfillment for Agencies &amp; Growth Partners</h2>
-                    <p class="text-muted leading-relaxed mb-4">
-                        Deliver award-winning search engine optimization campaigns to your clients under your own brand. We handle technical audits, on-page optimization, content strategy, and high-authority link building while you focus on client relationships and sales.
-                    </p>
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">100% Unbranded Reporting</h5>
-                                <p class="small text-muted mb-0">Custom client dashboards and monthly white-labeled PDF reports carrying your agency logo and branding.</p>
+    <!-- =========================================================================
+         BOX 1: Core Agency Fulfillment Pillars (Col-12 Master Box)
+         ========================================================================= -->
+    <section class="wlseo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wlseo-main-box">
+                        <div class="text-center text-md-start">
+                            <div class="wlseo-eyebrow">
+                                <i class="bi bi-shield-check"></i> Turnkey Agency Fulfillment
+                            </div>
+                            <h2 class="wlseo-box-title">
+                                Scalable White Label SEO Built for <span class="wlseo-title-highlight">Modern Agencies</span>
+                            </h2>
+                            <p class="wlseo-box-desc">
+                                Deliver high-performing organic search results under your own brand name. We provide complete backend technical optimization, content creation, and authority link outreach while your agency owns the client relationship and keeps healthy profit margins.
+                            </p>
+                        </div>
+
+                        <!-- 4 Pillars Grid inside Box 1 -->
+                        <div class="row g-4 mt-1">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-feature-card">
+                                    <div class="wlseo-feature-header">
+                                        <div class="wlseo-feature-icon">
+                                            <i class="bi bi-tag-fill"></i>
+                                        </div>
+                                        <h3 class="wlseo-feature-title">100% Unbranded</h3>
+                                    </div>
+                                    <p class="wlseo-feature-desc">
+                                        All monthly PDF reports, audits, and tracking dashboards carry only your agency branding with zero Groveus footprint.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-feature-card">
+                                    <div class="wlseo-feature-header">
+                                        <div class="wlseo-feature-icon">
+                                            <i class="bi bi-gear-wide-connected"></i>
+                                        </div>
+                                        <h3 class="wlseo-feature-title">Technical Audits</h3>
+                                    </div>
+                                    <p class="wlseo-feature-desc">
+                                        Comprehensive on-page audits, schema markup implementation, Core Web Vitals speed tuning, and crawl indexing fixes.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-feature-card">
+                                    <div class="wlseo-feature-header">
+                                        <div class="wlseo-feature-icon">
+                                            <i class="bi bi-link-45deg"></i>
+                                        </div>
+                                        <h3 class="wlseo-feature-title">Editorial Links</h3>
+                                    </div>
+                                    <p class="wlseo-feature-desc">
+                                        Verified, contextual editorial backlinks secured on real niche publications with DR 60+ to DR 90+ without any PBNs.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-feature-card">
+                                    <div class="wlseo-feature-header">
+                                        <div class="wlseo-feature-icon">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </div>
+                                        <h3 class="wlseo-feature-title">Strict NDA</h3>
+                                    </div>
+                                    <p class="wlseo-feature-desc">
+                                        Legally binding non-disclosure agreements ensuring your client data, retention, and communication remain 100% protected.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Confidential &amp; Strict NDAs</h5>
-                                <p class="small text-muted mb-0">Complete client confidentiality protected with bilateral non-disclosure agreements across all deliverables.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Dedicated Account Manager</h5>
-                                <p class="small text-muted mb-0">Direct access to experienced SEO strategists supporting your pitches, audits, and campaign delivery.</p>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- =========================================================================
+         BOX 2: Agency Fulfillment Workflow (Col-12 Master Box)
+         ========================================================================= -->
+    <section class="wlseo-section wlseo-section-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wlseo-main-box">
+                        <div class="text-center text-md-start">
+                            <div class="wlseo-eyebrow">
+                                <i class="bi bi-arrow-repeat"></i> Seamless Operations
+                            </div>
+                            <h2 class="wlseo-box-title">
+                                How Our Agency Fulfillment <span class="wlseo-title-highlight">Workflow Operates</span>
+                            </h2>
+                            <p class="wlseo-box-desc">
+                                A simple 4-step execution pipeline connecting your sales pipeline seamlessly to our backend SEO team.
+                            </p>
+                        </div>
+
+                        <!-- 4 Step Cards inside Box 2 -->
+                        <div class="row g-4 mt-1">
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-step-box">
+                                    <span class="wlseo-step-num-badge">1</span>
+                                    <h3 class="wlseo-step-title">Pitch &amp; Onboard</h3>
+                                    <p class="wlseo-step-desc">
+                                        You close the client deal using your custom pricing. Submit client goals and target URLs through our partner intake form.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-step-box">
+                                    <span class="wlseo-step-num-badge">2</span>
+                                    <h3 class="wlseo-step-title">Strategy Blueprint</h3>
+                                    <p class="wlseo-step-desc">
+                                        Our senior strategists perform deep competitor analysis, keyword silo mapping, and structured content scheduling.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-step-box">
+                                    <span class="wlseo-step-num-badge">3</span>
+                                    <h3 class="wlseo-step-title">Sprint Execution</h3>
+                                    <p class="wlseo-step-desc">
+                                        We execute on-page technical fixes, write high-intent copy, and secure high-authority editorial outreach links.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-3">
+                                <div class="wlseo-step-box">
+                                    <span class="wlseo-step-num-badge">4</span>
+                                    <h3 class="wlseo-step-title">Unbranded Reporting</h3>
+                                    <p class="wlseo-step-desc">
+                                        You receive client-ready PDF reports and live Looker Studio dashboard links carrying solely your agency logo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         BOX 3: In-House vs White Label Comparison (Col-12 Master Box)
+         ========================================================================= -->
+    <section class="wlseo-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wlseo-main-box">
+                        <div class="text-center text-md-start">
+                            <div class="wlseo-eyebrow">
+                                <i class="bi bi-graph-up-arrow"></i> Cost &amp; Efficiency
+                            </div>
+                            <h2 class="wlseo-box-title">
+                                In-House Hiring vs. <span class="wlseo-title-highlight">White Label Partnership</span>
+                            </h2>
+                            <p class="wlseo-box-desc">
+                                Understand why fast-growing agencies choose white-label fulfillment to maximize net margins and eliminate fixed operational payroll risks.
+                            </p>
+                        </div>
+
+                        <!-- Split Comparison Columns inside Box 3 -->
+                        <div class="row g-4 mt-1">
+                            <div class="col-12 col-lg-6">
+                                <div class="wlseo-compare-col wlseo-compare-inhouse">
+                                    <div class="wlseo-compare-header">
+                                        <i class="bi bi-x-circle-fill text-danger fs-4"></i>
+                                        <h3 class="text-danger">Building an In-House Team</h3>
+                                    </div>
+                                    <ul class="wlseo-compare-list">
+                                        <li class="wlseo-compare-item neg">
+                                            <i class="bi bi-dash-circle-fill"></i>
+                                            <div><strong>High Fixed Payroll:</strong> Paying $8,000–$15,000/mo in fixed salaries, benefits, and management overhead regardless of client volume.</div>
+                                        </li>
+                                        <li class="wlseo-compare-item neg">
+                                            <i class="bi bi-dash-circle-fill"></i>
+                                            <div><strong>Tool Licenses:</strong> Spending $2,000+/mo on Semrush, Ahrefs, Screaming Frog, and rank tracker subscriptions.</div>
+                                        </li>
+                                        <li class="wlseo-compare-item neg">
+                                            <i class="bi bi-dash-circle-fill"></i>
+                                            <div><strong>Staff Turnover:</strong> Constant recruitment, onboarding delays, and quality inconsistency when key employees leave.</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-6">
+                                <div class="wlseo-compare-col wlseo-compare-partner">
+                                    <div class="wlseo-compare-header">
+                                        <i class="bi bi-check-circle-fill text-success fs-4"></i>
+                                        <h3 class="text-success">Partnering with Groveus</h3>
+                                    </div>
+                                    <ul class="wlseo-compare-list">
+                                        <li class="wlseo-compare-item pos">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <div><strong>Predictable Wholesale Rates:</strong> Pay only for active clients, markup 2x–3x on client retainers, and keep 65%+ net margins.</div>
+                                        </li>
+                                        <li class="wlseo-compare-item pos">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <div><strong>Zero Software Costs:</strong> Full access to our enterprise SEO toolstack, crawl databases, and outreach pipelines for free.</div>
+                                        </li>
+                                        <li class="wlseo-compare-item pos">
+                                            <i class="bi bi-check-circle-fill"></i>
+                                            <div><strong>Instant Elastic Scale:</strong> Scale from 2 to 30+ client accounts seamlessly with dedicated strategist support.</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         BOX 4: Monthly Deliverables Checklist (Col-12 Master Box)
+         ========================================================================= -->
+    <section class="wlseo-section wlseo-section-alt">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="wlseo-main-box">
+                        <div class="text-center text-md-start">
+                            <div class="wlseo-eyebrow">
+                                <i class="bi bi-card-checklist"></i> Tangible Deliverables
+                            </div>
+                            <h2 class="wlseo-box-title">
+                                What Your Agency Receives <span class="wlseo-title-highlight">Every Month</span>
+                            </h2>
+                            <p class="wlseo-box-desc">
+                                Transparent, high-impact deliverables scheduled and delivered on time, prepared for seamless forwarding to your clients.
+                            </p>
+                        </div>
+
+                        <!-- 6 Deliverables Grid inside Box 4 -->
+                        <div class="row g-3 mt-1">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-file-earmark-pdf-fill wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">Unbranded PDF Reports</h3>
+                                        <p class="wlseo-deliv-desc">Polished monthly PDF reports highlighting organic traffic curves and ranking gains.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-link-45deg wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">Live Backlink Sheets</h3>
+                                        <p class="wlseo-deliv-desc">Transparent spreadsheets showing target URLs, DR metrics, and live indexed backlinks.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-journal-text wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">Content Drafts &amp; Publishing</h3>
+                                        <p class="wlseo-deliv-desc">High-intent blog posts and service landing page copy ready for one-click CMS publishing.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-search wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">24/7 Rank Tracking</h3>
+                                        <p class="wlseo-deliv-desc">Daily position monitoring across 50 to 500+ commercial keywords on desktop &amp; mobile.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-gear-fill wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">Technical Health Maintenance</h3>
+                                        <p class="wlseo-deliv-desc">Monthly crawl audits fixing 404 broken links, redirects, schema, and page speed regressions.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <div class="wlseo-deliv-item">
+                                    <i class="bi bi-headset wlseo-deliv-icon"></i>
+                                    <div>
+                                        <h3 class="wlseo-deliv-title">Dedicated Strategist</h3>
+                                        <p class="wlseo-deliv-desc">Direct access to our senior SEO strategists on Slack or email to assist with custom client audits.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

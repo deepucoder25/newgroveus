@@ -152,6 +152,7 @@
                 <li><a href="<?= site_url('ecommerce-seo-services') ?>" class="<?= in_array($segment1, ['ecommerce-seo', 'ecommerce-seo-services']) ? 'active' : '' ?>">Ecommerce Seo- Services</a></li>
                 <li><a href="<?= site_url('nationwide-seo-services') ?>" class="<?= $segment1 === 'nationwide-seo-services' ? 'active' : '' ?>">Nationwide Seo Services</a></li>
                 <li><a href="<?= site_url('linkbuilding-services') ?>" class="<?= in_array($segment1, ['linkbuilding-services', 'link-building-services']) ? 'active' : '' ?>">Linkbuilding Services</a></li>
+                <li><a href="<?= site_url('web-development-services') ?>" class="<?= $segment1 === 'web-development-services' ? 'active' : '' ?>">Web Design &amp; Development</a></li>
               </ul>
             </div>
             <div class="mega-section-block">
@@ -160,7 +161,6 @@
                 <li><a href="<?= site_url('content-marketing-services') ?>" class="<?= $segment1 === 'content-marketing-services' ? 'active' : '' ?>">Content Marketing</a></li>
                 <li><a href="<?= site_url('ppc-management-services') ?>" class="<?= in_array($segment1, ['ppc-management-services', 'google-pay-per-click']) ? 'active' : '' ?>">Google Pay Per Click</a></li>
                 <li><a href="<?= site_url('social-media-marketing') ?>" class="<?= $segment1 === 'social-media-marketing' ? 'active' : '' ?>">Social Media Marketing</a></li>
-                <li><a href="<?= site_url('web-development-services') ?>" class="<?= $segment1 === 'web-development-services' ? 'active' : '' ?>">Web Design &amp; Development</a></li>
               </ul>
             </div>
           </div>

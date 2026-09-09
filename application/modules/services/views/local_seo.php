@@ -227,39 +227,512 @@ ob_start(); ?>
     ],
     'svg' => $local_seo_svg
 ]); ?>
+<div class="lseo-page-wrap">
 
-<!-- 3. Local SEO Details Content Section -->
-<section class="service-details-section py-5">
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-lg-12">
-                <div class="service-main-content bg-white p-4 p-md-5 rounded-4 shadow-sm border">
-                    <h2 class="fw-bold mb-3">Capture High-Intent Local Customers with Targeted Local SEO</h2>
-                    <p class="text-muted leading-relaxed mb-4">
-                        Connect with ready-to-buy customers in your target neighborhood, city, or region. We optimize your Google Business Profile (GBP), local business citations, NAP (Name, Address, Phone) consistency across directories, and create geo-targeted landing pages engineered to dominate Google 3-Pack rankings.
-                    </p>
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Google 3-Pack Dominance</h5>
-                                <p class="small text-muted mb-0">Rank in the top 3 Google Maps results where 70%+ of local clicks happen.</p>
+    <!-- =========================================================
+         SECTION 1: Core Value Pillars (6-Grid Feature Cards)
+         ========================================================= -->
+    <section class="lseo-section lseo-section-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="lseo-eyebrow">
+                    <i class="bi bi-geo-alt-fill"></i> Dominate Local Search
+                </div>
+                <h2 class="lseo-title">
+                    Targeted Strategies to Win Your <span class="lseo-title-highlight">Local Market</span>
+                </h2>
+                <p class="lseo-subtitle">
+                    Over 80% of local searches on mobile lead to an in-store visit or call within 24 hours. We position your business directly in front of ready-to-buy nearby customers.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1: Google Map 3-Pack -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-map-fill"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">High-Intent Traffic</span>
+                                    <h3 class="lseo-card-title">Google 3-Pack Ranking</h3>
+                                </div>
                             </div>
+                            <p class="lseo-card-desc">
+                                Dominate the top 3 Google Maps listings where more than 70% of local search clicks concentrate, ensuring maximum call and navigation intent.
+                            </p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Citation &amp; NAP Building</h5>
-                                <p class="small text-muted mb-0">Consistent business information across top local and regional directories.</p>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Google Maps Pin Placement</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Proximity &amp; Prominence Calibration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2: Google Business Profile -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-shop"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">Profile Authority</span>
+                                    <h3 class="lseo-card-title">GBP Optimization</h3>
+                                </div>
                             </div>
+                            <p class="lseo-card-desc">
+                                Complete audit and optimization of your Google Business Profile with verified categories, geo-tagged photography, Q&amp;As, and weekly posts.
+                            </p>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-3 rounded-3 bg-light border-start border-4 border-danger">
-                                <h5 class="fw-bold mb-1">Geo-Targeted Landing Pages</h5>
-                                <p class="small text-muted mb-0">High-converting location pages tailored to local search queries.</p>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Category &amp; Keyword Alignment</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Geotagged Visuals &amp; Weekly Updates</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3: NAP & Citation Building -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-card-checklist"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">100% Accuracy</span>
+                                    <h3 class="lseo-card-title">NAP Citation Sync</h3>
+                                </div>
                             </div>
+                            <p class="lseo-card-desc">
+                                Build and standardize your business Name, Address, and Phone across 100+ trusted local directories, mapping platforms, and data aggregators.
+                            </p>
+                        </div>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> 100+ Tier-1 Directory Networks</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Duplicate &amp; Error Removal</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4: Geo-Targeted Landing Pages -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-layers-fill"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">Hyper-Local Reach</span>
+                                    <h3 class="lseo-card-title">Geo-Targeted Pages</h3>
+                                </div>
+                            </div>
+                            <p class="lseo-card-desc">
+                                Create localized service area landing pages customized with localized keywords, street-level relevance, embedded maps, and local testimonials.
+                            </p>
+                        </div>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> City &amp; Suburb Targeted Landing Pages</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Embedded Maps &amp; Schema Data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 5: Review & Reputation Growth -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">5-Star Trust</span>
+                                    <h3 class="lseo-card-title">Review Management</h3>
+                                </div>
+                            </div>
+                            <p class="lseo-card-desc">
+                                Implement proven automated feedback funnels to consistently generate genuine 5-star Google reviews and professionally handle customer sentiment.
+                            </p>
+                        </div>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Automated Review Funnels &amp; QR Codes</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Customer Sentiment Strategy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 6: Local Backlinks & Community Authority -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-card">
+                        <div>
+                            <div class="lseo-card-header">
+                                <div class="lseo-icon-box">
+                                    <i class="bi bi-link-45deg"></i>
+                                </div>
+                                <div class="lseo-card-title-wrap">
+                                    <span class="lseo-card-tag">Domain Power</span>
+                                    <h3 class="lseo-card-title">Local Link Signals</h3>
+                                </div>
+                            </div>
+                            <p class="lseo-card-desc">
+                                Earn high-authority local backlinks from neighborhood business associations, regional publications, chambers of commerce, and local sponsorships.
+                            </p>
+                        </div>
+                        <ul class="lseo-card-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Chamber of Commerce Links</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Regional Editorial Outreach</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 2: Proven 5-Step Local SEO Process Roadmap
+         ========================================================= -->
+    <section class="lseo-section lseo-section-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="lseo-eyebrow">
+                    <i class="bi bi-lightning-charge-fill"></i> Proven Workflow
+                </div>
+                <h2 class="lseo-title">
+                    Our 5-Step <span class="lseo-title-highlight">Local SEO Roadmap</span>
+                </h2>
+                <p class="lseo-subtitle">
+                    A clear, methodical path engineered to take your local business from invisible to top-ranked across local maps and neighborhood search queries.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-12 col-md-6 col-lg">
+                    <div class="lseo-process-card">
+                        <span class="lseo-step-badge">STEP 01</span>
+                        <div class="lseo-process-icon"><i class="bi bi-search"></i></div>
+                        <h3 class="lseo-process-title">Local Audit</h3>
+                        <p class="lseo-process-desc">Comprehensive analysis of local competitors, proximity signals, keyword volume, and existing citation health.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-12 col-md-6 col-lg">
+                    <div class="lseo-process-card">
+                        <span class="lseo-step-badge">STEP 02</span>
+                        <div class="lseo-process-icon"><i class="bi bi-pin-map"></i></div>
+                        <h3 class="lseo-process-title">GBP Optimization</h3>
+                        <p class="lseo-process-desc">Claiming, verifying, and meticulously configuring all primary/secondary categories, attributes, and geo-data.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-12 col-md-6 col-lg">
+                    <div class="lseo-process-card">
+                        <span class="lseo-step-badge">STEP 03</span>
+                        <div class="lseo-process-icon"><i class="bi bi-journals"></i></div>
+                        <h3 class="lseo-process-title">Citation Cleanup</h3>
+                        <p class="lseo-process-desc">Resolving duplicate listings, incorrect phone numbers, and outdated addresses across all global aggregators.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-12 col-md-6 col-lg">
+                    <div class="lseo-process-card">
+                        <span class="lseo-step-badge">STEP 04</span>
+                        <div class="lseo-process-icon"><i class="bi bi-code-slash"></i></div>
+                        <h3 class="lseo-process-title">Local Schema</h3>
+                        <p class="lseo-process-desc">Embedding LocalBusiness JSON-LD markup, city landing pages, and location-rich on-page metadata.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="col-12 col-md-6 col-lg">
+                    <div class="lseo-process-card">
+                        <span class="lseo-step-badge">STEP 05</span>
+                        <div class="lseo-process-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3 class="lseo-process-title">Track &amp; Scale</h3>
+                        <p class="lseo-process-desc">Continuous geo-grid tracking, monthly conversion auditing, review cultivation, and localized link outreach.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 3: KPI Metrics Highlight Banner
+         ========================================================= -->
+    <section class="lseo-section lseo-section-light pt-0">
+        <div class="container">
+            <div class="lseo-stats-banner">
+                <div class="row g-4 align-items-center">
+                    <div class="col-6 col-md-3">
+                        <div class="lseo-stat-box">
+                            <div class="lseo-stat-num">94%</div>
+                            <div class="lseo-stat-label">3-Pack Win Rate</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="lseo-stat-box">
+                            <div class="lseo-stat-num">3.8X</div>
+                            <div class="lseo-stat-label">Avg Call Increase</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="lseo-stat-box">
+                            <div class="lseo-stat-num">100+</div>
+                            <div class="lseo-stat-label">Citations Synced</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="lseo-stat-box">
+                            <div class="lseo-stat-num">10K+</div>
+                            <div class="lseo-stat-label">Keywords Ranked</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 4: What's Included (Deliverables Checklist)
+         ========================================================= -->
+    <section class="lseo-section lseo-section-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="lseo-eyebrow">
+                    <i class="bi bi-box-seam"></i> Complete Deliverables
+                </div>
+                <h2 class="lseo-title">
+                    Everything Included in Our <span class="lseo-title-highlight">Local SEO Service</span>
+                </h2>
+                <p class="lseo-subtitle">
+                    Zero guesswork. We handle every single technical, directory, and on-page element required for local market leadership.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">Google 3-Pack Optimization</h4>
+                            <p class="lseo-deliverable-text">Complete configuration of business description, services, products, and operational attributes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">NAP Consistency Audit</h4>
+                            <p class="lseo-deliverable-text">100% verification that your phone, name, and address match exactly across all mapping networks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">Local Schema (JSON-LD)</h4>
+                            <p class="lseo-deliverable-text">Structured data integration with precise coordinates, opening hours, pricing, and service taxonomy.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">Location Landing Pages</h4>
+                            <p class="lseo-deliverable-text">High-converting neighborhood &amp; city pages with locally relevant headers, content, and map embeds.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">Review Generation System</h4>
+                            <p class="lseo-deliverable-text">Automated direct review links and QR strategies to boost customer review frequency &amp; rating score.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="lseo-deliverable-item">
+                        <div class="lseo-check-icon"><i class="bi bi-check-lg"></i></div>
+                        <div>
+                            <h4 class="lseo-deliverable-heading">Geo-Grid Rank Heatmaps</h4>
+                            <p class="lseo-deliverable-text">Visual monthly tracking showing exact map rankings block-by-block and mile-by-mile around your location.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 5: Industries We Help Dominate Locally
+         ========================================================= -->
+    <section class="lseo-section lseo-section-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="lseo-eyebrow">
+                    <i class="bi bi-buildings"></i> Sector Expertise
+                </div>
+                <h2 class="lseo-title">
+                    Industries We Supercharge with <span class="lseo-title-highlight">Local SEO</span>
+                </h2>
+                <p class="lseo-subtitle">
+                    Proven local ranking formulas tailored to the specific search habits and buyer intent of your industry.
+                </p>
+            </div>
+
+            <div class="row g-3 g-md-4">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-hospital"></i></div>
+                        <h4 class="lseo-ind-title">Healthcare</h4>
+                        <p class="lseo-ind-desc">Clinics, Dentists &amp; Doctors</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-tools"></i></div>
+                        <h4 class="lseo-ind-title">Home Services</h4>
+                        <p class="lseo-ind-desc">Plumbing, HVAC &amp; Roofing</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-briefcase"></i></div>
+                        <h4 class="lseo-ind-title">Legal &amp; Law</h4>
+                        <p class="lseo-ind-desc">Attorneys &amp; Law Firms</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-house-door"></i></div>
+                        <h4 class="lseo-ind-title">Real Estate</h4>
+                        <p class="lseo-ind-desc">Brokers, Agents &amp; Rentals</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-cup-hot"></i></div>
+                        <h4 class="lseo-ind-title">Hospitality</h4>
+                        <p class="lseo-ind-desc">Restaurants &amp; Cafes</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="lseo-industry-card">
+                        <div class="lseo-ind-icon"><i class="bi bi-bag-check"></i></div>
+                        <h4 class="lseo-ind-title">Retail Stores</h4>
+                        <p class="lseo-ind-desc">Local Shops &amp; Boutiques</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================================================
+         SECTION 6: Frequently Asked Questions (Accordion)
+         ========================================================= -->
+    <section class="lseo-section lseo-section-alt">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="lseo-eyebrow">
+                    <i class="bi bi-question-circle-fill"></i> Got Questions?
+                </div>
+                <h2 class="lseo-title">
+                    Frequently Asked <span class="lseo-title-highlight">Questions</span>
+                </h2>
+                <p class="lseo-subtitle">
+                    Common questions regarding local SEO timelines, ranking factors, and multi-location setups.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="accordion lseo-accordion" id="localSeoFaqAccordion">
+                        
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                                    How long does it take to see results from Local SEO?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadOne" data-bs-parent="#localSeoFaqAccordion">
+                                <div class="accordion-body">
+                                    Most local businesses start noticing increased impressions and local search visibility within 30 to 60 days following GBP optimization and citation alignment. Highly competitive metropolitan areas typically reach solid Google 3-Pack rankings within 3 to 6 months.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                                    What is the Google Map 3-Pack and why is it crucial?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadTwo" data-bs-parent="#localSeoFaqAccordion">
+                                <div class="accordion-body">
+                                    The Google 3-Pack is the boxed section appearing at the top of Google search results that showcases 3 local businesses with interactive map pins, reviews, phone numbers, and driving directions. Over 70% of high-intent clicks go directly to these 3 spots.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                                    What if my business has multiple branches or locations?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadThree" data-bs-parent="#localSeoFaqAccordion">
+                                <div class="accordion-body">
+                                    We build dedicated, geocoded landing pages for each location, configure separate Google Business Profiles under an organized location group, and establish distinct NAP citations so each branch dominates its specific territory without cannibalization.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="faqHeadFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                                    How does NAP consistency affect my local rankings?
+                                </button>
+                            </h2>
+                            <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadFour" data-bs-parent="#localSeoFaqAccordion">
+                                <div class="accordion-body">
+                                    NAP (Name, Address, Phone number) consistency provides Google's search algorithms with trust and verification. When your information matches across major directories, search engines feel confident recommending your business to nearby searchers.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
